@@ -167,6 +167,6 @@ const account = {
    * Метод возвращает количество средств
    * определенного типа транзакции из всей истории транзакций
    */
-  getTransactionAmountByType(type) {},
+  getTransactionTotal(type) {},
 };
 ```
