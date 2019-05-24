@@ -19,31 +19,54 @@ const user = {
 
 # Задание 2
 
-Напиши скрипт который определит и выведет в консоль имя сотрудника который
-выполнил больше всех задач. Сотрудники и кол-во выполненых задач содержатся как
-свойства объекта `employees` в формате `"имя":"кол-во задач"`.
-
-```js
-const employees = {
-  ann: 29,
-  david: 35,
-  helen: 1,
-  lorence: 99,
-};
-```
-
-# Задание 3
-
 Напиши функцию `countProps(obj)`, считающую кол-во свойств в объекте. Функция
 возвращает количество свойств.
 
+Вызовы функции для проверки работоспособности твоей реализации.
+
 ```js
-// Вызовы функции для проверки
 console.log(countProps({})); // 0
 
 console.log(countProps({ name: 'Mango', age: 2 })); // 2
 
-console.log(countProps({ mail: 'poly@m.com', isOnline: true, score: 500 })); // 3
+console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 })); // 3
+```
+
+# Задание 3
+
+Напиши функцию `findBestEmployee(employees)`, которая принимает объект
+сотрудников и возвращает имя сапого продуктивного (который выполнил больше всех
+задач). Сотрудники и кол-во выполненых задач содержатся как свойства объекта в
+формате `"имя":"кол-во задач"`.
+
+Вызовы функции для проверки работоспособности твоей реализации.
+
+```js
+console.log(
+  findBestEmployee({
+    ann: 29,
+    david: 35,
+    helen: 1,
+    lorence: 99,
+  }),
+); // lorence
+
+console.log(
+  findBestEmployee({
+    poly: 12,
+    mango: 17,
+    ajax: 4,
+  }),
+); // mango
+
+console.log(
+  findBestEmployee({
+    lux: 147,
+    david: 21,
+    kiwi: 19,
+    chelsy: 38,
+  }),
+); // lux
 ```
 
 # Задание 4
@@ -52,8 +75,9 @@ console.log(countProps({ mail: 'poly@m.com', isOnline: true, score: 500 })); // 
 считает общую сумму запрплаты работников и возращает ее. Каждое поле объекта,
 передаваемого в функцию, имеет вид `"имя":"зарплата"`.
 
+Вызовы функции для проверки работоспособности твоей реализации.
+
 ```js
-// Вызовы функции для проверки
 console.log(countTotalSalary({})); // 0
 
 console.log(
@@ -63,6 +87,14 @@ console.log(
     alfred: 80,
   }),
 ); // 330
+
+console.log(
+  countTotalSalary({
+    kiwi: 200,
+    lux: 50,
+    chelsy: 150,
+  }),
+); // 400
 ```
 
 # Задание 5
@@ -71,40 +103,42 @@ console.log(
 имя ключа. Возвращает массив значений определенного поля `prop` из каждого
 объекта в массиве.
 
+Вызовы функции для проверки работоспособности твоей реализации.
+
 ```js
-const users = [
-  { name: 'Poly', age: 7, mood: 'happy' },
-  { name: 'Mango', age: 4, mood: 'blissful' },
-  { name: 'Ajax', age: 3, mood: 'tired' },
+const products = [
+  { name: 'Радар', price: 1300, quantity: 4 },
+  { name: 'Сканер', price: 2700, quantity: 3 },
+  { name: 'Дроид', price: 400, quantity: 7 },
+  { name: 'Захват', price: 1200, quantity: 2 },
 ];
 
-// Вызовы функции для проверки
-console.log(getAllPropValues(users, 'name')); // ['Poly', 'Mango', 'Ajax']
+console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
 
-console.log(getAllPropValues(users, 'mood')); // ['happy', 'blissful', 'tired']
+console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
 
-console.log(getAllPropValues(users, 'active')); // []
+console.log(getAllPropValues(products, 'category')); // []
 ```
 
 # Задание 6
 
-Есть два массива `names` и `prices` с именами и ценами товаров. Напиши функцию
-`combine(names, prices)`, которая получает эти два массива и возвращает массив
-объектов со свойствами `name` и `price`.
+Напиши функцию `calculateProductTotalPrice(arr, productName)`, которая получает
+массив объектов и имя продукта (значение свойства `name`). Возвращает общую
+стоимость продукта (цена \* количество).
+
+Вызовы функции для проверки работоспособности твоей реализации.
 
 ```js
-const names = [
-  'Радар',
-  'Сканер',
-  'Дроид',
-  'Захват',
-  'Двигатель',
-  'Топливный бак',
+const products = [
+  { name: 'Радар', price: 1300, quantity: 4 },
+  { name: 'Сканер', price: 2700, quantity: 3 },
+  { name: 'Дроид', price: 400, quantity: 7 },
+  { name: 'Захват', price: 1200, quantity: 2 },
 ];
-const prices = [1000, 2000, 1500, 2700, 1600, 8000];
 
-const products = combine(names, prices);
-console.log(products); // массив объектов {Радар: 1000} {Сканер: 2000} итд
+console.log(calculateProductTotalPrice(products, 'Радар')); // 5200
+
+console.log(calculateProductTotalPrice(products, 'Дроид')); // 2800
 ```
 
 # Задание 7
@@ -130,34 +164,41 @@ const Transaction = {
 const account = {
   // Текущий баланс счета
   balance: 0,
+
   // История транзакций
   transactions: [],
+
   /*
    * Метод отвечающий за добавление суммы к балансу
    * Создает объект транзакции и вызывает addTransaction
    */
   deposit(amount) {},
+
   /*
    * Метод отвечающий за снятие суммы с баланса.
    * Создает объект транзакции и вызывает addTransaction
    *
    * Если amount больше чем текущий баланс, выводи сообщение
-   * о том что снятие такой суммы не возможно, недостаточно средств.
+   * о том, что снятие такой суммы не возможно, недостаточно средств.
    */
   withdraw(amount) {},
+
   /*
    * Метод добавляющий транзацию в свойство transactions
    * Принимает объект трназкции
    */
   addTransaction(transaction) {},
+
   /*
    * Метод возвращает текущий баланс
    */
   getBalance() {},
+
   /*
    * Метод возвращает историю транзакций
    */
   getTransactionHistory() {},
+
   /*
    * Метод ищет и возвращает объект транзации по id
    */
