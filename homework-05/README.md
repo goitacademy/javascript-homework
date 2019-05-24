@@ -6,18 +6,19 @@
 вызвал.
 
 ```js
-const mango = new Account('Mangozedog', 'mango@dog.woof');
-const poly = new Account('Poly', 'poly@mail.com');
-
 console.log(Account.prototype.getInfo); // function
+
+const mango = new Account('Mangozedog', 'mango@dog.woof');
 mango.getInfo(); // Login: Mangozedog, Email: mango@dog.woof
+
+const poly = new Account('Poly', 'poly@mail.com');
 poly.getInfo(); // Login: Poly, Email: poly@mail.com
 ```
 
 # Задание 2
 
-Напиши ES6-класс `User(name, age, friends)` для создания пользователя со
-следующим свойствами:
+Напиши класс `User(name, age, friends)` для создания пользователя со следующим
+свойствами:
 
 - name - строка (имя)
 - age - число (возраст)
@@ -98,60 +99,77 @@ console.log(builder.value; // '=^.^='
 
 ```js
 class Car {
-  constructor({ maxSpeed = 0 }) {
-    /*
-     * Добавь свойства:
-     *   - speed - для отслеживания текущей скорости, изначально 0.
-     *   - maxSpeed - для хранения максимальной скорости
-     *   - running - для отслеживания заведен ли автомобиль,
-     *      возможные значения true или false. Изначально false.
-     *   - distance - содержит общий киллометраж, изначально с 0
-     */
-  }
+  /*
+   * Добавь статический метод `getSpecs(car)`,
+   * который принимает объект-машину как параметр и выводит
+   * в консоль значения свойств maxSpeed, speed, isOn, distance и price.
+   */
 
-  turnOn() {
-    // Добавь код для того чтобы завести автомобиль
-    // Просто записывает в свойство running значание true
-  }
+  /*
+   * Конструктор получает объект настроек.
+   *
+   * Добавь свойства будущеего экземпляра класса:
+   *  speed - текущая скорость, изначально 0
+   *  price - цена автомобиля
+   *  maxSpeed - максимальная скорость
+   *  isOn - заведен ли автомобиль, значения true или false. Изначально false
+   *  distance - общий киллометраж, изначально 0
+   */
+  constructor() {}
 
-  turnOff() {
-    // Добавь код для того чтобы заглушить автомобиль
-    // Просто записывает в свойство running значание false
-  }
+  /*
+   * Добавь геттер и сеттер для свойства price,
+   * который будет работать с свойством цены автомобиля.
+   */
 
-  accelerate(spd) {
-    // Записывает в поле speed полученное значение, при условии что
-    // оно не больше чем значение свойства maxSpeed
-  }
+  /*
+   * Добавь код для того чтобы завести автомобиль
+   * Записывает в свойство isOn значение true
+   */
+  turnOn() {}
 
-  decelerate(spd) {
-    // Записывает в поле speed полученное значение, при условии что
-    // оно не больше чем значение свойства maxSpeed и не меньше нуля
-  }
+  /*
+   * Добавь код для того чтобы заглушить автомобиль
+   * Записывает в свойство isOn значение false,
+   * и сбрасывает текущую скорость в 0
+   */
+  turnOff() {}
 
-  drive(hours) {
-    // Добавляет в поле distance киллометраж (hours умноженное на значение поля speed),
-    // но только в том случае если машина заведена!
-  }
+  /*
+   * Добавялет к свойству speed полученное значение,
+   * при условии что результирующая скорость
+   * не больше чем значение свойства maxSpeed
+   */
+  accelerate(value) {}
+
+  /*
+   * Отнимает от свойства speed полученное значение,
+   * при условии что результирующая скорость не меньше нуля
+   */
+  decelerate(value) {}
+
+  /*
+   * Добавляет в поле distance киллометраж (hours * speed),
+   * но только в том случае если машина заведена!
+   */
+  drive(hours) {}
 }
 
-const car = new Car({ maxSpeed: 100, price: 2000 });
+const mustang = new Car({ maxSpeed: 200, price: 2000 });
 
-car.turnOn();
-car.accelerate(50);
-car.drive(2);
+mustang.turnOn();
+mustang.accelerate(50);
+mustang.drive(2);
 
-Car.getSpecs(car); // maxSpeed: 100, speed: 50, running: true, distance: 100
+Car.getSpecs(mustang); // maxSpeed: 200, speed: 50, isOn: true, distance: 100, price: 2000
 
-console.log(car.value); // 2000
+mustang.decelerate(20);
+mustang.drive(1);
+mustang.turnOff();
 
-car.value = 4000;
-console.log(car.value); // 4000
+Car.getSpecs(mustang); // maxSpeed: 200, speed: 0, isOn: false, distance: 120, price: 2000
+
+console.log(mustang.price); // 2000
+mustang.price = 4000;
+console.log(mustang.price); // 4000
 ```
-
-Добавь к классу Car из предыдущего задания статический метод getSpecs, который
-принимает объект-машину как параметр и выводит в консоль значения полей
-maxSpeed, speed, running и distance.
-
-Добавь классу Car свойство цены автомобиля, назови его сам. Добавь геттер и
-сеттер value, который будет работать с свойством цены автомобиля.

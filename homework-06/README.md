@@ -128,10 +128,10 @@ console.log(getNamesSortedByFriendsCount(users));
 порядке.
 
 ```js
-const getUniqueSkills = users => {
+const getSortedUniqueSkills = users => {
   // твой код
 };
 
-console.log(getUniqueSkills(users));
+console.log(getSortedUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
 ```
