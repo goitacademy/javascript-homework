@@ -1,208 +1,137 @@
+# Домашнее задание
+
+Напиши функции которые с помощью перебирающих методов массивов
+(никаких`for`,`splice` и т. д) выполняют следующие операции над массивом
+объектов пользователей из файла [users.js](./users.js).
+
 # Задание 1
 
-Напиши функцию-конструктор Account, которая добавляет будущему объекту поля
-login, email.
-
-В prototype функции-конструктора добавь метод getInfo(), который выводит в
-консоль значения полей login и email.
-
-Обрати внимание, метод всего один, в поле prototype функции-конструктора, а
-использовать его смогут все экземпляры, по ссылке.
-
-Создать несколько экземпляров с разными значениями свойств, вывесди их в
-консоль.
+Получить массив имен всех пользователей (поле `name`).
 
 ```js
-const account = new Account('Mangozedog', 'mango@dog.woof');
+const getUserNames = users => {
+  // твой код
+};
 
-console.log(Account.prototype.getInfo); // function
-account.getInfo(); // Login: Mangozedog, Email: mango@dog.woof
+console.log(getUserNames(users));
+// [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 ```
 
 # Задание 2
 
-<!-- TODO: больше нет констуркторов в модуле -->
-
-Расставь отсутствующие this в конструкторе Account
+Получить массив объектов пользователей по цвету глаз (поле `eyeColor`).
 
 ```js
-function Account(login, password, type = 'regular') {
-  login = login;
-  password = password;
-  type = type;
+const getUsersWithEyeColor = (users, color) => {
+  // твой код
+};
 
-  changePassword = function(newPassword) {
-    password = newPassword;
-  };
-
-  getInfo = function() {
-    console.log(`
-      Login: ${login},
-      Pass: ${password},
-      Type: ${type}
-    `);
-  };
-}
-
-const account = new Account('Mango', 'qwe123', 'premium');
-
-console.log(account.login); // 'Mango'
-console.log(account.password); // 'qwe123'
-console.log(account.type); // 'premium'
-
-account.changePassword('asdzxc');
-console.log(account.password); // 'asdzxc'
-
-account.getInfo(); // Login: 'Mango', Pass: 'asdzxc', Type: 'premium'
+console.log(getUsersWithEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 ```
 
 # Задание 3
 
-<!-- TODO: не в этот модуль, в ООП -->
-
-Напиши функцию-конструкор User для создания пользователя со следующим
-свойствами: - name - строка (имя) - age - число (возраст) - friends - число
-(кол-во друзей)
-
-Имя, активность, возраст и друзей, будут переданы при вызове конструктора User.
-
-Добавь метод getInfo(), который, выводит строку:
-`User ${имя} is ${возраст} years old and has ${кол-во друщзей} friends`
+Получить массив имен пользователей по полу (поле `gender`).
 
 ```js
-const mango = new User({ name: 'Mango', age: 2, friends: 20 });
-mango.getInfo(); // User Mango is 2 years old and has 20 friends
+const getUsersWithGender = (users, gender) => {
+  // твой код
+};
 
-const poly = new User({ name: 'Poly', age: 3, friends: 17 });
-poly.getInfo(); // User Poly is 3 years old and has 17 friends
+console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 ```
 
 # Задание 4
 
-<!-- TODO: не в этот модуль, в ООП -->
-
-Напиши конструктор Storage(items), который будет создавать объекты для
-управления складом товаров При вызове будет получать один аргумент - начальный
-массив товаров, и записываеть его в свойство items
-
-Добавь метод getItems, который возвращает массив текущих товаров Добавь метод
-addItem(item), который получает новый товар и добавляет его к текущим Добавь
-метод removeItem(item), который получет товар и, если он есть, удаляет его из
-текущих
+Получить массив только неактивных пользователей (поле `isActive`).
 
 ```js
-const storage = new Storage([
-  'Нанитоиды',
-  'Пролонгер',
-  'Железные жупи',
-  'Антигравитатор',
-]);
+const getInactiveUsers = users => {
+  // твой код
+};
 
-const items = storage.getItems();
-console.log(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
-
-storage.addItem('Дроид');
-console.log(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
-
-storage.removeItem('Пролонгер');
-console.log(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
+console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
 ```
 
 # Задание 5
 
-Напиши ES6 класс StringBuilder.
-
-На вход (в конструкторе) он получает один параметр string - строку, которую
-записывает в свойство \_value.
-
-Добавь классу следующие методы:
-
-    - геттер value - возвращает текущее значение поля _value
-
-    - append(str) - получает парметр str (строку) и добавляет ее в конец _value
-
-    - prepend(str) - получает парметр str (строку) и добавляет ее в начало value
-
-    - pad(str) - получает парметр str (строку) и добавляет ее в начало и в конец _value
+Получить пользоваля (не массив) по `email` (поле `email`, он уникальный).
 
 ```js
-const builder = new StringBuilder('.');
+const getUserWithEmail = (users, email) => {
+  // твой код
+};
 
-builder.append('^');
-console.log(builder.value); // '.^'
-
-builder.prepend('^');
-console.log(builder.value; // '^.^'
-
-builder.pad('=');
-console.log(builder.value; // '=^.^='
+console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}
+console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {объект пользователя Elma Head}
 ```
 
-# Задание 1
+# Задание 6
 
-Напиши класс Car с указанными свойствами и методами
+Получить массив пользователей попадающих в возрастную категорию от `min` до
+`max` лет (поле `age`).
 
 ```js
-class Car {
-  constructor({ maxSpeed = 0 }) {
-    /*
-      Добавь свойства:
-        - speed - для отслеживания текущей скорости, изначально 0.
-        - maxSpeed - для хранения максимальной скорости
-        - running - для отслеживания заведен ли автомобиль, возможные значения true или false. Изначально false.
-        - distance - содержит общий киллометраж, изначально с 0
-    */
-  }
+const getUsersWithAge = (users, min, max) => {
+  // твой код
+};
 
-  turnOn() {
-    // Добавь код для того чтобы завести автомобиль
-    // Просто записывает в свойство running значание true
-  }
+console.log(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
 
-  turnOff() {
-    // Добавь код для того чтобы заглушить автомобиль
-    // Просто записывает в свойство running значание false
-  }
-
-  accelerate(spd) {
-    // Записывает в поле speed полученное значение, при условии что
-    // оно не больше чем значение свойства maxSpeed
-  }
-
-  decelerate(spd) {
-    // Записывает в поле speed полученное значение, при условии что
-    // оно не больше чем значение свойства maxSpeed и не меньше нуля
-  }
-
-  drive(hours) {
-    // Добавляет в поле distance киллометраж (hours умноженное на значение поля speed),
-    // но только в том случае если машина заведена!
-  }
-}
-
-const car = new Car({ maxSpeed: 100 });
+console.log(getUsersWithAge(users, 30, 40));
+// [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
 ```
 
-Добавь к классу Car из предыдущего задания статический метод getSpecs, который
-принимает объект-машину как параметр и выводит в консоль значения полей
-maxSpeed, speed, running и distance.
+# Задание 7
+
+Получить общую сумму баланса (поле `balance`) всех пользователей.
 
 ```js
-const car = new Car({ maxSpeed: 100 });
-car.turnOn();
-car.accelerate(50);
-car.drive(2);
+const getTotalBalance = users => {
+  // твой код
+};
 
-Car.getSpecs(car); // maxSpeed: 100, speed: 50, running: true, distance: 100
+console.log(getTotalBalance(users)); // 20916
 ```
 
-Добавь классу Car свойство цены автомобиля, назови его сам. Добавь геттер и
-сеттер value, который будет работать с свойством цены автомобиля.
+# Задание 8
+
+Массив имен всех пользователей у которых есть друг с указанным именем.
 
 ```js
-const car = new Car({ maxSpeed: 50, price: 2000 });
-console.log(car.value); // 2000
+const getUsersWithFriend = (users, name) => {
+  // твой код
+};
 
-car.value = 4000;
-console.log(car.value); // 4000
+console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
+console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
+```
+
+# Задание 9
+
+Массив имен (поле `name`) людей, отсортированных в зависимости от количества их
+друзей (поле `friends`)
+
+```js
+const getNamesSortedByFriendsCount = users => {
+  // твой код
+};
+
+console.log(getNamesSortedByFriendsCount(users));
+// [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
+```
+
+# Задание 10
+
+Получить массив всех умений всех пользователей (поле `skills`), при этом не
+должно быть повторяющихся умений и они должны быть отсортированы в алфавитном
+порядке.
+
+```js
+const getUniqueSkills = users => {
+  // твой код
+};
+
+console.log(getUniqueSkills(users));
+// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
 ```

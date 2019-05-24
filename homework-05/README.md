@@ -1,137 +1,157 @@
-# Домашнее задание
-
-Напиши функции которые с помощью перебирающих методов массивов
-(никаких`for`,`splice` и т. д) выполняют следующие операции над массивом
-объектов пользователей из файла [users.js](./users.js).
-
 # Задание 1
 
-Получить массив имен всех пользователей (поле `name`).
+Напиши функцию-конструктор `Account`, которая создает объект со свойствами
+`login` и `email`. В `prototype` функции-конструктора добавь метод `getInfo()`,
+который выводит в консоль значения полей `login` и `email` объекта который его
+вызвал.
 
 ```js
-const getUserNames = users => {
-  // твой код
-};
+const mango = new Account('Mangozedog', 'mango@dog.woof');
+const poly = new Account('Poly', 'poly@mail.com');
 
-console.log(getUserNames(users));
-// [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
+console.log(Account.prototype.getInfo); // function
+mango.getInfo(); // Login: Mangozedog, Email: mango@dog.woof
+poly.getInfo(); // Login: Poly, Email: poly@mail.com
 ```
 
 # Задание 2
 
-Получить массив объектов пользователей по цвету глаз (поле `eyeColor`).
+Напиши ES6-класс `User(name, age, friends)` для создания пользователя со
+следующим свойствами:
+
+- name - строка (имя)
+- age - число (возраст)
+- friends - число (кол-во друзей)
+
+Добавь метод `getInfo()`, который, выводит строку:
+`User ${имя} is ${возраст} years old and has ${кол-во друщзей} friends`
 
 ```js
-const getUsersWithEyeColor = (users, color) => {
-  // твой код
-};
+const mango = new User({ name: 'Mango', age: 2, friends: 20 });
+mango.getInfo(); // User Mango is 2 years old and has 20 friends
 
-console.log(getUsersWithEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+const poly = new User({ name: 'Poly', age: 3, friends: 17 });
+poly.getInfo(); // User Poly is 3 years old and has 17 friends
 ```
 
 # Задание 3
 
-Получить массив имен пользователей по полу (поле `gender`).
+Напиши класс `Storage(items)`, который будет создавать объекты для управления
+складом товаров. При вызове будет получать один аргумент - начальный массив
+товаров, и записывать его в свойство `items`.
+
+- Добавь метод `getItems()`, который возвращает массив текущих товаров
+- Добавь метод addItem(item), который получает новый товар и добавляет его к
+  текущим
+- Добавь метод removeItem(item), который получет товар и, если он есть, удаляет
+  его из текущих
 
 ```js
-const getUsersWithGender = (users, gender) => {
-  // твой код
-};
+const storage = new Storage([
+  'Нанитоиды',
+  'Пролонгер',
+  'Железные жупи',
+  'Антигравитатор',
+]);
 
-console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+const items = storage.getItems();
+console.log(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
+
+storage.addItem('Дроид');
+console.log(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
+
+storage.removeItem('Пролонгер');
+console.log(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
 ```
 
 # Задание 4
 
-Получить массив только неактивных пользователей (поле `isActive`).
+Напиши класс `StringBuilder(baseString)`. На вход он получает один параметр -
+строку, которую записывает в свойство `_value`.
+
+Добавь классу следующий функционал:
+
+- Геттер `value` - возвращает текущее значение поля `_value`
+- Метод `append(str)` - получает парметр str (строку) и добавляет ее в конец
+  `_value`
+- Метод `prepend(str)` - получает парметр str (строку) и добавляет ее в начало
+  value
+- Метод `pad(str)` - получает парметр str (строку) и добавляет ее в начало и в
+  конец `_value`
 
 ```js
-const getInactiveUsers = users => {
-  // твой код
-};
+const builder = new StringBuilder('.');
 
-console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
+builder.append('^');
+console.log(builder.value); // '.^'
+
+builder.prepend('^');
+console.log(builder.value; // '^.^'
+
+builder.pad('=');
+console.log(builder.value; // '=^.^='
 ```
 
 # Задание 5
 
-Получить пользоваля (не массив) по `email` (поле `email`, он уникальный).
+Напиши класс `Car` с указанными свойствами и методами.
 
 ```js
-const getUserWithEmail = (users, email) => {
-  // твой код
-};
+class Car {
+  constructor({ maxSpeed = 0 }) {
+    /*
+     * Добавь свойства:
+     *   - speed - для отслеживания текущей скорости, изначально 0.
+     *   - maxSpeed - для хранения максимальной скорости
+     *   - running - для отслеживания заведен ли автомобиль,
+     *      возможные значения true или false. Изначально false.
+     *   - distance - содержит общий киллометраж, изначально с 0
+     */
+  }
 
-console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}
-console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {объект пользователя Elma Head}
+  turnOn() {
+    // Добавь код для того чтобы завести автомобиль
+    // Просто записывает в свойство running значание true
+  }
+
+  turnOff() {
+    // Добавь код для того чтобы заглушить автомобиль
+    // Просто записывает в свойство running значание false
+  }
+
+  accelerate(spd) {
+    // Записывает в поле speed полученное значение, при условии что
+    // оно не больше чем значение свойства maxSpeed
+  }
+
+  decelerate(spd) {
+    // Записывает в поле speed полученное значение, при условии что
+    // оно не больше чем значение свойства maxSpeed и не меньше нуля
+  }
+
+  drive(hours) {
+    // Добавляет в поле distance киллометраж (hours умноженное на значение поля speed),
+    // но только в том случае если машина заведена!
+  }
+}
+
+const car = new Car({ maxSpeed: 100, price: 2000 });
+
+car.turnOn();
+car.accelerate(50);
+car.drive(2);
+
+Car.getSpecs(car); // maxSpeed: 100, speed: 50, running: true, distance: 100
+
+console.log(car.value); // 2000
+
+car.value = 4000;
+console.log(car.value); // 4000
 ```
 
-# Задание 6
+Добавь к классу Car из предыдущего задания статический метод getSpecs, который
+принимает объект-машину как параметр и выводит в консоль значения полей
+maxSpeed, speed, running и distance.
 
-Получить массив пользователей попадающих в возрастную категорию от `min` до
-`max` лет (поле `age`).
-
-```js
-const getUsersWithAge = (users, min, max) => {
-  // твой код
-};
-
-console.log(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
-
-console.log(getUsersWithAge(users, 30, 40));
-// [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
-```
-
-# Задание 7
-
-Получить общую сумму баланса (поле `balance`) всех пользователей.
-
-```js
-const getTotalBalance = users => {
-  // твой код
-};
-
-console.log(getTotalBalance(users)); // 20916
-```
-
-# Задание 8
-
-Массив имен всех пользователей у которых есть друг с указанным именем.
-
-```js
-const getUsersWithFriend = (users, name) => {
-  // твой код
-};
-
-console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
-console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
-```
-
-# Задание 9
-
-Массив имен (поле `name`) людей, отсортированных в зависимости от количества их
-друзей (поле `friends`)
-
-```js
-const getNamesSortedByFriendsCount = users => {
-  // твой код
-};
-
-console.log(getNamesSortedByFriendsCount(users));
-// [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
-```
-
-# Задание 10
-
-Получить массив всех умений всех пользователей (поле `skills`), при этом не
-должно быть повторяющихся умений и они должны быть отсортированы в алфавитном
-порядке.
-
-```js
-const getUniqueSkills = users => {
-  // твой код
-};
-
-console.log(getUniqueSkills(users));
-// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
-```
+Добавь классу Car свойство цены автомобиля, назови его сам. Добавь геттер и
+сеттер value, который будет работать с свойством цены автомобиля.
