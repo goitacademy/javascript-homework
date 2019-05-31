@@ -1,0 +1,75 @@
+html {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 16px;
+  list-style: none;
+}
+
+.product-list__item {
+  flex: 0 0 calc(50% - 16px);
+  margin: 8px;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.product__img {
+  width: 320px;
+  height: auto;
+  object-fit: contain;
+}
+
+.product__content {
+  padding: 16px;
+}
+
+.product__title {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.product__descr {
+  margin-bottom: 0;
+}
+
+.product__banner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(40px, -50%);
+  background-color: #f44336;
+  color: #fff;
+  padding: 16px 48px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 32px;
+  border: 4px solid #d32f2f;
+  user-select: none;
+}

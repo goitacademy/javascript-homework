@@ -1,24 +1,28 @@
-* {
+html {
   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
   margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: sans-serif;
-  min-height: 100vh;
+  background-color: #fff;
+  color: #212121;
 }
 
-img {
+/* img {
   display: block;
   max-width: 100%;
   height: auto;
-}
+} */
 
 .gallery {
-  width: 1200px;
+  max-width: 1200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 240px;
@@ -79,55 +83,81 @@ img {
   transform: scale(1.03);
 }
 
-.overlay {
+/* Lightbox */
+.lightbox {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
-  z-index: 999;
   pointer-events: none;
-  transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms linear;
 }
 
-.overlay.is-visible {
+.lightbox.is-open {
   opacity: 1;
   pointer-events: initial;
 }
 
-.overlay.is-visible .content {
-  transform: scale(1);
+.lightbox__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.overlay .content {
-  position: relative;
-  width: 1200px;
+.lightbox__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transform: scale(0.9);
   transition: transform 200ms ease-in-out;
 }
 
-.content__button {
+.lightbox___image {
+  width: auto;
+  height: auto;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+.lightbox.is-open .lightbox__content {
+  transform: scale(1);
+}
+
+.lightbox__button {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  top: -40px;
-  right: -40px;
+  top: 8px;
+  right: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none;
-  background-color: transparent;
+  width: 48px;
+  height: 48px;
   padding: 0;
   margin: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
   color: #fff;
   cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+  outline: none;
 }
 
-.content__button i {
+.lightbox__button:hover,
+.lightbox__button:focus {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lightbox__button i {
   font-size: 36px;
 }
