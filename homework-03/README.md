@@ -150,7 +150,7 @@ console.log(calculateProductTotalPrice(products, 'Радар')); // 5200
 console.log(calculateProductTotalPrice(products, 'Дроид')); // 2800
 ```
 
-# Задание 7 - повышенной сложности, выполнять не обязательно
+# Задание 7 - дополнительное, выполнять не обязательно
 
 <!-- TODO: добавить проверки методов -->
 
