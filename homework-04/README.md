@@ -9,7 +9,7 @@
 
 # Задание 1
 
-Расставь отсутствующие this в методах объекта account
+Расставь отсутствующие `this` в методах объекта `account`.
 
 ```js
 const account = {
@@ -38,4 +38,30 @@ console.log(orders); // ['order-1', 'order-2', 'order-3']
 account.addOrder(5000, 'order-4');
 console.log(account.balance); // 19000
 console.log(account.orders); // ['order-1', 'order-2', 'order-3', 'order-4']
+```
+
+# Задание 2
+
+Исправь ошибки которые будут в консоли, чтобы скрипт заработал.
+
+```js
+const inventory = {
+  items: ['Монорельса', 'Фильтр'],
+  add(itemName) {
+    this.items.push(itemName);
+  },
+  remove(itemName) {
+    this.items = this.items.filter(item => item !== itemName);
+  },
+};
+
+const invokeInventoryOperation = function(itemName, inventoryAction) {
+  inventoryAction(itemName);
+};
+
+invokeInventoryOperation('Аптечка', inventory.add);
+console.log(inventory.items); // ['Монорельса', 'Фильтр', 'Аптечка']
+
+invokeInventoryOperation('Фильтр', inventory.remove);
+console.log(inventory.items); // ['Монорельса', 'Аптечка']
 ```
