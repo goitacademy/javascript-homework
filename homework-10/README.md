@@ -11,30 +11,35 @@
   макету. Выделяй 20% времени на стили и 80% на функционал.
 
 ```html
-<li class="product-list__item" data-id="{{id}}">
-  <div class="product">
-    <img class="product__img" src="{{imageUrl}}" alt="" width="320" />
-    <div class="product__content">
-      <h2 class="product__title">{{title}}</h2>
-      <p class="product__descr">
-        {{description}}
-      </p>
-      <ul class="product__ingredients">
-        {{#each ingredients}}
-        <li>{{this}}</li>
-        {{/each}}
-      </ul>
-      <p>Price: {{price}}$</p>
-      {{#if available}}
-      <button>Add to cart</button>
-      {{/if}}
-    </div>
+<div data-id="pkXzyRp1P">
+  <img
+    src="https://s1.eda.ru/StaticContent/Photos/140812180013/140820212258/p_O.jpg"
+    alt=""
+    width="480"
+  />
+  <div class="content">
+    <h2 class="name">Томатный магрибский су</h2>
+    <p class="description">
+      Томатный магрибский суп особенно распространен в Марокко и Тунисе. Он
+      весьма прост в приготовлении и сам по себе легкий — в основе томаты и
+      куриный бульон. Кроме них в супе только необходимые специи, мед и лимон,
+      которые все вместе и передают тот самый восточный колорит.
+    </p>
+    <p class="price">
+      <i class="material-icons">
+        monetization_on
+      </i>
+      150 кредитов
+    </p>
 
-    {{#unless available}}
-    <div class="product__banner">
-      Sold Out
-    </div>
-    {{/unless}}
+    <ul class="ingredient-list">
+      <li>Помидоры</li>
+      <li>Куриный бульон</li>
+      <li>Мед</li>
+      <li>Петрушка</li>
+      <li>Кинза</li>
+      <li>Паприка</li>
+    </ul>
   </div>
-</li>
+</div>
 ```
