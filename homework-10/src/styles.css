@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -16,7 +15,6 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Классы темы для добавления на body */
 body.theme-light {
   background-color: #fff;
   color: #212121;
@@ -30,7 +28,7 @@ body.theme-dark {
 .toolbar {
   display: flex;
   justify-content: flex-end;
-  padding: 4px 24px;
+  padding: 8px 24px;
 }
 
 .toolbar__button {
@@ -65,12 +63,13 @@ body.theme-dark {
   padding: 0;
   margin: 0;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
-  grid-gap: 20px;
-  max-width: 1440px;
+  max-width: calc(100% - 64px);
   margin-left: auto;
   margin-right: auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+  grid-gap: 24px;
 }
 
 .card {
@@ -80,13 +79,11 @@ body.theme-dark {
   justify-content: space-between;
   height: 100%;
   padding-bottom: 8px;
-  border-radius: 3px;
-  overflow: hidden;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 .card__content {
+  display: flex;
+  flex-direction: column;
   padding: 8px;
   flex-grow: 1;
 }
@@ -106,6 +103,7 @@ body.theme-dark {
 
 .card__descr {
   line-height: 1.5;
+  flex-grow: 1;
 }
 
 .card__price {
@@ -131,6 +129,18 @@ body.theme-dark {
   margin-right: auto;
   margin-top: 16px;
   width: calc(100% - 16px);
+}
+
+.card__notification {
+  position: absolute;
+  top: 0;
+  right: 0;
+  white-space: nowrap;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: #f44336;
+  color: #fff;
 }
 
 .tag-list {
