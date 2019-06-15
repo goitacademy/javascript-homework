@@ -15,19 +15,13 @@ body {
   color: #212121;
 }
 
-/* img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-} */
-
 .gallery {
-  max-width: 1200px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 240px;
-  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-gap: 16px;
+  max-width: 1440px;
   padding: 0;
+  margin: 0;
   list-style: none;
   margin-left: auto;
   margin-right: auto;
@@ -40,6 +34,7 @@ body {
 }
 
 .gallery__image {
+  display: block;
   height: 100%;
   width: 100%;
   object-fit: cover;

@@ -7,10 +7,10 @@
 - Имена переменных и функций понятные, описательные
 - Код отформатирован с помощью Prettier
 
-# Домашнее задание
+# ТЗ
 
-Напиши функции которые с помощью перебирающих методов массивов
-(никаких`for`,`splice` и т. д) выполняют следующие операции над массивом
+Напиши функции которые с помощью перебирающих методов массива
+(никаких`for`,`splice` и т. д.) выполняют следующие операции над массивом
 объектов пользователей из файла [users.js](./users.js).
 
 # Задание 1
@@ -96,11 +96,11 @@ console.log(getUsersWithAge(users, 30, 40));
 Получить общую сумму баланса (поле `balance`) всех пользователей.
 
 ```js
-const getTotalBalance = users => {
+const calculateTotalBalance = users => {
   // твой код
 };
 
-console.log(getTotalBalance(users)); // 20916
+console.log(calculateTotalBalance(users)); // 20916
 ```
 
 # Задание 8
@@ -108,7 +108,7 @@ console.log(getTotalBalance(users)); // 20916
 Массив имен всех пользователей у которых есть друг с указанным именем.
 
 ```js
-const getUsersWithFriend = (users, name) => {
+const getUsersWithFriend = (users, friendName) => {
   // твой код
 };
 

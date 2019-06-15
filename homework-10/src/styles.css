@@ -65,13 +65,12 @@ body.theme-dark {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+  grid-gap: 20px;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill, 440px);
-  grid-gap: 20px;
 }
 
 .card {

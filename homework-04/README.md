@@ -2,8 +2,9 @@
 
 - Создан репозиторий `goit-js-hw-04`
 - При сдаче домашней работы есть ссылка на исходные файлы в репозитории
-- Каждое задание выполнено в отдельном файле. Используй `<script type="module">`
-  чтобы закрыть код задания в отдельной области видимости.
+- Каждое задание выполнено в отдельном файле с именем `task-номер_задания.js`.
+  Используй `<script type="module">` чтобы закрыть код задания в отдельной
+  области видимости и избежать конфликтов имен идентификаторов.
 - Имена переменных и функций понятные, описательные
 - Код отформатирован с помощью Prettier
 
@@ -56,12 +57,17 @@ const inventory = {
 };
 
 const invokeInventoryOperation = function(itemName, inventoryAction) {
+  console.log(`Invoking ${inventoryAction.name} opeartion on ${itemName}`);
   inventoryAction(itemName);
 };
 
 invokeInventoryOperation('Аптечка', inventory.add);
+// Invoking add opeartion on Аптечка
+
 console.log(inventory.items); // ['Монорельса', 'Фильтр', 'Аптечка']
 
 invokeInventoryOperation('Фильтр', inventory.remove);
+// Invoking remove opeartion on Фильтр
+
 console.log(inventory.items); // ['Монорельса', 'Аптечка']
 ```
