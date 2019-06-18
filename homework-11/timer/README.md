@@ -8,14 +8,28 @@
 ![preview](preview.gif)
 
 Плагин ожидает следующую HTML-разметку и показывает четыре цифры: дни, часы,
-минуты и секунды в формате `XX:XX:XX:XX`.
+минуты и секунды в формате `XX:XX:XX:XX`. Количество дней может состоять из
+более чем двух цифр.
 
 ```html
-<div id="timer-1">
-  <span data-value="days"></span>
-  <span data-value="hours"></span>
-  <span data-value="mins"></span>
-  <span data-value="secs"></span>
+<div class="timer" id="timer-1">
+  <div class="field">
+    <span class="value" data-value="days">11</span>
+    <span class="label">Days</span>
+  </div>
+
+  <div class="field">
+    <span class="value" data-value="hours">11</span>
+    <span class="label">Hours</span>
+  </div>
+  <div class="field">
+    <span class="value" data-value="mins">11</span>
+    <span class="label">Minutes</span>
+  </div>
+  <div class="field">
+    <span class="value" data-value="secs">11</span>
+    <span class="label">Seconds</span>
+  </div>
 </div>
 ```
 
