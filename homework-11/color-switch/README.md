@@ -25,11 +25,10 @@ const colors = [
 > ⚠️ Учти, на кнопку `Start` можно нажать бесконечное количество раз. Сделай
 > так, чтобы пока изменение темы запушено, кнопка `Start` была не активна.
 
-Для генерации случайного числа (индекс элемента массива цветов),
-используй результат следующей функции.
+Для генерации случайного числа (индекс элемента массива цветов), используй
+функцию `randomIntegerFromInterval`.
 
 ```js
-const randomIntegerFromInterval = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-};
+const randomIntegerFromInterval = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1) + min);
 ```
