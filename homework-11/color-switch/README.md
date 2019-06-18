@@ -29,6 +29,7 @@ const colors = [
 функцию `randomIntegerFromInterval`.
 
 ```js
-const randomIntegerFromInterval = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1) + min);
+const randomIntegerFromInterval = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
 ```
