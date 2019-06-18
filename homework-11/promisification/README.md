@@ -53,23 +53,23 @@ updateActiveState(users).then(logger);
 
 Перепиши функцию `makeTransaction()` так, чтобы она не использовала
 callback-функции `onSuccess` и `onError`, а принимала всего один параметр
-`order` и возвращала промис.
+`transaction` и возвращала промис.
 
 ```js
 const randomIntegerFromInterval = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-const makeTransaction = (order, onSuccess, onError) => {
+const makeTransaction = (transaction, onSuccess, onError) => {
   const delay = randomIntegerFromInterval(200, 500);
 
   setTimeout(() => {
     const canProcess = Math.random() > 0.3;
 
     if (canProcess) {
-      onSuccess(order.id, delay);
+      onSuccess(transaction.id, delay);
     } else {
-      onError(order.id);
+      onError(transaction.id);
     }
   }, delay);
 };
