@@ -11,6 +11,6 @@
 
 ## Задания
 
-- [Задание 1 - Color Switch](./color-switch/)
-- [Задание 2 - Promisification](./promisification/)
-- [Задание 3 - Timer](./timer/)
+- [Задание 1 - Переключатель цветов](./color-switch/)
+- [Задание 2 - Промисификация](./promisification/)
+- [Задание 3 - Таймер обратного отсчета](./timer/)

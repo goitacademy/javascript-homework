@@ -19,8 +19,9 @@ delay(1500).then(logger); // Resolved after 1500ms
 
 ## Задание 2
 
-Перепиши функцию `updateActiveState()` так, чтобы она не использовала
-callback-функцию, а возвращала промис.
+Перепиши функцию `toggleUserState()` так, чтобы она не использовала
+callback-функцию `callback`, а принимала всего два параметра `allUsers` и
+`userName` и возвращала промис.
 
 ```js
 const users = [
@@ -30,8 +31,10 @@ const users = [
   { name: 'Lux', active: false },
 ];
 
-const updateActiveState = (users, callback) => {
-  const updatedUsers = users.map(user => ({ ...user, active: !user.active }));
+const toggleUserState = (allUsers, userName, callback) => {
+  const updatedUsers = allUsers.map(user =>
+    user.name === userName ? { ...user, active: !user.active } : user,
+  );
 
   callback(updatedUsers);
 };
@@ -41,12 +44,14 @@ const logger = updatedUsers => console.table(updatedUsers);
 /*
  * Сейчас работает так
  */
-updateActiveState(users, logger);
+toggleUserState(users, 'Mango', logger);
+toggleUserState(users, 'Lux', logger);
 
 /*
  * Должно работать так
  */
-updateActiveState(users).then(logger);
+toggleUserState(users, 'Mango').then(logger);
+toggleUserState(users, 'Lux').then(logger);
 ```
 
 ## Задание 3
@@ -89,8 +94,6 @@ makeTransaction({ id: 70, amount: 150 }, logSuccess, logError);
 makeTransaction({ id: 71, amount: 230 }, logSuccess, logError);
 makeTransaction({ id: 72, amount: 75 }, logSuccess, logError);
 makeTransaction({ id: 73, amount: 100 }, logSuccess, logError);
-makeTransaction({ id: 74, amount: 400 }, logSuccess, logError);
-
 /*
  * Должно работать так
  */
@@ -107,10 +110,6 @@ makeTransaction({ id: 72, amount: 75 })
   .catch(logError);
 
 makeTransaction({ id: 73, amount: 100 })
-  .then(logSuccess)
-  .catch(logError);
-
-makeTransaction({ id: 74, amount: 400 })
   .then(logSuccess)
   .catch(logError);
 ```

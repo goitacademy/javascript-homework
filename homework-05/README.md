@@ -29,19 +29,19 @@ poly.getInfo(); // Login: Poly, Email: poly@mail.com
 
 Напиши класс `User` для создания пользователя со следующим свойствами:
 
-- `name` - строка (имя)
-- `age` - число (возраст)
-- `friends` - число (кол-во друзей)
+- `name` - строка
+- `age` - число
+- `followers` - число
 
 Добавь метод `getInfo()`, который, выводит строку:
-`User ${имя} is ${возраст} years old and has ${кол-во друщзей} friends`
+`User ${имя} is ${возраст} years old and has ${кол-во фоловеров} followers`
 
 ```js
-const mango = new User({ name: 'Mango', age: 2, friends: 20 });
-mango.getInfo(); // User Mango is 2 years old and has 20 friends
+const mango = new User({ name: 'Mango', age: 2, followers: 20 });
+mango.getInfo(); // User Mango is 2 years old and has 20 followers
 
-const poly = new User({ name: 'Poly', age: 3, friends: 17 });
-poly.getInfo(); // User Poly is 3 years old and has 17 friends
+const poly = new User({ name: 'Poly', age: 3, followers: 17 });
+poly.getInfo(); // User Poly is 3 years old and has 17 followers
 ```
 
 # Задание 3
@@ -170,13 +170,15 @@ mustang.turnOn();
 mustang.accelerate(50);
 mustang.drive(2);
 
-Car.getSpecs(mustang); // maxSpeed: 200, speed: 50, isOn: true, distance: 100, price: 2000
+Car.getSpecs(mustang);
+// maxSpeed: 200, speed: 50, isOn: true, distance: 100, price: 2000
 
 mustang.decelerate(20);
 mustang.drive(1);
 mustang.turnOff();
 
-Car.getSpecs(mustang); // maxSpeed: 200, speed: 0, isOn: false, distance: 120, price: 2000
+Car.getSpecs(mustang);
+// maxSpeed: 200, speed: 0, isOn: false, distance: 120, price: 2000
 
 console.log(mustang.price); // 2000
 mustang.price = 4000;
