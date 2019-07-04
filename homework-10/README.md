@@ -14,7 +14,7 @@
 Создай страницу меню с возможностью выбора темы для сервиса заказа еды.
 [Ссылка на демо видео](https://take.ms/RxIlv).
 
-![Превью](preview.jpg)
+![Превью](preview-light.jpg)
 
 - Обязательно используй `Webpack` для сборки и деплоя,
   [ссылка на готовую сборку](https://github.com/luxplanjay/webpack-starter-kit)
