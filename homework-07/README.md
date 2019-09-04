@@ -191,8 +191,9 @@ input), подставляет его текущее значение в `span#n
 ## Задание 7
 
 Напиши скрипт, который реагирует на изменение значения `input#font-size-slider`
-и обновляет инлайн-стиль `span#text` обновляя его свойство `font-size`. В
-результате при перетаскивании ползунка будет меняться размет текста.
+(событие input) и обновляет инлайн-стиль `span#text` обновляя его свойство
+`font-size`. В результате при перетаскивании ползунка будет меняться размет
+текста.
 
 ```html
 <input id="font-size-slider" type="range" />
@@ -208,7 +209,7 @@ input), подставляет его текущее значение в `span#n
 - Для сбора данных из полей формы используй класс
   [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData)
 - Выведи результат в консоль в красивом формате. Например
-  `'Заказана средняя пицца с дополнительным сыром. Доставка по адресу Бейкер стрит 2216'`.
+  `'Заказана средняя пицца с дополнительным соусом. Доставка по адресу Бейкер стрит 2216'`.
 
 ```html
 <form id="order-form">
@@ -248,19 +249,19 @@ input), подставляет его текущее значение в `span#n
     <ul>
       <li>
         <label>
-          <input type="checkbox" name="type" value="сыр" checked />
+          <input type="checkbox" name="extra" value="сыр" checked />
           Сыр
         </label>
       </li>
       <li>
         <label>
-          <input type="checkbox" name="type" value="мясо" />
+          <input type="checkbox" name="extra" value="мясо" />
           Мясо
         </label>
       </li>
       <li>
         <label>
-          <input type="checkbox" name="type" value="соус" checked />
+          <input type="checkbox" name="extra" value="соус" checked />
           Соус
         </label>
       </li>
