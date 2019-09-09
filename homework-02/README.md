@@ -10,37 +10,6 @@
 
 # Задание 1
 
-Используя методы массива, последовательно выполни указанные операции над
-массивом имен пользователей.
-
-```js
-const users = ['Mango', 'Poly', 'Ajax', 'Chelsey'];
-
-// Удалить первый элемент массива
-console.log(users); // ["Poly", "Ajax", "Chelsey"]
-
-// Удалить последний элемент массива
-console.log(users); // ["Poly", "Ajax"]
-
-// Добавить в начало массива пользователя "Lux"
-console.log(users); // ["Lux", "Poly", "Ajax"]
-
-// Добавить в конец массива два пользователя ("Jay" и "Kiwi") за одну операцию
-console.log(users); //  ["Lux", "Poly", "Ajax", "Jay", "Kiwi"]
-
-// Удалить из массива элемент хранящийся в переменной userToDelete
-const userToDelete = 'Ajax';
-console.log(users); //  ["Lux", "Poly", "Jay", "Kiwi"]
-
-// Добавить в массив пользователя хранящегося в переменной userToInsert,
-// перед пользователем хранящимся в переменной insertBefore
-const userToInsert = 'Kong';
-const insertBefore = 'Jay';
-console.log(users); //  ["Lux", "Poly", "Kong", "Jay", "Kiwi"]
-```
-
-# Задание 2
-
 Напиши функцию `logItems(array)`, которая получает массив и использует цикл
 `for`, который для каждого элемента массива будет выводить в консоль сообщение в
 формате `[номер элемента] - [значение элемента]`.
@@ -57,7 +26,7 @@ logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
 logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
 ```
 
-# Задание 3
+# Задание 2
 
 Напиши скрипт подсчета стоимости гравировки украшений. Для этого создай функцию
 `calculateEngravingPrice(message, pricePerWord)` принимающую строку (в строке
@@ -86,7 +55,7 @@ console.log(calculateEngravingPrice('Donec orci lectus aliquam est', 40)); // 20
 console.log(calculateEngravingPrice('Donec orci lectus aliquam est', 20)); // 100
 ```
 
-# Задание 4
+# Задание 3
 
 Напиши фукцнию `findLongestWord(string)`, которая принимает параметром
 произвольную строку (в строке будут только слова и пробелы) и возвращает самое
@@ -102,7 +71,7 @@ console.log(findLongestWord('Google do a roll')); // 'Google'
 console.log(findLongestWord('May the force be with you')); // 'force'
 ```
 
-# Задание 5
+# Задание 4
 
 Напиши функцию `formatString(string)` принимающую строку в параметр `string`.
 
@@ -132,7 +101,7 @@ console.log(
 // вернется форматированная строка
 ```
 
-# Задание 6
+# Задание 5
 
 Напиши функцию `checkForSpam(str)`, принимающую 1 параметр `string` - строку.
 Функция проверяет ее на содержание слов `spam` и `sale`. Если нашли зарещенное
@@ -151,7 +120,7 @@ console.log(checkForSpam('Get best sale offers now!')); // true
 console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
 ```
 
-# Задание 7
+# Задание 6
 
 Напиши скрипт со следующим функционалом:
 
@@ -176,7 +145,7 @@ const numbers = [];
 let total = 0;
 ```
 
-# Задание 8 - дополнительное, выполнять не обязательно
+# Задание 7 - дополнительное, выполнять не обязательно
 
 Есть массив `logins` с логинами пользователей. Напиши скрипт добавления логина в
 массив `logins`. Добавляемый логин должен:
