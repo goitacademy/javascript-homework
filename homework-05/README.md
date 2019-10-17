@@ -96,10 +96,10 @@ builder.append('^');
 console.log(builder.value); // '.^'
 
 builder.prepend('^');
-console.log(builder.value; // '^.^'
+console.log(builder.value); // '^.^'
 
 builder.pad('=');
-console.log(builder.value; // '=^.^='
+console.log(builder.value); // '=^.^='
 ```
 
 # Задание 5
@@ -178,7 +178,7 @@ mustang.drive(1);
 mustang.turnOff();
 
 Car.getSpecs(mustang);
-// maxSpeed: 200, speed: 0, isOn: false, distance: 130, price: 2000
+// maxSpeed: 200, speed: 30, isOn: false, distance: 130, price: 2000
 
 console.log(mustang.price); // 2000
 mustang.price = 4000;
