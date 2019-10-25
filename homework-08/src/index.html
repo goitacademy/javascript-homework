@@ -9,17 +9,17 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- В этот список добавляй элементы галереи -->
-    <ul class="gallery"></ul>
+    <ul class="gallery js-gallery"></ul>
 
     <!--
-      Модальное окно для полноразмерного изображения.
-      Для того чтобы открыть, добавь на div.lightbox CSS-класс is-open
+      Модальное окно для полноразмерного изображения
+      Для того чтобы открыть, необходимо добавить на div.lightbox CSS-класс is-open
     -->
-    <div class="lightbox">
+    <div class="lightbox js-lightbox">
       <div class="lightbox__overlay"></div>
 
       <div class="lightbox__content">
@@ -35,6 +35,6 @@
       </button>
     </div>
 
-    <script src="./gallery-items.js" type="module"></script>
+    <script src="gallery-items.js" type="module"></script>
   </body>
 </html>

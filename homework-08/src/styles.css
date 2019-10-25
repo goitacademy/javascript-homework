@@ -9,19 +9,24 @@ html {
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   margin: 0;
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   background-color: #fff;
   color: #212121;
 }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  grid-gap: 16px;
-  max-width: 1440px;
+  width: 1200px;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-auto-rows: 240px;
+  grid-gap: 12px;
   padding: 0;
-  margin: 0;
   list-style: none;
   margin-left: auto;
   margin-right: auto;
@@ -33,11 +38,15 @@ body {
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
+.gallery__image:hover {
+  transform: scale(1.03);
+}
+
 .gallery__image {
-  display: block;
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: transform 200ms ease-in-out;
 }
 
 .gallery__link {
@@ -68,14 +77,6 @@ body {
 
 .gallery__item:hover .gallery__icon {
   opacity: 1;
-}
-
-.gallery__image {
-  transition: transform 200ms ease-in-out;
-}
-
-.gallery__image:hover {
-  transform: scale(1.03);
 }
 
 /* Lightbox */
