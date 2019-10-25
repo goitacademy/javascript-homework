@@ -9,10 +9,11 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-
   <body>
     <div class="toolbar">
+      <!-- Разметка переключателя темы -->
       <div class="theme-switch">
         <svg
           aria-hidden="true"
@@ -31,7 +32,7 @@
 
         <div class="switch">
           <input
-            class="switch__input"
+            class="switch__input js-switch-input"
             type="checkbox"
             name="theme"
             id="theme-switch-control"
@@ -62,6 +63,7 @@
       </div>
     </div>
 
-    <ul class="menu" id="menu"></ul>
+    <!-- В этот список рендери разметку меню -->
+    <ul class="menu js-menu"></ul>
   </body>
 </html>
