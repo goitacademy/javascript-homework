@@ -118,7 +118,7 @@ body {
   transition: transform 200ms ease-in-out;
 }
 
-.lightbox___image {
+.lightbox__image {
   width: auto;
   height: auto;
   max-height: 100vh;
