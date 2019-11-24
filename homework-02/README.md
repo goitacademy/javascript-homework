@@ -73,7 +73,7 @@ console.log(findLongestWord('May the force be with you')); // 'force'
 
 # Задание 4
 
-Напиши функцию `formatString(string)` принимающую строку в параметр `string`.
+Напиши функцию `formatString(string)` принимающую строку.
 
 - Если длина строки не превышает `40 символов`, функция возвращает ее в исходном
   виде.

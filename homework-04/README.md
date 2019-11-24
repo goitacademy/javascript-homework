@@ -46,7 +46,7 @@ console.table(account.showOrders()); // ['order-1', 'order-2', 'order-3', 'order
 
 ```js
 const inventory = {
-  items: ['Монорельса', 'Фильтр'],
+  items: ['Knife', 'Gas mask'],
   add(itemName) {
     console.log(`Adding ${itemName} to inventory`);
 
@@ -64,15 +64,15 @@ const invokeInventoryAction = function(itemName, action) {
   action(itemName);
 };
 
-invokeInventoryAction('Аптечка', inventory.add);
-// Invoking action on Аптечка
-// Adding Аптечка to inventory
+invokeInventoryAction('Medkit', inventory.add);
+// Invoking action on Medkit
+// Adding Medkit to inventory
 
-console.log(inventory.items); // ['Монорельса', 'Фильтр', 'Аптечка']
+console.log(inventory.items); // ['Knife', 'Gas mask', 'Medkit']
 
-invokeInventoryAction('Фильтр', inventory.remove);
-// Invoking action on Фильтр
-// Removing Фильтр from inventory
+invokeInventoryAction('Gas mask', inventory.remove);
+// Invoking action on Gas mask
+// Removing Gas mask from inventory
 
-console.log(inventory.items); // ['Монорельса', 'Аптечка']
+console.log(inventory.items); // ['Knife', 'Medkit']
 ```
