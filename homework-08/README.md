@@ -54,10 +54,6 @@
       data-source="https://cdn.pixabay.com/photo/2010/12/13/10/13/tulips-2546_1280.jpg"
       alt="Tulips"
     />
-
-    <span class="gallery__icon">
-      <i class="material-icons">zoom_out_map</i>
-    </span>
   </a>
 </li>
 ```
