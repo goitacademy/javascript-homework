@@ -127,13 +127,13 @@ body {
   cursor: pointer;
   transition: background-color 200ms ease-in-out;
   outline: none;
+  background-image: url('../images/icon-close.svg');
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
 }
 
 .lightbox__button:hover,
 .lightbox__button:focus {
   background-color: rgba(0, 0, 0, 0.5);
-}
-
-.lightbox__button i {
-  font-size: 36px;
 }
