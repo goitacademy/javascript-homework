@@ -196,7 +196,7 @@ mustang.drive(1);
 mustang.turnOff();
 
 Car.getSpecs(mustang);
-// maxSpeed: 200, speed: 30, isOn: false, distance: 130, price: 2000
+// maxSpeed: 200, speed: 0, isOn: false, distance: 130, price: 2000
 
 console.log(mustang.price); // 2000
 mustang.price = 4000;
