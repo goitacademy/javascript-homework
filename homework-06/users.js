@@ -60,7 +60,7 @@ export default [
     age: 27,
   },
   {
-    guid: '150b00fb-dd82-427d-9faf-2879ea87c695',
+    id: '150b00fb-dd82-427d-9faf-2879ea87c695',
     name: 'Blackburn Dotson',
     email: 'blackburndotson@furnigeer.com',
     eyeColor: 'brown',
