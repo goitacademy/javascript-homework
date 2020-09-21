@@ -1,9 +1,9 @@
 export default [
   {
     preview:
-      'https://cdn.pixabay.com/photo/2019/05/14/16/43/hokkaido-4202825__340.jpg',
+      'https://cdn.pixabay.com/photo/2019/05/14/16/43/himilayan-blue-poppy-4202825__340.jpg',
     original:
-      'https://cdn.pixabay.com/photo/2019/05/14/16/43/hokkaido-4202825_1280.jpg',
+      'https://cdn.pixabay.com/photo/2019/05/14/16/43/himilayan-blue-poppy-4202825_1280.jpg',
     description: 'Hokkaido Flower',
   },
   {
@@ -15,9 +15,9 @@ export default [
   },
   {
     preview:
-      'https://cdn.pixabay.com/photo/2019/05/16/09/47/view-4206785__340.jpg',
+      'https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785__340.jpg',
     original:
-      'https://cdn.pixabay.com/photo/2019/05/16/09/47/view-4206785_1280.jpg',
+      'https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785_1280.jpg',
     description: 'Aerial Beach View',
   },
   {
