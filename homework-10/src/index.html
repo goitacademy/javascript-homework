@@ -17,8 +17,6 @@
       <div class="theme-switch">
         <svg
           aria-hidden="true"
-          data-prefix="fas"
-          data-icon="sun"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
@@ -30,26 +28,27 @@
           ></path>
         </svg>
 
-        <div class="switch">
+        <div class="theme-switch__control">
           <input
-            class="switch__input js-switch-input"
+            class="theme-switch__toggle"
             type="checkbox"
             name="theme"
-            id="theme-switch-control"
+            id="theme-switch-toggle"
+            aria-label="Переключить между тёмной и светлой темой"
           />
+
           <label
             aria-hidden="true"
-            class="switch__label"
-            for="theme-switch-control"
-            >On</label
+            class="theme-switch__track"
+            for="theme-switch-toggle"
           >
-          <div aria-hidden="true" class="switch__marker"></div>
+          </label>
+
+          <div aria-hidden="true" class="theme-switch__marker"></div>
         </div>
 
         <svg
           aria-hidden="true"
-          data-prefix="fas"
-          data-icon="moon"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
