@@ -18,8 +18,8 @@
 
 ![Превью страницы](preview.jpg)
 
-- Обязательно используй `Webpack` для сборки и деплоя,
-  [ссылка на готовую сборку](https://github.com/luxplanjay/webpack-starter-kit)
+- Обязательно используй `Webpack` для сборки и деплоя (
+  [ссылка на готовую сборку](https://github.com/luxplanjay/webpack-starter-kit))
 - В папке [src](./src) ты найдешь стартовую разметку, стили и данные
 - Массив объектов блюд лежит в [menu.json](./src/menu.json)
 
