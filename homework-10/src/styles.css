@@ -37,7 +37,7 @@ body.dark-theme {
 .theme-switch {
   display: flex;
   align-items: center;
-  transition: color 150ms ease-in 0;
+  transition: color 150ms ease-in;
 }
 
 .theme-switch__icon {
