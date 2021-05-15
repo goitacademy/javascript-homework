@@ -19,9 +19,8 @@
 ![Превью страницы](preview.jpg)
 
 - Обязательно используй `Webpack` или `Parcel` для сборки и деплоя проекта.
-  Настраивать собственную сборку не нужно, вот ссылки на готовые, читай README и
-  используй - [Parcel](https://github.com/goitacademy/parcel-project-template)
-  или [Webpack](https://github.com/luxplanjay/webpack-starter-kit).
+  Настраивать собственную сборку не нужно, используй готовую
+  [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
 - В папке [src](./src) ты найдешь стартовую разметку, стили и данные
 - Массив объектов блюд лежит в [menu.json](./src/menu.json)
 
