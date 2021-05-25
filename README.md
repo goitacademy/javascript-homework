@@ -1,1 +1,1 @@
-# GoIT JavaScript Course Homework
+# Домашние работы курса JavaScript
