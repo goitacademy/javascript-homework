@@ -111,10 +111,10 @@ const ingredients = [
 ## Задание 3
 
 Напиши скрипт для создания галереи изображений по массиву данных. В HTML есть
-список `ul#gallery`.
+список `ul.gallery`.
 
 ```html
-<ul id="gallery"></ul>
+<ul class="gallery"></ul>
 ```
 
 Используй массив объектов `images` для создания тегов `<img>` вложенных в
@@ -122,21 +122,21 @@ const ingredients = [
 `insertAdjacentHTML()`.
 
 - Все элементы галереи должны добавляться в DOM за одну операцию вставки.
-- Добавь минимальное оформление галереи флексбоксами или гридами через
-  css-классы.
+- Добавь минимальное оформление галереи флексбоксами или гридами через CSS
+  классы.
 
 ```js
 const images = [
   {
-    url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260',
     alt: 'White and Black Long Fur Cat',
   },
   {
-    url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260',
     alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
   },
   {
-    url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260',
     alt: 'Group of Horses Running',
   },
 ];
@@ -223,7 +223,7 @@ const images = [
 
 ## Задание 8
 
-Напиши скрипт управления формой входа.
+Напиши скрипт управления формой логина.
 
 ```html
 <form class="login-form">
@@ -243,7 +243,7 @@ const images = [
 2. При отправке формы страница не должна перезагружаться.
 3. Если в форме есть незаполненные поля, выводи `alert` с предупреждением о том,
    что все поля должны быть заполнены.
-4. Если пользотель заполнил все поля и отправил форму, собери значения полей в
+4. Если пользователь заполнил все поля и отправил форму, собери значения полей в
    обьект, где имя поля будет именем свойства, а значение поля - значением
    свойства. Для доступа к элементам формы используй свойство `elements`.
 5. Выведи обьект с введенными данными в консоль и очисти значения полей формы
@@ -280,8 +280,8 @@ function getRandomHexColor() {
 ```html
 <div id="controls">
   <input type="number" min="1" max="100" step="1" />
-  <button type="button" data-action="create">Create</button>
-  <button type="button" data-action="destroy">Destroy</button>
+  <button type="button" data-create>Create</button>
+  <button type="button" data-destroy>Destroy</button>
 </div>
 
 <div id="boxes"></div>

@@ -11,15 +11,15 @@
     <form class="age-calculator">
       <label>
         Month:
-        <input type="number" name="month" />
+        <input type="number" name="month" min="1" max="12" required />
       </label>
       <label>
         Day:
-        <input type="number" name="day" />
+        <input type="number" name="day" min="1" max="31" required />
       </label>
       <label>
         Year:
-        <input type="number" name="year" />
+        <input type="number" name="year" min="1900" required />
       </label>
       <button type="submit">Calculate age</button>
     </form>

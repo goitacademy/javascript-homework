@@ -128,15 +128,15 @@ const ingredients = [
 ```js
 const images = [
   {
-    url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260',
     alt: 'White and Black Long Fur Cat',
   },
   {
-    url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260',
     alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
   },
   {
-    url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260',
     alt: 'Group of Horses Running',
   },
 ];
@@ -279,8 +279,8 @@ function getRandomHexColor() {
 ```html
 <div id="controls">
   <input type="number" min="1" max="100" step="1" />
-  <button type="button" data-action="create">Create</button>
-  <button type="button" data-action="destroy">Destroy</button>
+  <button type="button" data-create>Create</button>
+  <button type="button" data-destroy>Destroy</button>
 </div>
 
 <div id="boxes"></div>

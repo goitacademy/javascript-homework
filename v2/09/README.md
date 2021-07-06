@@ -2,52 +2,39 @@
 
 # Критерии приема
 
-- Созданы репозитории `goit-js-hw-11-color-switch`,
-  `goit-js-hw-11-promisification` и `goit-js-hw-11-timer`.
+- Создан репозиторий `goit-js-hw-09`.
 - При сдаче домашней работы есть две ссылки для каждого проекта: на исходные
   файлы и рабочую страницу на GitHub pages.
-- При посещении рабочей страницы (GitHub pages) задания, в консоли нету ошибок и
-  предупреждений
-- Имена переменных и функций понятные, описательные
-- Код отформатирован с помощью `Prettier`
+- При посещении рабочей страницы задания, в консоли нету ошибок и предупреждений
+- Проект собран с помощью
+  [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
+- Код отформатирован `Prettier`.
 
 ## Задание 1 - переключатель цветов
 
-Есть массив цветов в hex-формате и кнопки `Start` и `Stop`.
+В HTML есть кнопки `Start` и `Stop`.
 
 ```html
-<button type="button" data-action="start">Start</button>
-<button type="button" data-action="stop">Stop</button>
-```
-
-```js
-const colors = [
-  '#FFFFFF',
-  '#2196F3',
-  '#4CAF50',
-  '#FF9800',
-  '#009688',
-  '#795548',
-];
+<button type="button" data-start>Start</button>
+<button type="button" data-stop>Stop</button>
 ```
 
 Напиши скрипт, который после нажатия кнопки `Start`, раз в секунду меняет цвет
-фона `body` на случайное значение из массива используя инлайн-стиль. При нажатии
-на кнопку `Stop`, изменение цвета фона должно останавливаться.
+фона `<body>` на случайное значение используя инлайн стиль. При нажатии на
+кнопку `Stop`, изменение цвета фона должно останавливаться.
 
 > ⚠️ Учти, на кнопку `Start` можно нажать бесконечное количество раз. Сделай
 > так, чтобы пока изменение темы запушено, кнопка `Start` была не активна.
 
-Для генерации случайного числа (индекс элемента массива цветов), используй
-функцию `randomIntegerFromInterval`.
+Для генерации случайного цвета используй функцию `getRandomHexColor`.
 
 ```js
-const randomIntegerFromInterval = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-};
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
 ```
 
-## Задание 2 - Промисификация
+## Задание 2 - промисификация
 
 ### Задание 1
 
@@ -157,38 +144,38 @@ makeTransaction({ id: 72, amount: 75 }).then(logSuccess).catch(logError);
 makeTransaction({ id: 73, amount: 100 }).then(logSuccess).catch(logError);
 ```
 
-## Задание 3 - Таймер обратного отсчета
+## Задание 3 - таймер обратного отсчета
 
-Создай плагин настраиваемого таймера, который ведет обратный отсчет до
-предварительно определенной даты. Такой плагин может использоваться в блогах и
+Напиши скрипт таймера, который ведёт обратный отсчет до предварительно
+определенной даты. Такой таймер может использоваться в блогах и
 интернет-магазинах, страницах регистрации событий, во время технического
 обслуживания и т. д.
 
 ![preview](preview.gif)
 
 Плагин ожидает следующую HTML-разметку и показывает четыре цифры: дни, часы,
-минуты и секунды в формате `XX:XX:XX:XX`. Количество дней может состоять из
+минуты и секунды в формате `xx:xx:xx:xx`. Количество дней может состоять из
 более чем двух цифр.
 
 ```html
-<div class="timer" id="timer-1">
+<div class="timer">
   <div class="field">
-    <span class="value" data-value="days">11</span>
+    <span class="value" data-days>11</span>
     <span class="label">Days</span>
   </div>
 
   <div class="field">
-    <span class="value" data-value="hours">11</span>
+    <span class="value" data-hours>11</span>
     <span class="label">Hours</span>
   </div>
 
   <div class="field">
-    <span class="value" data-value="mins">11</span>
+    <span class="value" data-minutes>11</span>
     <span class="label">Minutes</span>
   </div>
 
   <div class="field">
-    <span class="value" data-value="secs">11</span>
+    <span class="value" data-seconds>11</span>
     <span class="label">Seconds</span>
   </div>
 </div>
@@ -204,32 +191,32 @@ new CountdownTimer({
 });
 ```
 
-Для подсчета значений используй следующие готовые формулы, где `time` - разница
-между `targetDate` и текущей датой.
+Для подсчета значений используй готовую функцию, где `ms` - разница между
+`targetDate` и текущей датой в миллисекундах.
 
 ```js
-/*
- * Оставшиеся дни: делим значение UTC на 1000 * 60 * 60 * 24, количество
- * миллисекунд в одном дне (миллисекунды * секунды * минуты * часы)
- */
-const days = Math.floor(time / (1000 * 60 * 60 * 24));
+function convertMs(ms) {
+  // Number of milliseconds per unit of time
+  const second = 1000;
+  const minute = second * 60;
+  const hour = minute * 60;
+  const day = hour * 24;
 
-/*
- * Оставшиеся часы: получаем остаток от предыдущего расчета с помощью оператора
- * остатка % и делим его на количество миллисекунд в одном часе
- * (1000 * 60 * 60 = миллисекунды * минуты * секунды)
- */
-const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  // Remaining days
+  const days = Math.floor(ms / day);
+  // Remaining hours
+  const hours = Math.floor((ms % day) / hour);
+  // Remaining minutes
+  const minutes = Math.floor(((ms % day) % hour) / minute);
+  // Remaining seconds
+  const seconds = Math.floor((((ms % day) % hour) % minute) / second);
 
-/*
- * Оставшиеся минуты: получаем оставшиеся минуты и делим их на количество
- * миллисекунд в одной минуте (1000 * 60 = миллисекунды * секунды)
- */
-const mins = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+  return { days, hours, minutes, seconds };
+}
 
-/*
- * Оставшиеся секунды: получаем оставшиеся секунды и делим их на количество
- * миллисекунд в одной секунде (1000)
- */
-const secs = Math.floor((time % (1000 * 60)) / 1000);
+console.log(convertMs(2000)); // {days: 0, hours: 0, minutes: 0, seconds: 2}
+console.log(convertMs(140000)); //{days: 0, hours: 0, minutes: 2, seconds: 20}
+console.log(convertMs(24140000)); // {days: 0, hours: 6, minutes: 42, seconds: 20}
 ```
+
+## Задание 4 - калькулятор возраста

@@ -10,7 +10,7 @@
 - Имена переменных и функций понятные, описательные.
 - Проект собран с помощью
   [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-- Код отформатирован с помощью `Prettier`.
+- Код отформатирован `Prettier`.
 - Добавь минимальную стилизацию.
 - Есть файл `fetchCountries.js` с дефолтным экспортом функции
   `fetchCountries(searchQuery)`, возвращающей промис с массивом стран, результат

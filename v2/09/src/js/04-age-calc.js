@@ -1,14 +1,15 @@
+const mSecondsPerYear = 31_556_952_000;
 const form = document.querySelector('.age-calculator');
 
 form.addEventListener('submit', e => {
   e.preventDefault();
   const { month, day, year } = form.elements;
-  const birthDay = new Date(year.value, month.value, day.value);
+  const birthDay = new Date(year.value, month.value - 1, day.value);
 
   if (
-    birthDay.getDate() != day ||
-    birthDay.getMonth() != month ||
-    birthDay.getFullYear() != year
+    birthDay.getDate() != day.value ||
+    birthDay.getMonth() != month.value - 1 ||
+    birthDay.getFullYear() != year.value
   ) {
     return alert('Пожалуйста, введите правильную дату рождения');
   }
@@ -19,8 +20,9 @@ form.addEventListener('submit', e => {
   today.setSeconds(0);
 
   if (birthDay > today) {
-    return alert('Вы из будущего или ещё не родились');
+    return alert('Вы из будущего, что за магия?');
   }
 
-  alert(Math.floor((today - birthDay) / 31556952000));
+  alert(Math.floor((today - birthDay) / mSecondsPerYear));
+  form.reset();
 });
