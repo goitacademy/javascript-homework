@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countdown timer</title>
   </head>
+  <style>
+    #date-selector {
+      margin-bottom: 16px;
+    }
+  </style>
   <body>
     <p><a href="index.html">Go back</a></p>
+
+    <input type="date" id="date-selector" />
+    <button type="button" data-start>Start countdown</button>
 
     <div class="timer">
       <div class="field">
@@ -30,6 +38,6 @@
       </div>
     </div>
 
-    <script src="js/03-timer.js"></script>
+    <script src="js/02-timer.js"></script>
   </body>
 </html>
