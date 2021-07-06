@@ -152,15 +152,13 @@ const toggleUserState = (allUsers, username, callback) => {
   callback(updatedUsers);
 };
 
-const logger = data => console.table(data);
-
 // Currently the function works like this
-toggleUserState(users, 'Mango', logger);
-toggleUserState(users, 'Ajax', logger);
+toggleUserState(users, 'Mango', console.table);
+toggleUserState(users, 'Ajax', console.table);
 
 // The function should work like this
-toggleUserState(users, 'Mango').then(logger);
-toggleUserState(users, 'Ajax').then(logger);
+toggleUserState(users, 'Mango').then(console.table);
+toggleUserState(users, 'Ajax').then(console.table);
 ```
 
 ### Подзадание 3

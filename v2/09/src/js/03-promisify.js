@@ -25,15 +25,13 @@ const toggleUserState = (allUsers, username, callback) => {
   callback(updatedUsers);
 };
 
-const logger = data => console.table(data);
-
 // Currently the function works like this
-toggleUserState(users, 'Mango', logger);
-toggleUserState(users, 'Ajax', logger);
+// toggleUserState(users, 'Mango', console.table);
+// toggleUserState(users, 'Ajax', console.table);
 
 // The function should work like this
-toggleUserState(users, 'Mango').then(logger);
-toggleUserState(users, 'Ajax').then(logger);
+// toggleUserState(users, 'Mango').then(console.table);
+// toggleUserState(users, 'Ajax').then(console.table);
 
 // ======================= Subtask 3 =======================
 const randomIntegerFromInterval = (min, max) => {
@@ -63,13 +61,13 @@ const logError = id => {
 };
 
 // Currently the function works like this
-makeTransaction({ id: 70, amount: 150 }, logSuccess, logError);
-makeTransaction({ id: 71, amount: 230 }, logSuccess, logError);
-makeTransaction({ id: 72, amount: 75 }, logSuccess, logError);
-makeTransaction({ id: 73, amount: 100 }, logSuccess, logError);
+// makeTransaction({ id: 70, amount: 150 }, logSuccess, logError);
+// makeTransaction({ id: 71, amount: 230 }, logSuccess, logError);
+// makeTransaction({ id: 72, amount: 75 }, logSuccess, logError);
+// makeTransaction({ id: 73, amount: 100 }, logSuccess, logError);
 
 // The function should work like this
-makeTransaction({ id: 70, amount: 150 }).then(logSuccess).catch(logError);
-makeTransaction({ id: 71, amount: 230 }).then(logSuccess).catch(logError);
-makeTransaction({ id: 72, amount: 75 }).then(logSuccess).catch(logError);
-makeTransaction({ id: 73, amount: 100 }).then(logSuccess).catch(logError);
+// makeTransaction({ id: 70, amount: 150 }).then(logSuccess).catch(logError);
+// makeTransaction({ id: 71, amount: 230 }).then(logSuccess).catch(logError);
+// makeTransaction({ id: 72, amount: 75 }).then(logSuccess).catch(logError);
+// makeTransaction({ id: 73, amount: 100 }).then(logSuccess).catch(logError);
