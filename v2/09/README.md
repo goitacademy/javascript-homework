@@ -8,7 +8,7 @@
 - При посещении рабочей страницы задания, в консоли нету ошибок и
   предупреждений.
 - Проект собран с помощью
-  [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
+  [**parcel-project-template**](https://github.com/goitacademy/parcel-project-template).
 - Код отформатирован `Prettier`.
 
 ## Задание 1 - переключатель цветов
@@ -41,7 +41,7 @@ function getRandomHexColor() {
 таймер может использоваться в блогах и интернет-магазинах, страницах регистрации
 событий, во время технического обслуживания и т. д.
 
-![preview](preview.gif)
+![Preview](preview.gif)
 
 В HTML есть готовая разметка таймера, поле для выбора конечной даты и кнопка,
 при клике по которой таймер должен запускаться. Добавь минимальное оформление
@@ -73,7 +73,7 @@ function getRandomHexColor() {
 
 - Если пользователь выбрал дату в прошлом, необходимо показать уведомление
   `"Please choose a date in the future"`. Используй библиотеку
-  [sweetalert2](https://sweetalert2.github.io/#download).
+  [**sweetalert2**](https://sweetalert2.github.io/#download).
 - Кнопка должа быть не активна до тех пор, пока пользователь не выбрал дату в
   будущем.
 - Если выбрана валидная дата и пользователь нажал кнопку - начинается отсчет

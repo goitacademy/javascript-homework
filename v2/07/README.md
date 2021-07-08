@@ -24,7 +24,7 @@
 Создай галерею с возможностью клика по её элементам и просмотра полноразмерного
 изображения в модальном окне.
 
-![xxx](preview.gif)
+![Preview](preview.gif)
 
 Выполняй это задание в файлах `01-gallery.html` и `01-gallery.js`. Разбей его на
 несколько подзадач:
@@ -34,15 +34,16 @@
 2. Реализация делегирования на `ul.js-gallery` и получение `url` большого
    изображения.
 3. Подключение скрипта и стилей библиотеки модального окна
-   [basiclightbox](https://basiclightbox.electerious.com/). Используй
-   [CDN сервис jsdelivr](https://www.jsdelivr.com/package/npm/basiclightbox?path=dist)
+   [**basicLightbox**](https://basiclightbox.electerious.com/). Используй
+   [**CDN сервис jsdelivr**](https://www.jsdelivr.com/package/npm/basiclightbox?path=dist)
    и добавь в проект ссылки на минифицированные (`.min`) файлы библиотеки.
 4. Открытие модального окна по клику на элементе галереи. Для этого ознакомься с
-   [документацией](https://github.com/electerious/basicLightbox#readme) и
-   [примерами](https://basiclightbox.electerious.com/).
+   [**документацией**](https://github.com/electerious/basicLightbox#readme) и
+   [**примерами**](https://basiclightbox.electerious.com/).
 5. Замена значения атрибута `src` элемента `<img>` в модальном окне перед
    открытием. Используй готовую разметку модального окна с изображением из
-   примеров библиотеки [basiclightbox](https://basiclightbox.electerious.com/).
+   примеров библиотеки
+   [**basicLightbox**](https://basiclightbox.electerious.com/).
 
 ### Разметка элемента галереи
 
@@ -81,8 +82,8 @@
 ## Задание 2 - библиотека `SimpleLightbox`
 
 Сделай такую же галерею как в первом задании, но используя библиотеку
-[SimpleLightbox](https://simplelightbox.com/), которая возьмет на себя обработку
-кликов по изображениям, открытие и закрытие модального окна, а также
+[**SimpleLightbox**](https://simplelightbox.com/), которая возьмет на себя
+обработку кликов по изображениям, открытие и закрытие модального окна, а также
 пролистывание изображений при помощи клавиатуры.
 
 Выполняй это задание в файлах `02-lightbox.html` и `02-lightbox.js`. Разбей его
@@ -91,12 +92,12 @@
 1. Создание и рендер разметки по массиву данных `galleryItems` и
    предоставленному шаблону элемента галереи.
 2. Подключение скрипта и стилей библиотеки используя
-   [CDN сервис cdnjs](https://cdnjs.com/libraries/simplelightbox). Необходимо
-   добавить ссылки на два файла: `simple-lightbox.min.js` и
+   [**CDN сервис cdnjs**](https://cdnjs.com/libraries/simplelightbox).
+   Необходимо добавить ссылки на два файла: `simple-lightbox.min.js` и
    `simple-lightbox.min.css`.
 3. Инициализация библиотеки после того как элементы галереи созданы и добавлены
    в `ul.js-gallery`. Для этого ознакомься с документацией
-   [SimpleLightbox](https://simplelightbox.com/) - в первую очередь секции
+   [**SimpleLightbox**](https://simplelightbox.com/) - в первую очередь секции
    «Usage» и «Markup».
 4. Посмотри в документации секцию «Options» и добавь отображение подписей к
    изображениям из атрибута `alt`. Пусть подпись будет снизу и появляется через
