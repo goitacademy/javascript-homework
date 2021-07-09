@@ -11,6 +11,7 @@
   [**parcel-project-template**](https://github.com/goitacademy/parcel-project-template).
 - Для HTTP запросов использована библиотека
   [**axios**](https://axios-http.com/).
+- Используется синтаксис `async/await`.
 - Для уведомлений использована библиотека
   [**notiflix**](https://www.notiflix.com/).
 - Код отформатирован `Prettier`.
