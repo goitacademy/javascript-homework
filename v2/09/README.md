@@ -57,8 +57,7 @@ function getRandomHexColor() {
     <span class="label">Days</span>
   </div>
   <div class="field">
-    <span class="value" data-hours>11</span>
-    <span class="label">Hours</span>
+    <span class="value" data-hours>11</span><span class="label">Hours</span>
   </div>
   <div class="field">
     <span class="value" data-minutes>11</span>
@@ -81,7 +80,11 @@ function getRandomHexColor() {
 
 Скрипт должен вычислять раз в секунду сколько времени осталось до указанной даты
 и обновлять интерфейс, показывая четыре цифры: дни, часы, минуты и секунды в
-формате `xx:xx:xx:xx`. Количество дней может состоять из более чем двух цифр.
+формате `xx:xx:xx:xx`.
+
+- Количество дней может состоять из более чем двух цифр.
+- Таймер должен останавливаться когда дошел до конечной даты, то есть
+  `00:00:00:00`.
 
 Для подсчета значений используй готовую функцию, где `ms` - разница между
 конечной и текущей датой в миллисекундах.
@@ -198,12 +201,8 @@ const logError = id => {
 // Currently the function works like this
 makeTransaction({ id: 70, amount: 150 }, logSuccess, logError);
 makeTransaction({ id: 71, amount: 230 }, logSuccess, logError);
-makeTransaction({ id: 72, amount: 75 }, logSuccess, logError);
-makeTransaction({ id: 73, amount: 100 }, logSuccess, logError);
 
 // The function should work like this
 makeTransaction({ id: 70, amount: 150 }).then(logSuccess).catch(logError);
 makeTransaction({ id: 71, amount: 230 }).then(logSuccess).catch(logError);
-makeTransaction({ id: 72, amount: 75 }).then(logSuccess).catch(logError);
-makeTransaction({ id: 73, amount: 100 }).then(logSuccess).catch(logError);
 ```
