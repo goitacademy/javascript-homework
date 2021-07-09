@@ -36,6 +36,7 @@ https://user-images.githubusercontent.com/17479434/125040406-49a6f600-e0a0-11eb-
     autocomplete="off"
     placeholder="Search images..."
   />
+  <button type="submit">Search</button>
 </form>
 ```
 
