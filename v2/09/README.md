@@ -5,14 +5,24 @@
 - Создан репозиторий `goit-js-hw-09`.
 - При сдаче домашней работы есть две ссылки для каждого проекта: на исходные
   файлы и рабочую страницу на `GitHub Pages`.
-- При посещении рабочей страницы задания, в консоли нету ошибок и
-  предупреждений.
+- При посещении живой страницы задания, в консоли нету ошибок и предупреждений.
 - Проект собран с помощью
   [**parcel-project-template**](https://github.com/goitacademy/parcel-project-template).
 - Код отформатирован `Prettier`.
 
+## Стартовые файлы
+
+В [**папке src**](./src) ты найдешь стартовые файлы с готовой разметкой, стилями
+и подключенными файлами скриптов для каждого задания. Скопируй их себе в проект,
+полностью заменив папку `src` в
+[**parcel-project-template**](https://github.com/goitacademy/parcel-project-template).
+Для этого скачай весь этот репозиторий как архив или используй сервис
+[DownGit](https://downgit.github.io/) для скачивания отдельной папки из
+репозитория.
+
 ## Задание 1 - переключатель цветов
 
+Выполняй это задание в файлах `01-color-switcher.html` и `01-color-switcher.js`.
 В HTML есть кнопки `Start` и `Stop`.
 
 ```html
@@ -25,7 +35,8 @@
 кнопку `Stop`, изменение цвета фона должно останавливаться.
 
 > ⚠️ Учти, на кнопку `Start` можно нажать бесконечное количество раз. Сделай
-> так, чтобы пока изменение темы запушено, кнопка `Start` была не активна.
+> так, чтобы пока изменение темы запушено, кнопка `Start` была не активна
+> (disabled).
 
 Для генерации случайного цвета используй функцию `getRandomHexColor`.
 
@@ -37,59 +48,71 @@ function getRandomHexColor() {
 
 ## Задание 2 - таймер обратного отсчета
 
-Напиши скрипт таймера, который ведёт обратный отсчет до определенной даты. Такой
-таймер может использоваться в блогах и интернет-магазинах, страницах регистрации
-событий, во время технического обслуживания и т. д.
+Выполняй это задание в файлах `01-timer.html` и `01-timer.js`. Напиши скрипт
+таймера, который ведёт обратный отсчет до определенной даты. Такой таймер может
+использоваться в блогах и интернет-магазинах, страницах регистрации событий, во
+время технического обслуживания и т. д.
 
-![Preview](preview.gif)
+![Countdown timer preview](preview.gif)
 
-В HTML есть готовая разметка таймера, поле для выбора конечной даты и кнопка,
-при клике по которой таймер должен запускаться. Добавь минимальное оформление
-элементов интерфейса.
+В HTML есть готовая разметка таймера, поле для выбора конечной даты и кнопки,
+при клике по которым таймер должен запускаться или останавливаться. Добавь
+минимальное оформление элементов интерфейса.
 
 ```html
 <input type="date" id="date-selector" />
-<button type="button" data-start>Start countdown</button>
+<button type="button" data-start>Start</button>
+<button type="button" data-stop>Stop</button>
 
 <div class="timer">
   <div class="field">
-    <span class="value" data-days>11</span>
+    <span class="value" data-days>00</span>
     <span class="label">Days</span>
   </div>
   <div class="field">
-    <span class="value" data-hours>11</span><span class="label">Hours</span>
+    <span class="value" data-hours>00</span>
+    <span class="label">Hours</span>
   </div>
   <div class="field">
-    <span class="value" data-minutes>11</span>
+    <span class="value" data-minutes>00</span>
     <span class="label">Minutes</span>
   </div>
   <div class="field">
-    <span class="value" data-seconds>11</span>
+    <span class="value" data-seconds>00</span>
     <span class="label">Seconds</span>
   </div>
 </div>
 ```
 
+- Если пользователь выбрал валидную дату (в будущем), интерфейс таймера
+  обновляется и видно сколько времени до выбранной даты.
+- Кнопка «Start» должа быть не активна до тех пор, пока пользователь не выбрал
+  дату в будущем.
+- Если выбрана валидная дата и пользователь нажал кнопку «Start» - начинается
+  отсчет времени.
+- Кнопка «Stop» должа быть активна только когда таймер запущен.
+- При нажатии на кнопку «Stop» таймер останавливается, а его интерфейс
+  обнуляется.
 - Если пользователь выбрал дату в прошлом, необходимо показать уведомление
-  `"Please choose a date in the future"`. Используй библиотеку
-  [**sweetalert2**](https://sweetalert2.github.io/#download).
-- Кнопка должа быть не активна до тех пор, пока пользователь не выбрал дату в
-  будущем.
-- Если выбрана валидная дата и пользователь нажал кнопку - начинается отсчет
-  времени.
+  `"Please choose a date in the future"` используя `window.alert()`.
 
 Скрипт должен вычислять раз в секунду сколько времени осталось до указанной даты
-и обновлять интерфейс, показывая четыре цифры: дни, часы, минуты и секунды в
-формате `xx:xx:xx:xx`.
+и обновлять интерфейс таймера, показывая четыре цифры: дни, часы, минуты и
+секунды в формате `xx:xx:xx:xx`.
 
 - Количество дней может состоять из более чем двух цифр.
 - Таймер должен останавливаться когда дошел до конечной даты, то есть
   `00:00:00:00`.
 
-Для подсчета значений используй готовую функцию, где `ms` - разница между
-конечной и текущей датой в миллисекундах.
+Для подсчета и форматирования значений используй готовые функции
+`addLeadingZero` и `convertMs`, где `ms` - разница между конечной и текущей
+датой в миллисекундах.
 
 ```js
+function addLeadingZero(value) {
+  return String(value).padStart(2, '0');
+}
+
 function convertMs(ms) {
   // Number of milliseconds per unit of time
   const second = 1000;
@@ -106,15 +129,30 @@ function convertMs(ms) {
   // Remaining seconds
   const seconds = Math.floor((((ms % day) % hour) % minute) / second);
 
-  return { days, hours, minutes, seconds };
+  return {
+    days: addLeadingZero(days),
+    hours: addLeadingZero(hours),
+    minutes: addLeadingZero(minutes),
+    seconds: addLeadingZero(seconds),
+  };
 }
 
-console.log(convertMs(2000)); // {days: 0, hours: 0, minutes: 0, seconds: 2}
-console.log(convertMs(140000)); //{days: 0, hours: 0, minutes: 2, seconds: 20}
-console.log(convertMs(24140000)); // {days: 0, hours: 6, minutes: 42, seconds: 20}
+console.log(convertMs(2000)); // {days: "00", hours: "00", minutes: "00", seconds: "02"}
+console.log(convertMs(140000)); // {days: "00", hours: "00", minutes: "02", seconds: "20"}
+console.log(convertMs(24140000)); // {days: "00", hours: "06", minutes: "42", seconds: "20"}
 ```
 
+### Библиотека уведомлений
+
+> ⚠️ Следующий функционал не обязателен при сдаче задания, но будет хорошей
+> дополнительной практикой.
+
+Для отображения уведомлений пользователю вместо `window.alert()` используй
+[**библиотеку notiflix**](https://github.com/notiflix/Notiflix).
+
 ## Задание 3 - промисификация функций
+
+Выполняй это задание в файлах `01-promisify.html` и `01-promisify.js`.
 
 ### Подзадание 1
 
@@ -160,7 +198,7 @@ const toggleUserState = (allUsers, username, callback) => {
 toggleUserState(users, 'Mango', console.table);
 toggleUserState(users, 'Ajax', console.table);
 
-// The function should work like this
+// Function should work like this
 toggleUserState(users, 'Mango').then(console.table);
 toggleUserState(users, 'Ajax').then(console.table);
 ```
@@ -202,7 +240,7 @@ const logError = id => {
 makeTransaction({ id: 70, amount: 150 }, logSuccess, logError);
 makeTransaction({ id: 71, amount: 230 }, logSuccess, logError);
 
-// The function should work like this
+// Fnction should work like this
 makeTransaction({ id: 70, amount: 150 }).then(logSuccess).catch(logError);
 makeTransaction({ id: 71, amount: 230 }).then(logSuccess).catch(logError);
 ```
