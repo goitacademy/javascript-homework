@@ -25,7 +25,7 @@
 Создай фронтенд часть приложения поиска данных о стране по её частичному или
 полному имени. Используй публичный API
 [**Rest Countries**](https://restcountries.eu/), а именно
-[**ресурс /name**](https://restcountries.eu/#api-endpoints-name), возвращающий
+[**ресурс name**](https://restcountries.eu/#api-endpoints-name), возвращающий
 массив объектов стран удовлетворивших критерий поиска. Добавь минимальное
 оформление элементов интерфейса.
 
@@ -34,7 +34,7 @@
 ### HTTP-запрос
 
 Напиши функцию `fetchCountries(name)` которая делает HTTP-запрос на
-[**ресурс /name**](https://restcountries.eu/#api-endpoints-name) и возвращает
+[**ресурс name**](https://restcountries.eu/#api-endpoints-name) и возвращает
 промис с массивом стран - результатом запроса. Вынеси её в отдельный файл
 `fetchCountries.js` и сделай именованный экспорт.
 
