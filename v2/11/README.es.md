@@ -11,7 +11,8 @@
   [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
 - Для HTTP запросов использована библиотека [axios](https://axios-http.com/).
 - Используется синтаксис `async/await`.
-- Для уведомлений использована библиотека [notiflix](https://www.notiflix.com/).
+- Для уведомлений использована библиотека
+  [notiflix](https://github.com/notiflix/Notiflix#readme).
 - Код отформатирован `Prettier`.
 
 # Задание - поиск изображений
@@ -69,7 +70,8 @@ https://user-images.githubusercontent.com/17479434/125040406-49a6f600-e0a0-11eb-
 Если бэкенд возвращает пустой массив, значит ничего подходящего найдено небыло.
 В таком случае показывай уведомление с текстом
 `"Sorry, there are no images matching your search query. Please try again."`.
-Для уведомлений используй библиотеку [notiflix](https://www.notiflix.com/).
+Для уведомлений используй библиотеку
+[notiflix](https://github.com/notiflix/Notiflix#readme).
 
 ## Галерея и карточка изображения
 
