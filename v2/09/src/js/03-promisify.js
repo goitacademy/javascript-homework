@@ -1,4 +1,6 @@
-// ======================= Subtask 1 =======================
+/**
+ * ======================= Subtask 1 =======================
+ */
 const delay = ms => {
   // Change this function
 };
@@ -10,7 +12,9 @@ delay(2000).then(logger); // Fulfilled after 2000ms
 delay(1000).then(logger); // Fulfilled after 1000ms
 delay(1500).then(logger); // Fulfilled after 1500ms
 
-// ======================= Subtask 2 =======================
+/**
+ * ======================= Subtask 2 =======================
+ */
 const users = [
   { name: 'Mango', active: true },
   { name: 'Poly', active: false },
@@ -33,7 +37,9 @@ const toggleUserState = (allUsers, username, callback) => {
 // toggleUserState(users, 'Mango').then(console.table);
 // toggleUserState(users, 'Ajax').then(console.table);
 
-// ======================= Subtask 3 =======================
+/**
+ * ======================= Subtask 3 =======================
+ */
 const randomIntegerFromInterval = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
