@@ -54,7 +54,7 @@ function getRandomHexColor() {
 использоваться в блогах и интернет-магазинах, страницах регистрации событий, во
 время технического обслуживания и т. д.
 
-https://user-images.githubusercontent.com/17479434/127641930-32727d91-0a57-415b-b7f2-a7eaa4198b84.mp4
+https://user-images.githubusercontent.com/17479434/127672390-2a51efe1-06fb-41dd-86dd-8542393d3043.mp4
 
 ### Элементы интефрейса
 
