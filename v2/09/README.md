@@ -23,7 +23,8 @@
 
 ## Задание 1 - переключатель цветов
 
-Выполняй это задание в файлах `01-color-switcher.html` и `01-color-switcher.js`. Посмотри демо видео работы переключателя.
+Выполняй это задание в файлах `01-color-switcher.html` и `01-color-switcher.js`.
+Посмотри демо видео работы переключателя.
 
 https://user-images.githubusercontent.com/17479434/127716753-fabd276f-6a7d-411b-bfa2-01c818f4ea66.mp4
 
