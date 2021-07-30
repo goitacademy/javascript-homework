@@ -54,20 +54,17 @@ function getRandomHexColor() {
 использоваться в блогах и интернет-магазинах, страницах регистрации событий, во
 время технического обслуживания и т. д.
 
-
 https://user-images.githubusercontent.com/17479434/127641930-32727d91-0a57-415b-b7f2-a7eaa4198b84.mp4
 
+### Элементы интефрейса
 
-<!-- ![Countdown timer preview](preview.gif) -->
-
-В HTML есть готовая разметка таймера, поле для выбора конечной даты и кнопки,
-при клике по которым таймер должен запускаться или останавливаться. Добавь
-минимальное оформление элементов интерфейса.
+В HTML есть готовая разметка таймера, поля выбора конечной даты и кнопки, при
+клике по которой таймер должен запускаться. Добавь минимальное оформление
+элементов интерфейса.
 
 ```html
-<input type="date" id="date-selector" />
+<input type="text" id="datetime-picker" />
 <button type="button" data-start>Start</button>
-<button type="button" data-stop>Stop</button>
 
 <div class="timer">
   <div class="field">
@@ -88,6 +85,49 @@ https://user-images.githubusercontent.com/17479434/127641930-32727d91-0a57-415b-
   </div>
 </div>
 ```
+
+### Библиотека `flatpickr`
+
+Используй библиотеку [flatpickr](https://flatpickr.js.org/) для того чтобы
+позволить пользователю кроссбраузерно выбрать конечную дату и время в одном
+элементе интерфейса.
+
+Для того чтобы подключить CSS код библиотеки в проект, необходимо добавить еще
+один импорт, кроме того который описан в документации.
+
+```js
+// Описан в документации
+import flatpickr from 'flatpickr';
+// Дополнительный импорт стилей
+import 'flatpickr/dist/flatpickr.min.css';
+```
+
+Библиотека ожидает что её инициализируют на элемент `input[type="text"]`,
+поэтому мы добавили в разметку поле `input#datetime-picker`
+
+```html
+<input type="text" id="datetime-picker" />
+```
+
+Вторым аргументом функции `flatpickr(selector, options)` можно передать
+необязательный обьект параметров. Мы подготовили для тебя объект который нужен
+для выполнения задания. Разберись за что отвечает каждое свойство в
+[документации «Options»](https://flatpickr.js.org/options/) и используй его в
+своем коде.
+
+```js
+const options = {
+  enableTime: true,
+  time_24hr: true,
+  defaultDate: new Date(),
+  minuteIncrement: 1,
+  onClose(selectedDates) {
+    // ...
+  },
+};
+```
+
+### bla bla bla
 
 - Если пользователь выбрал валидную дату (в будущем), интерфейс таймера
   обновляется и видно сколько времени до выбранной даты.
