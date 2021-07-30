@@ -38,16 +38,16 @@ const randomIntegerFromInterval = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-const makeTransaction = (transaction, onSuccess, onError) => {
+const makeTransaction = (transactionId, onSuccess, onError) => {
   const delay = randomIntegerFromInterval(200, 500);
 
   setTimeout(() => {
     const canProcess = Math.random() > 0.3;
 
     if (canProcess) {
-      onSuccess({ id: transaction.id, time: delay });
+      onSuccess({ id: transactionId, time: delay });
     } else {
-      onError(transaction.id);
+      onError(transactionId);
     }
   }, delay);
 };
@@ -61,13 +61,9 @@ const logError = id => {
 };
 
 // Currently the function works like this
-// makeTransaction({ id: 70, amount: 150 }, logSuccess, logError);
-// makeTransaction({ id: 71, amount: 230 }, logSuccess, logError);
-// makeTransaction({ id: 72, amount: 75 }, logSuccess, logError);
-// makeTransaction({ id: 73, amount: 100 }, logSuccess, logError);
+// makeTransaction(70, logSuccess, logError);
+// makeTransaction(71, logSuccess, logError);
 
-// The function should work like this
-// makeTransaction({ id: 70, amount: 150 }).then(logSuccess).catch(logError);
-// makeTransaction({ id: 71, amount: 230 }).then(logSuccess).catch(logError);
-// makeTransaction({ id: 72, amount: 75 }).then(logSuccess).catch(logError);
-// makeTransaction({ id: 73, amount: 100 }).then(logSuccess).catch(logError);
+// Fnction should work like this
+// makeTransaction(70).then(logSuccess).catch(logError);
+// makeTransaction(71).then(logSuccess).catch(logError);
