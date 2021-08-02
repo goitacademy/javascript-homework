@@ -203,97 +203,53 @@ console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20
 Для отображения уведомлений пользователю вместо `window.alert()` используй
 библиотеку [notiflix](https://github.com/notiflix/Notiflix#readme).
 
-## Задание 3 - промисификация функций
+## Задание 3 - генератор промисов
 
-Выполняй это задание в файлах `03-promisify.html` и `03-promisify.js`.
+Выполняй это задание в файлах `03-promise.html` и `03-promise.js`. Посмотри демо
+видео работы генератора промисов.
 
-### Подзадание 1
+В HTML есть разметка формы, в поля которой пользователь будет вводить сообщение
+и время в миллисекундах.
 
-Напиши функцию `delay(ms)`, которая возвращает промис, переходящий в состояние
-«fulfilled» через `ms` миллисекунд. Значением исполнившегося промиса должно быть
-то количество миллисекунд которое передали во время вызова функции `delay`.
-
-```js
-const delay = ms => {
-  // Change this function
-};
-
-const logger = time => console.log(`Fulfilled after ${time}ms`);
-
-// Tests
-delay(2000).then(logger); // Fulfilled after 2000ms
-delay(1000).then(logger); // Fulfilled after 1000ms
-delay(1500).then(logger); // Fulfilled after 1500ms
+```html
+<form class="form">
+  <label>Message <input type="text" name="message" required /></label>
+  <label>Delay <input type="number" name="delay" required /></label>
+  <button type="submit">Create promise</button>
+</form>
 ```
 
-### Подзадание 2
-
-Перепиши функцию `toggleUserState()` так, чтобы она не использовала
-callback-функцию `callback`, а принимала всего два параметра `allUsers` и
-`username` и возвращала промис.
+Напиши скрипт, который при сабмите формы вызывает функцию
+`createPromise(message, delay)` и передает ей значения полей.
 
 ```js
-const users = [
-  { name: 'Mango', active: true },
-  { name: 'Poly', active: false },
-  { name: 'Ajax', active: false },
-];
-
-const toggleUserState = (allUsers, username, callback) => {
-  const updatedUsers = allUsers.map(user =>
-    user.name === username ? { ...user, active: !user.active } : user
-  );
-
-  callback(updatedUsers);
-};
-
-// Currently the function works like this
-toggleUserState(users, 'Mango', console.table);
-toggleUserState(users, 'Ajax', console.table);
-
-// Function should work like this
-toggleUserState(users, 'Mango').then(console.table);
-toggleUserState(users, 'Ajax').then(console.table);
+function createPromise(message, delay) {
+  const shouldResolve = Math.random() > 0.3;
+  if (shouldResolve) {
+    // Fulfill
+  } else {
+    // Reject
+  }
+}
 ```
 
-### Подзадание 3
-
-Перепиши функцию `makeTransaction()` так, чтобы она не использовала
-callback-функции `onSuccess` и `onError`, а принимала всего один параметр
-`transaction` и возвращала промис.
+Дополни код функции `createPromise` так, чтобы она возвращала промис который
+выполянется или отклоняется через `delay` времени - значение введенное
+пользователем на момент сабмита формы.
 
 ```js
-const randomIntegerFromInterval = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-};
+const messageInputValue = 'Does this work?';
+const delayInputValue = 1000;
 
-const makeTransaction = (transactionId, onSuccess, onError) => {
-  const delay = randomIntegerFromInterval(200, 500);
-
-  setTimeout(() => {
-    const canProcess = Math.random() > 0.3;
-
-    if (canProcess) {
-      onSuccess({ id: transactionId, time: delay });
-    } else {
-      onError(transactionId);
-    }
-  }, delay);
-};
-
-const logSuccess = ({ id, time }) => {
-  console.log(`Transaction ${id} processed in ${time}ms`);
-};
-
-const logError = id => {
-  console.warn(`Error processing transaction ${id}. Please try again later.`);
-};
-
-// Currently the function works like this
-makeTransaction(70, logSuccess, logError);
-makeTransaction(71, logSuccess, logError);
-
-// Fnction should work like this
-makeTransaction(70).then(logSuccess).catch(logError);
-makeTransaction(71).then(logSuccess).catch(logError);
+createPromise(messageInputValue, delayInputValue)
+  .then(msg => console.log(`✅ Fulfilled: ${msg}`))
+  .catch(msg => console.log(`❌ Rejected: ${msg}`));
 ```
+
+### Библиотека уведомлений
+
+> ⚠️ Следующий функционал не обязателен при сдаче задания, но будет хорошей
+> дополнительной практикой.
+
+Для отображения уведомлений пользователю вместо `console.log()` используй
+библиотеку [notiflix](https://github.com/notiflix/Notiflix#readme).
