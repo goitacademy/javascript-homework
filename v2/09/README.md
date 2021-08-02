@@ -233,10 +233,10 @@ console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20
 Напиши скрипт, который при сабмите формы вызывает функцию
 `createPromise(position, delay)` столько раз, сколько ввели в поле `amount`. При
 каждом вызове передай ей номер создаваемого промиса (`position`) и задержку
-учитывая введенный пользователем шаг (`delay`).
+учитывая введенную пользователем первую задержку (`delay`) и шаг (`step`).
 
 ```js
-function makePromise(position, delay) {
+function createPromise(position, delay) {
   const shouldResolve = Math.random() > 0.3;
   if (shouldResolve) {
     // Fulfill
@@ -253,7 +253,7 @@ function makePromise(position, delay) {
 нужно сделать с промисом - выполнить или отклонить.
 
 ```js
-makePromise(2, 1500)
+createPromise(2, 1500)
   .then(({ position, delay }) => {
     console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
   })
