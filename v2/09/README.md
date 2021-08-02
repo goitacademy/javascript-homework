@@ -205,25 +205,38 @@ console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20
 
 ## Задание 3 - генератор промисов
 
-Выполняй это задание в файлах `03-promise.html` и `03-promise.js`. Посмотри демо
-видео работы генератора промисов.
+Выполняй это задание в файлах `03-promises.html` и `03-promises.js`. Посмотри
+демо видео работы генератора промисов.
 
-В HTML есть разметка формы, в поля которой пользователь будет вводить сообщение
-и время в миллисекундах.
+В HTML есть разметка формы, в поля которой пользователь будет вводить первую
+задержку в миллисекундах, шаг увеличения задержки для каждого промиса после
+первого и количество промисов которое необходимо создать.
 
 ```html
 <form class="form">
-  <label>Message <input type="text" name="message" required /></label>
-  <label>Delay <input type="number" name="delay" required /></label>
-  <button type="submit">Create promise</button>
+  <label>
+    First delay (ms)
+    <input type="number" name="delay" required />
+  </label>
+  <label>
+    Delay step (ms)
+    <input type="number" name="step" required />
+  </label>
+  <label>
+    Amount
+    <input type="number" name="amount" required />
+  </label>
+  <button type="submit">Create promises</button>
 </form>
 ```
 
 Напиши скрипт, который при сабмите формы вызывает функцию
-`createPromise(message, delay)` и передает ей значения полей.
+`createPromise(position, delay)` столько раз, сколько ввели в поле `amount`. При
+каждом вызове передай ей номер создаваемого промиса (`position`) и задержку
+учитывая введенный пользователем шаг (`delay`).
 
 ```js
-function createPromise(message, delay) {
+function makePromise(position, delay) {
   const shouldResolve = Math.random() > 0.3;
   if (shouldResolve) {
     // Fulfill
@@ -233,17 +246,20 @@ function createPromise(message, delay) {
 }
 ```
 
-Дополни код функции `createPromise` так, чтобы она возвращала промис который
-выполянется или отклоняется через `delay` времени - значение введенное
-пользователем на момент сабмита формы.
+Дополни код функции `createPromise` так, чтобы она возвращала **один промис**,
+который выполянется или отклоняется через `delay` времени. Значением промиса
+должен быть объект, в котором будут свойства `position` и `delay` со значениями
+одноименных параметров. Используй начальный код функции для выбора того, что
+нужно сделать с промисом - выполнить или отклонить.
 
 ```js
-const messageInputValue = 'Does this work?';
-const delayInputValue = 1000;
-
-createPromise(messageInputValue, delayInputValue)
-  .then(msg => console.log(`✅ Fulfilled: ${msg}`))
-  .catch(msg => console.log(`❌ Rejected: ${msg}`));
+makePromise(2, 1500)
+  .then(({ position, delay }) => {
+    console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
+  })
+  .catch(({ position, delay }) => {
+    console.log(`❌ Rejected promise ${position} in ${delay}ms`);
+  });
 ```
 
 ### Библиотека уведомлений
