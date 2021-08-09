@@ -12,3 +12,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const gallery = document.querySelector('#gallery');
+const createGalery = document.addEventListener(image, addLi) =>{
+  function addEl(createImg, createElI) {
+    const createImg = document.createElement('img');
+    const createElI = document.createElement('li');
+    createElI.includes(createImg);
+  }
+}
