@@ -19,7 +19,7 @@
 [сервис DownGit](https://downgit.github.io/) для скачивания отдельной папки из
 репозитория.
 
-## Задание 1
+## Zadanie 1
 
 В HTML есть список категорий `ul#categories`.
 
