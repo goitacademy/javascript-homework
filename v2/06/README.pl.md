@@ -1,27 +1,26 @@
 **Read in other languages: [Русский](README.md), [Українська](README.ua.md),
 [English](README.en.md), [Español](README.es.md), [Polski](README.pl.md).**
 
-# Критерии приема
+# Kryteria przyjęcia
 
-- Создан репозиторий `goit-js-hw-06`.
-- При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую
-  страницу на `GitHub Pages`.
-- Задания выполнены строго по ТЗ (нельзя изменять исходный HTML задания).
-- При посещении живой страницы задания, в консоли нету ошибок и предупреждений.
-- Имена переменных и функций понятные, описательные.
-- Код отформатирован `Prettier`.
+- Utworzono repozytorium `goit-js-hw-06`.
+- Przy oddaniu pracy domowej powinny być dwa linki: do plików źródłowych i strony 
+  roboczej na `GitHub Pages`.
+- Zadania wykonano zgodnie z zakresem zadań (nie wolno zmieniać kodu źródłowego HTML zadania).
+- Wiersz poleceń nie zawiera błędów i ostrzeżeń.
+- Nazwy zmiennych i funkcji są zrozumiałe, opisowe.
+- Kod sformatowano `Prettier`.
 
-## Стартовые файлы
+## Pliki startowe
 
-В [папке src](./src) ты найдешь стартовые файлы с готовой разметкой и
-подключенными файлами скриптов для каждого задания. Скопируй их себе в проект.
-Для этого скачай весь этот репозиторий как архив или используй
-[сервис DownGit](https://downgit.github.io/) для скачивания отдельной папки из
-репозитория.
+W [folderze src](./src) znajdziesz pliki startowe z gotowym oznaczeniem i 
+połączonymi plikami skryptów do każdego zadania. Skopiuj je do swojego projektu.
+Aby to zrobić, pobierz całe repozytorium jako archiwum lub użyj
+[serwis DownGit](https://downgit.github.io/) aby pobrać oddzielny folder z repozytorium.
 
 ## Zadanie 1
 
-В HTML есть список категорий `ul#categories`.
+W HTML znajduje się lista kategorii `ul#categories`.
 
 ```html
 <ul id="categories">
@@ -55,15 +54,15 @@
 </ul>
 ```
 
-Напиши скрипт который:
+Napisz skrypt, który:
 
-1. Посчитает и выведет в консоль количество категорий в `ul#categories`, то есть
-   элементов `li.item`.
-2. Для каждого элемента `li.item` в списке `ul#categories`, найдет и выведет в
-   консоль текст заголовка элемента (тега `<h2>`) и количество элементов в
-   категории (всех вложенных в него `<li>`).
+1. Policzy i wprowadzi do wiersza poleceń liczbę kategorii w `ul#categories`, czyli
+   elementy `li.item`.
+2. Dla każdego elementu `li.item` na liście `ul#categories`, znajdzie i wprowadzi do
+   wiersza poleceń tekst nagłówka elementu (tag `<h2>`) i liczbę elementów w
+   kategorii (wszystkich `<li>`).
 
-В результате, в консоли будут выведены такие сообщения.
+W konsekwencji, w wierszu poleceń znajdą się takie komunikaty.
 
 ```bash
 Number of categories: 3
@@ -78,15 +77,15 @@ Category: Technologies
 Elements: 5
 ```
 
-## Задание 2
+## Zadanie 2
 
-В HTML есть пустой список `ul#ingredients`.
+W HTML znajduje się pusta lista `ul#ingredients`.
 
 ```html
 <ul id="ingredients"></ul>
 ```
 
-В JavaScript есть массив строк.
+W JavaScript znajduje się tablica ciągów.
 
 ```js
 const ingredients = [
@@ -99,15 +98,15 @@ const ingredients = [
 ];
 ```
 
-Напиши скрипт, который для каждого элемента массива `ingredients`:
+Napisz skrypt, który dla każdego elementu tablicy `ingredients`:
 
-1. Создаст отдельный элемент `<li>`. Обзательно используй метод
+1. Utworzy oddzielny element `<li>`. Koniecznie użyj metody
    `document.createElement()`.
-2. Добавит название ингредиента как его текстовое содержимое.
-3. Добавит элементу класс `item`.
-4. После чего вставит все `<li>` за одну операцию в список `ul.ingredients`.
+2. Doda nazwę elementu jako jego zawartość tekstową.
+3. Doda do elementu klasę `item`.
+4. Po czym umieści wszystkie `<li>` na liście podczas jednej operacji `ul.ingredients`.
 
-## Задание 3
+## Zadanie 3
 
 Напиши скрипт для создания галереи изображений по массиву данных. В HTML есть
 список `ul.gallery`.
