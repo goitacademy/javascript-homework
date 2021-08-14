@@ -162,7 +162,7 @@ zmniejszać jego wartość na jednostkę.
 ## Zadanie 5
 
 Napisz skrypt, który przy pisaniu tekstu w polu input `input#name-input` (zdarzenie
-`input`), wstawia jego aktualną wartość do `span#name-output`. Jeśli pole input jest
+`input`) wstawia jego aktualną wartość do `span#name-output`. Jeśli pole input jest
 puste, w spanie powinien wyświetlić się wiersz `"Anonymous"`.
 
 ```html
@@ -172,8 +172,8 @@ puste, w spanie powinien wyświetlić się wiersz `"Anonymous"`.
 
 ## Zadanie 6
 
-Напиши скрипт, который при потере фокуса на инпуте (событие `blur`), проверяет
-его содержимое на правильное количество введённых символов.
+Napisz skrypt, który przy utracie fokusu na polu input (zdarzenie `blur`) sprawdza
+jego zawartość na prawidłową liczbę wprowadzonych symboli.
 
 ```html
 <input
@@ -184,13 +184,13 @@ puste, w spanie powinien wyświetlić się wiersz `"Anonymous"`.
 />
 ```
 
-- Сколько символов должно быть в инпуте, указывается в его атрибуте
+- Informacja o liczbie symboli, która powinna znajdować się w polu input, pokazuje się w jego atrybucie
   `data-length`.
-- Если введено подходящее количество символов, то `border` инпута становится
-  зелёным, если неправильное - красным.
+- Jeśli wprowadzono odpowiednią liczbę symboli, to `border` pola input staje się
+  zielone, a jeśli liczba jest nieprawidłowa - czerwone.
 
-Для добавления стилей, используй CSS-классы `valid` и `invalid`, которые мы уже
-добавили в исходные файлы задания.
+Aby dodać style, używaj klas CSS `valid` i `invalid`, które już
+dodaliśmy do plików źródłowych zadania.
 
 ```css
 #validation-input {
@@ -206,12 +206,12 @@ puste, w spanie powinien wyświetlić się wiersz `"Anonymous"`.
 }
 ```
 
-## Задание 7
+## Zadanie 7
 
-Напиши скрипт, который реагирует на изменение значения `input#font-size-control`
-(событие `input`) и изменяет инлайн-стиль `span#text` обновляя свойство
-`font-size`. В результате при перетаскивании ползунка будет меняться размер
-текста.
+Napisz skrypt, który reaguje na zmianę wartości `input#font-size-control`
+(событие `input`) i zmienia styl inline `span#text` aktualizując właściwość
+`font-size`. W rezultacie podczas przeciągania paska przesuwania będzie zmieniał się rozmiar
+tekstu.
 
 ```html
 <input id="font-size-control" type="range" min="16" max="96" />
@@ -219,9 +219,9 @@ puste, w spanie powinien wyświetlić się wiersz `"Anonymous"`.
 <span id="text">Abracadabra!</span>
 ```
 
-## Задание 8
+## Zadanie 8
 
-Напиши скрипт управления формой логина.
+Napisz skrypt zarządzania formularzem logowania.
 
 ```html
 <form class="login-form">
@@ -237,8 +237,8 @@ puste, w spanie powinien wyświetlić się wiersz `"Anonymous"`.
 </form>
 ```
 
-1. Обработка отправки формы `form.login-form` должна быть по событию `submit`.
-2. При отправке формы страница не должна перезагружаться.
+1. Opracowanie przesyłania formularza `form.login-form` powinno przebiegać zgodnie ze zdarzeniem `submit`.
+2. Podczas przesyłania formularza strona nie powinna się restartować.
 3. Если в форме есть незаполненные поля, выводи `alert` с предупреждением о том,
    что все поля должны быть заполнены.
 4. Если пользователь заполнил все поля и отправил форму, собери значения полей в
