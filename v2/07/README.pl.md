@@ -12,7 +12,7 @@
 
 ## Pliki startowe
 
-- W [folderze src](./src) najdziesz pliki startowe z gotowym znacznikiem i gotowymi
+- W [folderze src](./src) znajdziesz pliki startowe z gotowym znacznikiem i gotowymi
   stylami. Skopiuj je do swojego projektu. Aby to zrobić, pobierz całe repozytorium jako 
   archiwum lub użyj [serwisu DownGit](https://downgit.github.io/) aby
   pobrać oddzielny folder z repozytorium.
