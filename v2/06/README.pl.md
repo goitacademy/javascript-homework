@@ -142,7 +142,7 @@ const images = [
 
 ## Zadanie 4
 
-Licznik składa się ze spana i przycisków, które, po kliknięciu, powinny zwiększać i 
+Licznik składa się ze spana i klawiszy, które, po naciśnięciu, powinny zwiększać i 
 zmniejszać jego wartość na jednostkę.
 
 ```html
@@ -155,22 +155,22 @@ zmniejszać jego wartość na jednostkę.
 
 - Utwórz zmienną `counterValue` w której będzie przechowywana aktualna wartość
   licznika i inicjalizuj wartość `0`.
-- Добавь слушатели кликов на кнопки, внутри которых увеличивай или уменьшай
-  значение счтетчика.
-- Обновляй интерфейс новым значением переменной `counterValue`.
+- Dodaj click listeners na przyciski, wewnątrz których zwiększaj i zmniejszaj
+  wartość licznika.
+- Aktualizuj interfejs nową wartością zmiennej `counterValue`.
 
-## Задание 5
+## Zadanie 5
 
-Напиши скрипт который, при наборе текста в инпуте `input#name-input` (событие
-`input`), подставляет его текущее значение в `span#name-output`. Если инпут
-пустой, в спане должна отображаться строка `"Anonymous"`.
+Napisz skrypt, który przy pisaniu tekstu w polu input `input#name-input` (zdarzenie
+`input`), wstawia jego aktualną wartość do `span#name-output`. Jeśli pole input jest
+puste, w spanie powinien wyświetlić się wiersz `"Anonymous"`.
 
 ```html
 <input type="text" id="name-input" placeholder="Please enter your name" />
 <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 ```
 
-## Задание 6
+## Zadanie 6
 
 Напиши скрипт, который при потере фокуса на инпуте (событие `blur`), проверяет
 его содержимое на правильное количество введённых символов.
