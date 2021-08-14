@@ -71,24 +71,24 @@ postępowanie domyślnie.
 
 ### Zamknięcie z klawiatury
 
-> ⚠️ Следующий функционал не обязателен при сдаче задания, но будет хорошей
-> дополнительной практикой.
+> ⚠️ Następna funkcja nie jest obowiązkowa przy oddawaniu zadania, ale będzie dobrą
+> dodatkową praktyką.
 
-Добавь закрытие модального окна по нажатию клавиши `Escape`. Сделай так, чтобы
-прослушивание клавиатуры было только пока открыто модальное окно. У библиотеки
-[basicLightbox](https://basiclightbox.electerious.com/) есть метод для
-программного закрытия модального окна.
+Dodaj zamknięcie okna modalnego po naciśnięciu klawiszy `Escape`. Zrób tak, aby
+nasłuchiwanie klawiatury było tylko wtedy, gdy otwarte jest okno modalne. W bibliotece
+[basicLightbox](https://basiclightbox.electerious.com/) istnieje metoda na
+programowe zamknięcie okna modalnego.
 
-## Задание 2 - библиотека `SimpleLightbox`
+## Zadanie 2 - biblioteka `SimpleLightbox`
 
-Сделай такую же галерею как в первом задании, но используя библиотеку
-[SimpleLightbox](https://simplelightbox.com/), которая возьмет на себя обработку
-кликов по изображениям, открытие и закрытие модального окна, а также
-пролистывание изображений при помощи клавиатуры.
+Utwórz taką samą galerię jak w zadaniu pierwszym, używając jednak biblioteki
+[SimpleLightbox](https://simplelightbox.com/), która zajmie się opracowaniem
+kliknięć w obrazki, otwieraniem i zamykaniem okna modalnego oraz
+przerzucaniem obrazków za pomocą klawiatury.
 
 https://user-images.githubusercontent.com/17479434/127714821-4b7527c8-01db-42d3-83f0-8c1578561982.mp4
 
-Необходимо немного изменить разметку карточки галереи, используй этот шаблон.
+Konieczna jest nieznaczna zmiana znacznika galerii, użyj tego szablonu.
 
 ```html
 <a class="gallery__item" href="large-image.jpg">
@@ -96,20 +96,20 @@ https://user-images.githubusercontent.com/17479434/127714821-4b7527c8-01db-42d3-
 </a>
 ```
 
-Выполняй это задание в файлах `02-lightbox.html` и `02-lightbox.js`. Разбей его
-на несколько подзадач:
+Wykonuj to zadanie w plikach `02-lightbox.html` i `02-lightbox.js`. Rozbij je
+na kilka podzadań:
 
-1. Создание и рендер разметки по массиву данных `galleryItems` и
-   предоставленному шаблону элемента галереи. Используй готовый код из первого
-   задания.
-2. Подключение скрипта и стилей библиотеки используя
-   [CDN сервис cdnjs](https://cdnjs.com/libraries/simplelightbox). Необходимо
-   добавить ссылки на два файла: `simple-lightbox.min.js` и
+1. Tworzenie i renderowanie znacznika zgodnie z tablicą danych `galleryItems` i
+   dostarczonym szablonem elementu galerii. Użyj gotowego kodu z zadania
+   pierwszego.
+2. Połączenie skryptu i stylów biblioteki poprzez użycie
+   [CDN serwisu cdnjs](https://cdnjs.com/libraries/simplelightbox). Koniecznym jest
+   dodanie linków do dwóch plików: `simple-lightbox.min.js` i
    `simple-lightbox.min.css`.
-3. Инициализация библиотеки после того как элементы галереи созданы и добавлены
-   в `div.gallery`. Для этого ознакомься с документацией
-   [SimpleLightbox](https://simplelightbox.com/) - в первую очередь секции
-   «Usage» и «Markup».
-4. Посмотри в документации секцию «Options» и добавь отображение подписей к
-   изображениям из атрибута `alt`. Пусть подпись будет снизу и появляется через
-   250 миллисекунд после открытия изображения.
+3. Inicjalizacja biblioteki po utworzeniu elementów galerii i dodaniu ich
+   do `div.gallery`. Aby to zrobić, zapoznaj się z dokumentacją
+   [SimpleLightbox](https://simplelightbox.com/) - najpierw sekcje
+   «Usage» i «Markup».
+4. W dokumentacji zwróć uwagę na sekcję «Options» i dodaj wyświetlanie podpisów do
+   obrazów z atrybutu `alt`. Niech podpis będzie pod spodem i pojawia się po
+   250 milisekundach po otwarciu obrazka.
