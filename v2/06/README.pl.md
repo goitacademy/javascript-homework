@@ -239,18 +239,18 @@ Napisz skrypt zarządzania formularzem logowania.
 
 1. Opracowanie przesyłania formularza `form.login-form` powinno przebiegać zgodnie ze zdarzeniem `submit`.
 2. Podczas przesyłania formularza strona nie powinna się restartować.
-3. Если в форме есть незаполненные поля, выводи `alert` с предупреждением о том,
-   что все поля должны быть заполнены.
-4. Если пользователь заполнил все поля и отправил форму, собери значения полей в
-   обьект, где имя поля будет именем свойства, а значение поля - значением
-   свойства. Для доступа к элементам формы используй свойство `elements`.
-5. Выведи обьект с введенными данными в консоль и очисти значения полей формы
-   методом `reset`.
+3. Jeśli w formularzu są nieuzupełnione pola, wprowadź `alert` z upomnieniem o tym,
+   że wszystkie pola powinny zostać wypełnione.
+4. Jeśli użytkownik uzupełnił wszystkie pola i wysłał formularz, zbierz wartość pól w
+   obiekt, gdzie nazwa pola będzie nazwą właściwości, a wartość pola - wartością
+   właściwości. Aby otrzymać dostęp do elementów formularza użyj właściwości `elements`.
+5. Umieść obiekt z wprowadzonymi danymi do wiersza poleceń i wyczyść wartości pól formularza
+   metodą `reset`.
 
-## Задание 9
+## Zadanie 9
 
-Напиши скрипт, который изменяет цвета фона элемента `<body>` через инлайн стиль
-при клике на `button.change-color` и выводит значение цвета в `span.color`.
+Napisz skrypt, który zmienia kolor tła elementu `<body>` poprzez style inline
+przy kliknięciu na `button.change-color` i wprowadza wartość koloru do `span.color`.
 
 ```html
 <div class="widget">
@@ -259,7 +259,7 @@ Napisz skrypt zarządzania formularzem logowania.
 </div>
 ```
 
-Для генерации случайного цвета используй функцию `getRandomHexColor`.
+Aby wygenerować losowy kolor użyj funkcji `getRandomHexColor`.
 
 ```js
 function getRandomHexColor() {
@@ -267,12 +267,11 @@ function getRandomHexColor() {
 }
 ```
 
-## Задание 10 (выполнять не обязательно)
+## Zadanie 10 (nieobowiązkowe)
 
-Напиши скрипт создания и очистки коллекции элементов. Пользователь вводит
-количество элементов в `input` и нажимает кнопку `Создать`, после чего
-рендерится коллекция. При нажатии на кнопку `Очистить`, коллекция элементов
-очищается.
+Napisz skrypt tworzenia i usuwania kolekcji elementów. Użytkownik wprowadza
+liczbę elementów do `input` i naciska przycisk `Utwórz`, co rozpoczyna
+tworzenie się kolekcji. Po naciśnięciu przycisku `Usuń`, kolekcja elementów zostaje usunięta.
 
 ```html
 <div id="controls">
@@ -284,14 +283,14 @@ function getRandomHexColor() {
 <div id="boxes"></div>
 ```
 
-Создай функцию `createBoxes(amount)`, которая принимает один параметр - число.
-Функция создает столько `<div>`, сколько указано в `amount` и добавляет их в
+Utwórz funkcję `createBoxes(amount)`, która przyjmuje jeden parametr - liczbę.
+Funkcja tworzy tyle `<div>`, ile ukazano w `amount` i dodaje je do
 `div#boxes`.
 
-1. Размеры самого первого `<div>` - 30px на 30px.
-2. Каждый элемент после первого, должен быть шире и выше предыдущего на 10px.
-3. Все элементы должены иметь случайный цвет фона в формате HEX. Используй
-   готовую функцию `getRandomHexColor` для получения цвета.
+1. Wymiary pierwszego `<div>` - 30px na 30px.
+2. Każdy następny element powinien być szerszy i wyższy od poprzedniego o 10px.
+3. Wszystkie elementy powinny mieć losowy kolor tła w formacie NEX. Użyj
+   gotowej funkcji `getRandomHexColor` aby otrzymać kolor.
 
 ```js
 function getRandomHexColor() {
@@ -299,5 +298,5 @@ function getRandomHexColor() {
 }
 ```
 
-Создай функцию `destroyBoxes()`, которая очищает содержимое `div#boxes`, тем
-самым удаляя все созданные элементы.
+Utwórz funkcję `destroyBoxes()`, która usuwa zawartość `div#boxes`, tym
+samym usuwając wszystkie utworzone elementy.
