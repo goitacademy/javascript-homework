@@ -1,52 +1,52 @@
 **Read in other languages: [Русский](README.md), [Українська](README.ua.md),
 [English](README.en.md), [Español](README.es.md), [Polski](README.pl.md).**
 
-# Критерии приема
+# Kryteria przyjęcia
 
-- Создан репозиторий `goit-js-hw-08`.
-- При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую
-  страницу на `GitHub Pages`.
-- При посещении живой страницы задания, в консоли нету ошибок и предупреждений.
-- Проект собран с помощью
+- Utworzono repozytorium `goit-js-hw-08`.
+- Przy oddaniu pracy domowej dołączono linki: do plików źródłowych i strony 
+  roboczej na `GitHub Pages`.
+- Wiersz poleceń nie zawiera błędów i ostrzeżeń.
+- Projekt utworzono z pomocą
   [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-- Код отформатирован `Prettier`.
+- Kod sformatowano `Prettier`.
 
-## Стартовые файлы
+## Pliki startowe
 
-В [папке src](./src) ты найдешь стартовые файлы с готовой разметкой, стилями и
-подключенными файлами скриптов для каждого задания. Скопируй их себе в проект,
-полностью заменив папку `src` в
+W [folderze src](./src) znajdziesz pliki startowe z gotowym znacznikiem, stylami i
+połączonymi plikami skryptów dla każdego zadania. Skopiuj je do swojego projektu,
+całkowicie zamieniając folder `src` w
 [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-Для этого скачай весь этот репозиторий как архив или используй
-[сервис DownGit](https://downgit.github.io/) для скачивания отдельной папки из
-репозитория.
+Aby to zrobić, pobierz całe repozytorium jako archiwum lub użyj
+[serwisu DownGit](https://downgit.github.io/) aby pobrać oddzielny folder z 
+repozytorium.
 
-## Задание 1 - библиотека `SimpleLightbox`
+## Zadanie 1 - biblioteka `SimpleLightbox`
 
-Выполняй это задание в файлах `01-gallery.html` и `01-gallery.js`. Разбей его на
-несколько подзадач:
+Wykonaj to zadanie w plikach `01-gallery.html` i `01-gallery.js`. Rozbij je na 
+kilka podzadań:
 
-1. Добавь библиотеку [SimpleLightbox](https://simplelightbox.com/) как
-   зависимость проекта используя `npm` (ссылка на CDN из твоей прошлой работы
-   больше не нужна).
-2. Используй свой JavaScript код из предыдущей домашней работы, но выполни
-   рефакторинг с учетом того, что библиотека была установлена через `npm`
-   (синтаксис import/export).
+1. Dodaj bibliotekę [SimpleLightbox](https://simplelightbox.com/) jako
+   zależność projektu używając `npm` (link do CDN z Twojej poprzedniej pracy
+   nie jest już potrzebny).
+2. Użyj swojego kodu JavaScript z poprzedniej pracy domowej, ale zrealizuj
+   refaktoryzację uwzględniając to, że biblioteka została zainstalowana przez `npm`
+   (składnia import/export).
 
-Для того чтобы подключить CSS код библиотеки в проект, необходимо добавить еще
-один импорт, кроме того который описан в документации.
+Aby umieścić kod CSS biblioteki w projekcie, należy dodać jeszcze
+jeden import, oprócz tego opisanego w dokumentacji.
 
 ```js
-// Описан в документации
+// Opisany w dokumentacji
 import SimpleLightbox from 'simplelightbox';
-// Дополнительный импорт стилей
+// Dodatkowy import stylów
 import 'simplelightbox/dist/simple-lightbox.min.css';
 ```
 
-## Задание 2 - видео плеер
+## Zadanie 2 - odtwarzacz wideo
 
-В HTML есть `<iframe>` с видео для Vimeo плеера. Напиши скрипт который будет
-сохранять текущее время воспроизведения видео в локальное хранилище и, при
+W HTML znajduje się `<iframe>` z wideo na Vimeo. Napisz skrypt, który będzie
+przechowywał aktualny czas odtwarzania wideo в локальное хранилище и, при
 перезагрузке страницы, продолжать воспроизводить видео с этого времени.
 
 ```html
