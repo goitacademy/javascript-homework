@@ -13,7 +13,7 @@
 
 ## Pliki startowe
 
-W [folderze src](./src) znajdziesz pliki startowe z gotowym oznaczeniem i 
+W [folderze src](./src) znajdziesz pliki startowe z gotowym znacznikiem i 
 połączonymi plikami skryptów do każdego zadania. Skopiuj je do swojego projektu.
 Aby to zrobić, pobierz całe repozytorium jako archiwum lub użyj
 [serwisu DownGit](https://downgit.github.io/) aby pobrać oddzielny folder z repozytorium.
@@ -108,20 +108,20 @@ Napisz skrypt, który dla każdego elementu tablicy `ingredients`:
 
 ## Zadanie 3
 
-Напиши скрипт для создания галереи изображений по массиву данных. В HTML есть
-список `ul.gallery`.
+Napisz skrypt do tworzenia galerii obrazów według tablicy danych. W HTML znajduje się
+lista `ul.gallery`.
 
 ```html
 <ul class="gallery"></ul>
 ```
 
-Используй массив объектов `images` для создания элементов `<img>` вложенных в
-`<li>`. Для создания разметки используй шаблонные строки и метод
+Użyj tablicy obiektów `images` w celu utworzenia elementów `<img>` umieszczonych w
+`<li>`. Aby utworzyć znacznik użyj łańcuchów szablonowych i metody
 `insertAdjacentHTML()`.
 
-- Все элементы галереи должны добавляться в DOM за одну операцию вставки.
-- Добавь минимальное оформление галереи флексбоксами или гридами через CSS
-  классы.
+- Wszystkie elementy galerii powinny być dodawane do DOM podczas jednej operacji.
+- Ulepsz galerię używając flexboxów lub gridów poprzez 
+  klasy CSS.
 
 ```js
 const images = [
@@ -140,10 +140,10 @@ const images = [
 ];
 ```
 
-## Задание 4
+## Zadanie 4
 
-Счетчик состоит из спана и кнопок, которые, при клике, должны увеличивать и
-уменьшать его значение на единицу.
+Licznik składa się ze spana i przycisków, które, po kliknięciu, powinny zwiększać i 
+zmniejszać jego wartość na jednostkę.
 
 ```html
 <div id="counter">
@@ -153,8 +153,8 @@ const images = [
 </div>
 ```
 
-- Создай переменную `counterValue` в которой будет храниться текущее значение
-  счетчика и инициализируй её значением `0`.
+- Utwórz zmienną `counterValue` w której będzie przechowywana aktualna wartość
+  licznika i inicjalizuj wartość `0`.
 - Добавь слушатели кликов на кнопки, внутри которых увеличивай или уменьшай
   значение счтетчика.
 - Обновляй интерфейс новым значением переменной `counterValue`.
