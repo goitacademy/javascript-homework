@@ -1,55 +1,55 @@
 **Read in other languages: [Русский](README.md), [Українська](README.ua.md),
 [English](README.en.md), [Español](README.es.md), [Polski](README.pl.md).**
 
-# Критерии приема
+# Kryteria przyjęcia
 
-- Создан репозиторий `goit-js-hw-07`.
-- При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую
-  страницу на `GitHub Pages`.
-- При посещении живой страницы задания, в консоли нету ошибок и предупреждений.
-- Имена переменных и функций понятные, описательные.
-- Код отформатирован `Prettier`.
+- Utworzono repozytorium `goit-js-hw-07`.
+- Przy oddaniu pracy domowej dołączono linki: do plików źródłowych i strony 
+  roboczej na `GitHub Pages`.
+- Wiersz poleceń nie zawiera błędów i ostrzeżeń.
+- Nazwy zmiennych i funkcji są zrozumiałe, opisowe.
+- Kod sformatowano `Prettier`.
 
-## Стартовые файлы
+## Pliki startowe
 
-- В [папке src](./src) ты найдешь стартовые файлы с базовой разметкой и готовыми
-  стилями. Скопируй их себе в проект. Для этого скачай весь этот репозиторий как
-  архив или используй [сервис DownGit](https://downgit.github.io/) для
-  скачивания отдельной папки из репозитория.
-- В файле `gallery-items.js` есть массив `galleryItems`, который содержит
-  объекты с информацией о изображениях: маленькое (превью), оригинальное
-  (большое) и описание. Мы уже подключили его к каждому из JS-файлов проекта.
+- W [folderze src](./src) najdziesz pliki startowe z gotowym znacznikiem i gotowymi
+  stylami. Skopiuj je do swojego projektu. Aby to zrobić, pobierz całe repozytorium jako 
+  archiwum lub użyj [serwisu DownGit](https://downgit.github.io/) aby
+  pobrać oddzielny folder z repozytorium.
+- W pliku `gallery-items.js` znajduje się tablica `galleryItems`, która zawiera
+  obiekty z informacją o obrazkach: małe (miniatura), oryginalne
+  (duże) i opis. Już podłączyliśmy ją do każdego z plików JS projektu.
 
-## Задание 1 - галерея изображений
+## Zadanie 1 - galeria obrazów
 
-Создай галерею с возможностью клика по её элементам и просмотра полноразмерного
-изображения в модальном окне. Посмотри демо видео работы галереи.
+Utwórz galerię z możliwością kliknięcia w jej elementy i przeglądania pełnego
+obrazu w oknie modalnym. Obejrzyj wideo-demo działania galerii.
 
 https://user-images.githubusercontent.com/17479434/127711719-4e293f5b-fbaa-4851-8671-fc841963d961.mp4
 
-Выполняй это задание в файлах `01-gallery.html` и `01-gallery.js`. Разбей его на
-несколько подзадач:
+Wykonaj to zadanie w plikach `01-gallery.html` i `01-gallery.js`. Rozbij je na
+kilka podzadań:
 
-1. Создание и рендер разметки по массиву данных `galleryItems` и
-   предоставленному шаблону элемента галереи.
-2. Реализация делегирования на `div.gallery` и получение `url` большого
-   изображения.
-3. Подключение скрипта и стилей библиотеки модального окна
-   [basicLightbox](https://basiclightbox.electerious.com/). Используй
-   [CDN сервис jsdelivr](https://www.jsdelivr.com/package/npm/basiclightbox?path=dist)
-   и добавь в проект ссылки на минифицированные (`.min`) файлы библиотеки.
-4. Открытие модального окна по клику на элементе галереи. Для этого ознакомься с
-   [документацией](https://github.com/electerious/basicLightbox#readme) и
-   [примерами](https://basiclightbox.electerious.com/).
-5. Замена значения атрибута `src` элемента `<img>` в модальном окне перед
-   открытием. Используй готовую разметку модального окна с изображением из
-   примеров библиотеки [basicLightbox](https://basiclightbox.electerious.com/).
+1. Tworzenie i renderowanie znacznika zgodnie z tablicą danych `galleryItems` i
+   dostarczonym szablonem elementu galerii.
+2. Implementacja delegowania na `div.gallery` i otrzymanie `url` większego
+   obrazu.
+3. Połączenie skryptu i stylów biblioteki okna modalnego
+   [basicLightbox](https://basiclightbox.electerious.com/). Użyj
+   [CDN serwisu jsdelivr](https://www.jsdelivr.com/package/npm/basiclightbox?path=dist)
+   i dodaj do projektu linki do minimalizowania (`.min`) plików biblioteki.
+4. Otworzenie okna modalnego po kliknięciu w element galerii. Aby to zrobić, zapoznaj się z
+   [dokumentacją](https://github.com/electerious/basicLightbox#readme) i
+   [przykładami](https://basiclightbox.electerious.com/).
+5. Zmiana wartości atrybutu `src` elementu `<img>` w oknie modalnym przed
+   otworzeniem. Użyj gotowego znacznika okna modalnego z obrazkiem z
+   przykładów biblioteki [basicLightbox](https://basiclightbox.electerious.com/).
 
-### Разметка элемента галереи
+### Znacznik elementu galerii
 
-Ссылка на оригинальное изображение должна храниться в data-атрибуте `source` на
-элементе `<img>`, и указываться в `href` ссылки. Не добавляй другие HTML теги
-или CSS классы кроме тех, что есть в этом шаблоне.
+Link do oryginalnego obrazka powinien być przechowywany w atrybucie data `source` w
+elemencie `<img>`, i ukazywać się w `href` linku. Nie dodawaj innych tagów HTML
+lub klas CSS oprócz tych, które znajdują się w tym szablonie.
 
 ```html
 <div class="gallery__item">
@@ -64,11 +64,12 @@ https://user-images.githubusercontent.com/17479434/127711719-4e293f5b-fbaa-4851-
 </div>
 ```
 
-Обрати внимание на то, что изображение обернуто в ссылку, а значит при клике по
-умолчанию пользователь будет перенаправлен на другую страницу. Запрети это
-поведение по умолчанию.
+Zwróc uwagę na to, że obrazek zamieniono w link, a więc po
+domyślnym kliknięciu użytkownik zostanie przekierowany na inną stronę. Zablokuj to
+postępowanie domyślnie.
 
-### Закрытие с клавиатуры
+
+### Zamknięcie z klawiatury
 
 > ⚠️ Следующий функционал не обязателен при сдаче задания, но будет хорошей
 > дополнительной практикой.
