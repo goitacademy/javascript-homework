@@ -4,7 +4,7 @@
 # Kryteria przyjęcia
 
 - Utworzono repozytorium `goit-js-hw-06`.
-- Przy oddaniu pracy domowej powinny być dwa linki: do plików źródłowych i strony 
+- Przy oddaniu pracy domowej dołączono linki: do plików źródłowych i strony 
   roboczej na `GitHub Pages`.
 - Zadania wykonano zgodnie z zakresem zadań (nie wolno zmieniać kodu źródłowego HTML zadania).
 - Wiersz poleceń nie zawiera błędów i ostrzeżeń.
@@ -16,7 +16,7 @@
 W [folderze src](./src) znajdziesz pliki startowe z gotowym oznaczeniem i 
 połączonymi plikami skryptów do każdego zadania. Skopiuj je do swojego projektu.
 Aby to zrobić, pobierz całe repozytorium jako archiwum lub użyj
-[serwis DownGit](https://downgit.github.io/) aby pobrać oddzielny folder z repozytorium.
+[serwisu DownGit](https://downgit.github.io/) aby pobrać oddzielny folder z repozytorium.
 
 ## Zadanie 1
 
