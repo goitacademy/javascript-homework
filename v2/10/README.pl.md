@@ -1,112 +1,112 @@
 **Read in other languages: [Русский](README.md), [Українська](README.ua.md),
 [English](README.en.md), [Español](README.es.md), [Polski](README.pl.md).**
 
-# Критерии приема
+# Kryteria przyjęcia
 
-- Создан репозиторий `goit-js-hw-10`.
-- При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую
-  страницу на `GitHub Pages`.
-- При посещении живой страницы задания, в консоли нету ошибок и предупреждений.
-- Проект собран с помощью
+- Utworzono repozytorium `goit-js-hw-10`.
+- Przy oddaniu pracy domowej dołączono linki: do plików źródłowych i strony
+  roboczej na `GitHub Pages`.
+- Wiersz poleceń nie zawiera błędów i ostrzeżeń.
+- Projekt utworzono z pomocą 
   [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-- Код отформатирован `Prettier`.
+- Sformatowano kod `Prettier`.
 
-## Стартовые файлы
+## Pliki startowe
 
-В [папке src](./src) ты найдешь стартовые файлы. Скопируй их себе в проект,
-полностью заменив папку `src` в
+W [folderze src](./src) znajdziesz pliki startowe. Skopiuj je do swojego projektu,
+całkowicie zamieniając folder  `src` w
 [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-Для этого скачай весь этот репозиторий как архив или используй
-[сервис DownGit](https://downgit.github.io/) для скачивания отдельной папки из
-репозитория.
+Aby to zrobić, pobierz całe repozytorium jako archiwum lub użyj
+[serwisu DownGit](https://downgit.github.io/) aby pobrać oddzielny folder z
+repozytorium.
 
-## Задание - поиск стран
+## Zadanie - wyszukiwanie krajów
 
-Создай фронтенд часть приложения поиска данных о стране по её частичному или
-полному имени. Используй публичный API
-[Rest Countries](https://restcountries.eu/), а именно
-[ресурс name](https://restcountries.eu/#api-endpoints-name), возвращающий массив
-объектов стран удовлетворивших критерий поиска. Добавь минимальное оформление
-элементов интерфейса.
+Utwórz frontend aplikacji wyszukiwania danych o kraju według częściowej 
+lub pełnej nazwy. Użyj publicznego API
+[Rest Countries](https://restcountries.eu/), a dokładniej
+[źródło name](https://restcountries.eu/#api-endpoints-name), przywracający tablicę
+obiektów krajów odpowiadających kryterium wyszukiwania. Popraw wizualnie
+elementy interfejsu.
 
 ![Country search app preview](./preview/app-preview.gif)
 
-### HTTP-запрос
+### Żądanie HTTP
 
-Напиши функцию `fetchCountries(name)` которая делает HTTP-запрос на
-[ресурс name](https://restcountries.eu/#api-endpoints-name) и возвращает промис
-с массивом стран - результатом запроса. Вынеси её в отдельный файл
-`fetchCountries.js` и сделай именованный экспорт.
+Napisz funkcję `fetchCountries(name)` która tworzy żądanie HTTP na
+[źródło name](https://restcountries.eu/#api-endpoints-name) i przywraca obietnicę
+z tablicą krajów - wynikiem żądania. Przenieś ją do oddzielnego pliku
+`fetchCountries.js` i utwórz eksport nazwany.
 
-### Фильтрация полей
+### Filtrowanie pól
 
-В ответе от бэкенда возвращаются объекты, большая часть свойств которых тебе не
-пригодится. Чтобы сократить объем передаваемых данных добавь строку параметров
-запроса - так этот бэкенд реализует фильтрацию полей. Ознакомься с
-[документацией синтаксиса фильтров](https://restcountries.eu/#filter-response).
+W odpowiedzi, z backendu przywracane są obiekty, których większość właściwości nie
+przyda Ci się. Aby zredukować zakres danych przekazywanych danych, dodaj ciąg parametrów
+żądania - w taki sposób backend realizuje filtrację pól. Zapoznaj się z
+[dokumentacją składni filtrów](https://restcountries.eu/#filter-response).
 
-Тебе нужны только следующие свойства:
+Potrzebujesz tylko następujących właściwości:
 
-- `name` - полное имя страны
-- `capital` - столица
-- `population` - население
-- `flag` - ссылка на изображение флага
-- `languages` - массив языков
+- `name` - pełna nazwa kraju
+- `capital` - stolica
+- `population` - liczba ludności
+- `flag` - link do ilustracji przedstawiającej flagę
+- `languages` - tablica języków
 
-### Поле поиска
+### Pole wyszukiwania
 
-Название страны для поиска пользователь вводит в текстовое поле
-`input#search-box`. HTTP-запросы выполняются при наборе имени страны, то есть по
-событию `input`. Но, делать запрос при каждом нажатии клавиши нельзя, так как
-одновременно получится много запросов и они будут выполняться в непредсказуемом
-порядке.
+Nazwę kraju, którą chce się wyszukać, użytkownik wprowadza w pole tekstowe
+`input#search-box`. Żądania HTTP realizuje się przy zebraniu nazwy kraju, czyli po
+zdarzeniu `input`. Jednak nie należy robić żądania przy każdym kliknięciu przycisku, ponieważ
+otrzymamy jednocześnie wiele żądań, które będą wykonywane w nieprzewidywalnym
+porządku.
 
-Необходимо применить приём `Debounce` на обработчике события и делать
-HTTP-запрос спустя `300мс` после того, как пользователь перестал вводить текст.
-Используй пакет
+Koniecznym jest zastosowanie funkcji `Debounce` na event handler i wykonanie
+żądania HTTP `300ms` po tym, jak użytkownik przestał wprowadzać tekst.
+Użyj pakietu
 [lodash.debounce](https://www.npmjs.com/package/lodash.debounce).
 
-Если пользователь полностью очищает поле поиска, то HTTP-запрос не выполняется,
-а разметка списка стран или информации о стране пропадает.
+Jeśli użytkownik całkowicie usuwa pole wyszukiwania, to żądanie HTTP nie zostaje zrealizowane,
+a znacznik listy krajów lub informacji o kraju znika.
 
-Выполни санитизацию введенной строки методом `trim()`, это решит проблему когда
-в поле ввода только пробелы или они есть в начале и в конце строки.
+Dokonaj sanityzacji wprowadzonego ciągu metodą `trim()`, to rozwiąże problem, gdy
+w polu wprowadzania są tylko spacje lub widnieją one na początku i na końcu wiersza.
 
-### Интерфейс
+### Interfejs
 
-Если в ответе бэкенд вернул больше чем 10 стран, в интерфейсе пояляется
-уведомление о том, что имя должно быть более специфичным. Для уведомлений
-используй [библиотеку notiflix](https://github.com/notiflix/Notiflix#readme) и
-выводи такую строку
+Jeśli w odpowiedzi backend przywrócił więcej niż 10 krajów, w interfejsie pojawia się
+powiadomienie o tym, że nazwa powinna być bardziej charakterystyczna. Do powiadomień
+używaj [biblioteki notiflix](https://github.com/notiflix/Notiflix#readme) i
+wprowadź taki wiersz
 `"Too many matches found. Please enter a more specific name."`.
 
 ![Too many matches alert](./preview/too-many-matches.png)
 
-Если бэкенд вернул от 2-х до 10-х стран, под тестовым полем отображается список
-найденных стран. Каждый элемент списка состоит из флага и имени страны.
+Jeśli backend przywrócił od 2-óch do 10-ciu krajów, pod polem tekstowym pojawia się lista
+znalezionych krajów. Każdy element listy składa się z flagi i nazwy kraju. 
 
 ![Country list UI](./preview/country-list.png)
 
-Если результат запроса это массив с одной страной, в интерфейсе отображается
-разметка карточки с данными о стране: флаг, название, столица, население и
-языки.
+Jeśli wynik żądania to tablica z jednym krajem, w interfejsie pojawia się
+znacznik karty z danymi o kraju: flaga, nazwa, stolica, liczba ludności i
+języki.
 
 ![Country info UI](./preview/country-info.png)
 
-> ⚠️ Достаточно чтобы приложение работало для большинства стран. Некоторые
-> страны, такие как `Sudan`, могут создавать проблемы, поскольку название страны
-> является частью названия другой страны, `South Sudan`. Не нужно беспокоиться
-> об этих исключениях.
+> ⚠️ Wystarczy, jeśli aplikacja będzie działała dla większości krajów. Niektóre
+> kraje, takie jak `Sudan`, mogą powodować problemy, ponieważ nazwa kraju
+> jest częścią nazwy innego kraju, `South Sudan`. Nie należy się martwić
+> tymi wyjątkami.
 
-### Обработка ошибки
+### Przetwarzanie błędu
 
-Если пользователь ввёл имя страны которой не существует, бэкенд вернёт не пустой
-массив, а ошибку со статус кодом `404` - не найдено. Если это не обработать, то
-пользователь никогда не узнает о том, что поиск не дал результатов. Добавь
-уведомление `"Oops, there is no country with that name"` в случае ошибки
-используя [библиотеку notiflix](https://github.com/notiflix/Notiflix#readme).
+Jeśli użytkownik wprowadził nazwę kraju, który nie istnieje, backend odda nie pustą
+tablicę, a błąd z kodem stanu `404` - nie znaleziono. Jeśli tego nie opracujesz, to
+użytkownik nigdy nie dowie się o tym, że żądanie nie przyniosło wyników. Dodaj
+powiadomienie `"Oops, there is no country with that name"` w razie błędu,
+używając [biblioteki notiflix](https://github.com/notiflix/Notiflix#readme).
 
 ![Error alert](./preview/error-alert.png)
 
-> ⚠️ Не забывай о том, что `fetch` не считает 404 ошибкой, поэтому необходимо
-> явно отклонить промис чтобы можно было словить и обработать ошибку.
+> ⚠️ Nie zapominaj o tym, że `fetch` nie liczy 404 jako błąd, dlatego konieczne jest
+> widoczne odrzucenie obietnicy, aby można było wyłapać i przetworzyć błąd.
