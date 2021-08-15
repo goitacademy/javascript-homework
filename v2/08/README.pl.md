@@ -46,8 +46,8 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 ## Zadanie 2 - odtwarzacz wideo
 
 W HTML znajduje się `<iframe>` z wideo na Vimeo. Napisz skrypt, który będzie
-przechowywał aktualny czas odtwarzania wideo в локальное хранилище и, при
-перезагрузке страницы, продолжать воспроизводить видео с этого времени.
+zapisywał aktualny czas odtwarzania wideo w local storage i, podczas
+przeładowywania strony, kontynuuje odtwarzanie wideo od danego momentu.
 
 ```html
 <iframe
@@ -61,35 +61,35 @@ przechowywał aktualny czas odtwarzania wideo в локальное хранил
 ></iframe>
 ```
 
-Выполняй это задание в файлах `02-video.html` и `02-video.js`. Разбей его на
-несколько подзадач:
+Wykonuj to zadanie w plikach `02-video.html` i `02-video.js`. Rozbij je na
+kilka podzadań:
 
-1. Ознакомься с
-   [документацией](https://github.com/vimeo/player.js/#vimeo-player-api)
-   библиотеки Vimeo плеера.
-2. Добавь библиотеку как зависимость проекта через `npm`.
-3. Инициализируй плеер в файле скрипта как это описано в секции
+1. Zapoznaj się z
+   [dokumentacją](https://github.com/vimeo/player.js/#vimeo-player-api)
+   biblioteki odtwarzacza Vimeo.
+2. Dodaj bibliotekę jako zależność projektu poprzez `npm`.
+3. Inicjalizuj odtwarzacz w pliku skryptu tak, jak opisano w sekcji
    [pre-existing player](https://github.com/vimeo/player.js/#pre-existing-player),
-   но учти что у тебя плеер добавлен как npm пакет, а не через CDN.
-4. Разбери документацию метода
+   ale weź pod uwagę to, że odtwarzacz jest dodano jako pakiet npm, a nie poprzez CDN.
+4. Zbadaj dokumentację metody
    [on()](https://github.com/vimeo/player.js/#onevent-string-callback-function-void)
-   и начни отслеживать событие
-   [timeupdate](https://github.com/vimeo/player.js/#events) - обновление времени
-   воспроизведения.
-5. Сохраняй время воспроизведения в локальное хранилище. Пусть ключом для
-   хранилища будет строка `"videoplayer-current-time"`.
-6. При перезагрузке страницы воспользуйся методом
+   i zacznij śledzić zdarzenie
+   [timeupdate](https://github.com/vimeo/player.js/#events) - aktualizacja czasu
+   odtwarzania.
+5. Zapisuj czas odtwarzania w local storage. Niech kluczem do
+   storage będzie `"videoplayer-current-time"`.
+6. Przy przeładowywaniu strony używaj metody
    [setCurrentTime()](https://github.com/vimeo/player.js/#setcurrenttimeseconds-number-promisenumber-rangeerrorerror)
-   для того чтобы возобновить воспроизведение с сохраненной позиции.
-7. Добавь в проект бибилотеку
-   [lodash.throttle](https://www.npmjs.com/package/lodash.throttle) и сделай
-   так, чтобы время воспроизведения обновлялось в хранилище не чаще чем раз в
-   секунду.
+   aby wznowić odtwarzanie od zapisanego momentu.
+7. Dodaj do projektu bibliotekę
+   [lodash.throttle](https://www.npmjs.com/package/lodash.throttle) i zrób
+   tak, aby czas odtwarzania aktualizował się w storage nie częściej niż raz na
+   sekundę.
 
-## Задание 3 - форма обратной связи
+## Zadanie 3 - formularz kontaktowy
 
-В HTML есть разметка формы. Напиши скрипт который будет сохранять значения полей
-в локальное хранилище когда пользователь что-то печатает.
+W HTML znajduje się znacznik formularza. Napisz skrypt, który będzie zapisywał wartości pól
+w local storage, gdy użytkownik coś wpisuje.
 
 ```html
 <form class="feedback-form" autocomplete="off">
@@ -105,18 +105,18 @@ przechowywał aktualny czas odtwarzania wideo в локальное хранил
 </form>
 ```
 
-Выполняй это задание в файлах `03-feedback.html` и `03-feedback.js`. Разбей его
-на несколько подзадач:
+Wykonuj to zadanie w plikach `03-feedback.html` i `03-feedback.js`. Rozbij je
+na kilka podzadań:
 
-1. Отслеживай на форме событие `input`, и каждый раз записывай в локальное
-   хранилище объект с полями `email` и `password`, в которых сохраняй текущие
-   значения полей формы. Пусть ключом для хранилища будет строка
+1. Śledź w formularzu zdarzenie `input`, i za każdym razem zapisuj w local
+   storage obiekt z polami `email` i `password`, w których przechowuj aktualne
+   wartości pól formularza. Niech kluczem do storage będzie
    `"feedback-form-state"`.
-2. При загрузке страницы проверяй состояние хранилища, и если там есть
-   сохраненные данные, заполняй ими поля формы. В противном случае поля должны
-   быть пустыми.
-3. При сабмите формы очищай хранилище и поля формы, а также выводи объект с
-   полями `email`, `password` и текущими их значениями в консоль.
-4. Сделай так, чтобы хранилище обновлялось не чаще чем раз в 500 миллисекунд.
-   Для этого добавь в проект и используй библиотеку
-   [lodash.throttle](https://www.npmjs.com/package/lodash.throttle).
+2. Podczas przeładowywania strony sprawdzaj stan storage i jeśli są tam
+   zapisane dane, wypełniaj nimi pola formularza. W przeciwnym wypadku pola powinny
+   być puste.
+3. Przy wysłaniu formularza, wyczyść storage i pola formularza, a także wprowadź obiekt z
+   polami `email`, `password` i ich aktualnymi wartościami do wiersza poleceń.
+4. Zrób tak, aby storage aktualizował się nie częściej niż raz na 500 milisekund.
+   Aby to zrobić, użyj biblioteki
+   [lodash.throttle](https://www.npmjs.com/package/lodash.throttle) i dodaj ją do projektu.
