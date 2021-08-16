@@ -9,7 +9,7 @@
 - Wiersz poleceń nie zawiera błędów i ostrzeżeń.
 - Projekt utworzono z pomocą
   [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-- Kod sformatowano `Prettier`.
+- Sformatowano kod `Prettier`.
 
 ## Pliki startowe
 
@@ -23,7 +23,7 @@ repozytorium.
 
 ## Zadanie 1 - biblioteka `SimpleLightbox`
 
-Wykonaj to zadanie w plikach `01-gallery.html` i `01-gallery.js`. Rozbij je na 
+Wykonuj to zadanie w plikach `01-gallery.html` i `01-gallery.js`. Rozbij je na 
 kilka podzadań:
 
 1. Dodaj bibliotekę [SimpleLightbox](https://simplelightbox.com/) jako
@@ -70,7 +70,7 @@ kilka podzadań:
 2. Dodaj bibliotekę jako zależność projektu poprzez `npm`.
 3. Inicjalizuj odtwarzacz w pliku skryptu tak, jak opisano w sekcji
    [pre-existing player](https://github.com/vimeo/player.js/#pre-existing-player),
-   ale weź pod uwagę to, że odtwarzacz jest dodano jako pakiet npm, a nie poprzez CDN.
+   ale weź pod uwagę to, że odtwarzacz dodano jako pakiet npm, a nie poprzez CDN.
 4. Zbadaj dokumentację metody
    [on()](https://github.com/vimeo/player.js/#onevent-string-callback-function-void)
    i zacznij śledzić zdarzenie
@@ -78,7 +78,7 @@ kilka podzadań:
    odtwarzania.
 5. Zapisuj czas odtwarzania w local storage. Niech kluczem do
    storage będzie `"videoplayer-current-time"`.
-6. Przy przeładowywaniu strony używaj metody
+6. Do przeładowywania strony używaj metody
    [setCurrentTime()](https://github.com/vimeo/player.js/#setcurrenttimeseconds-number-promisenumber-rangeerrorerror)
    aby wznowić odtwarzanie od zapisanego momentu.
 7. Dodaj do projektu bibliotekę
@@ -115,7 +115,7 @@ na kilka podzadań:
 2. Podczas przeładowywania strony sprawdzaj stan storage i jeśli są tam
    zapisane dane, wypełniaj nimi pola formularza. W przeciwnym wypadku pola powinny
    być puste.
-3. Przy wysłaniu formularza, wyczyść storage i pola formularza, a także wprowadź obiekt z
+3. Po wysłaniu formularza wyczyść storage i pola formularza, a także wprowadź obiekt z
    polami `email`, `password` i ich aktualnymi wartościami do wiersza poleceń.
 4. Zrób tak, aby storage aktualizował się nie częściej niż raz na 500 milisekund.
    Aby to zrobić, użyj biblioteki
