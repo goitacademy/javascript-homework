@@ -8,7 +8,7 @@
   roboczej na `GitHub Pages`.
 - Wiersz poleceń nie zawiera błędów i ostrzeżeń.
 - Nazwy zmiennych i funkcji są zrozumiałe, opisowe.
-- Kod sformatowano `Prettier`.
+- Sformatowano kod `Prettier`.
 
 ## Pliki startowe
 
@@ -18,16 +18,16 @@
   pobrać oddzielny folder z repozytorium.
 - W pliku `gallery-items.js` znajduje się tablica `galleryItems`, która zawiera
   obiekty z informacją o obrazkach: małe (miniatura), oryginalne
-  (duże) i opis. Już podłączyliśmy ją do każdego z plików JS projektu.
+  (duże) i opis. Już połączyliśmy ją z każdym z plików JS projektu.
 
 ## Zadanie 1 - galeria obrazów
 
 Utwórz galerię z możliwością kliknięcia w jej elementy i przeglądania pełnego
-obrazu w oknie modalnym. Obejrzyj wideo-demo działania galerii.
+obrazu w oknie modalnym. Obejrzyj wersję demonstracyjną wideo o działaniu galerii.
 
 https://user-images.githubusercontent.com/17479434/127711719-4e293f5b-fbaa-4851-8671-fc841963d961.mp4
 
-Wykonaj to zadanie w plikach `01-gallery.html` i `01-gallery.js`. Rozbij je na
+Wykonuj to zadanie w plikach `01-gallery.html` i `01-gallery.js`. Rozbij je na
 kilka podzadań:
 
 1. Tworzenie i renderowanie znacznika zgodnie z tablicą danych `galleryItems` i
@@ -42,7 +42,7 @@ kilka podzadań:
    [dokumentacją](https://github.com/electerious/basicLightbox#readme) i
    [przykładami](https://basiclightbox.electerious.com/).
 5. Zmiana wartości atrybutu `src` elementu `<img>` w oknie modalnym przed
-   otworzeniem. Użyj gotowego znacznika okna modalnego z obrazkiem z
+   otworzeniem. Użyj gotowego znacznika okna modalnego z obrazem z
    przykładów biblioteki [basicLightbox](https://basiclightbox.electerious.com/).
 
 ### Znacznik elementu galerii
@@ -75,7 +75,7 @@ postępowanie domyślnie.
 > dodatkową praktyką.
 
 Dodaj zamknięcie okna modalnego po naciśnięciu klawiszy `Escape`. Zrób tak, aby
-nasłuchiwanie klawiatury było tylko wtedy, gdy otwarte jest okno modalne. W bibliotece
+nasłuchiwanie klawiatury było aktywne tylko wtedy, gdy otwarte jest okno modalne. W bibliotece
 [basicLightbox](https://basiclightbox.electerious.com/) istnieje metoda na
 programowe zamknięcie okna modalnego.
 
@@ -84,7 +84,7 @@ programowe zamknięcie okna modalnego.
 Utwórz taką samą galerię jak w zadaniu pierwszym, używając jednak biblioteki
 [SimpleLightbox](https://simplelightbox.com/), która zajmie się opracowaniem
 kliknięć w obrazki, otwieraniem i zamykaniem okna modalnego oraz
-przerzucaniem obrazków za pomocą klawiatury.
+przewijaniem obrazków za pomocą klawiatury.
 
 https://user-images.githubusercontent.com/17479434/127714821-4b7527c8-01db-42d3-83f0-8c1578561982.mp4
 
@@ -111,5 +111,5 @@ na kilka podzadań:
    [SimpleLightbox](https://simplelightbox.com/) - najpierw sekcje
    «Usage» i «Markup».
 4. W dokumentacji zwróć uwagę na sekcję «Options» i dodaj wyświetlanie podpisów do
-   obrazów z atrybutu `alt`. Niech podpis będzie pod spodem i pojawia się po
+   obrazków z atrybutu `alt`. Niech podpis będzie pod spodem i pojawia się po
    250 milisekundach po otwarciu obrazka.
