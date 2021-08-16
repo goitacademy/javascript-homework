@@ -1,32 +1,32 @@
 **Read in other languages: [Русский](README.md), [Українська](README.ua.md),
 [English](README.en.md), [Español](README.es.md), [Polski](README.pl.md).**
 
-# Критерии приема
+# Kryterium przyjęcia
 
-- Создан репозиторий `goit-js-hw-11`.
-- При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую
-  страницу на `GitHub Pages`.
-- При посещении живой страницы задания, в консоли нету ошибок и предупреждений.
-- Проект собран с помощью
+- Utworzono repozytorium `goit-js-hw-11`.
+- Przy oddaniu pracy domowej dołączono linki: do plików źródłowych i strony
+  roboczej na `GitHub Pages`.
+- Wiersz poleceń nie zawiera błędów i ostrzeżeń.
+- Projekt utworzono z pomocą
   [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-- Для HTTP запросов использована библиотека [axios](https://axios-http.com/).
-- Используется синтаксис `async/await`.
-- Для уведомлений использована библиотека
+- Do żądań HTTP użyto biblioteki [axios](https://axios-http.com/).
+- Użyto składni `async/await`.
+- Do powiadomień użyto biblioteki
   [notiflix](https://github.com/notiflix/Notiflix#readme).
-- Код отформатирован `Prettier`.
+- Sformatowano kod `Prettier`.
 
-# Задание - поиск изображений
+# Zadanie - wyszukiwanie obrazów
 
-Создай фронтенд часть приложения поиска и просмотра изображений по ключевому
-слову. Добавь оформление элементов интерфейса. Посмотри демо видео работы
-приложения.
+Utwórz frontend aplikacji wyszukiwania i przeglądania obrazków według słów
+kluczowych. Popraw wizualnie elementy interfejsu. Obejrzyj wersję demonstracyjną wideo o działaniu
+aplikacji.
 
 https://user-images.githubusercontent.com/17479434/125040406-49a6f600-e0a0-11eb-975d-e7d8eaf2af6b.mp4
 
-## Форма поиска
+## Formularz wyszukiwania
 
-Форма изначально есть в HTML документе. Пользователь будет вводить строку для
-поиска в текстовое поле, а при сабмите формы необходимо выполнять HTTP-запрос.
+Formularz początkowo znajduje się w dokumencie HTML. Użytkownik będzie wprowadzał treść do
+wyszukania w pole tekstowe, a przy wysyłaniu formularza koniecznym jest spełnienie żądania HTTP.
 
 ```html
 <form class="search-form" id="search-form">
@@ -40,52 +40,52 @@ https://user-images.githubusercontent.com/17479434/125040406-49a6f600-e0a0-11eb-
 </form>
 ```
 
-## HTTP-запросы
+## Żądania HTTP
 
-В качестве бэкенда используй публичный API сервиса
-[Pixabay](https://pixabay.com/api/docs/). Зарегистрируйся, получи свой
-уникальный ключ доступа и ознакомься с документацией.
+Jako backendu używaj publicznego API serwisu
+[Pixabay](https://pixabay.com/api/docs/). Zarejestruj się, otrzymaj swój
+unikalny klucz dostępu i zapoznaj się z dokumentacją.
 
-Список параметров строки запроса которые тебе обязательно необходимо указать:
+Lista parametrów treści żądania, które należy podać:
 
-- `key` - твой уникальный ключ доступа к API.
-- `q` - термин для поиска. То, что будет вводить пользователь.
-- `image_type` - тип изображения. Мы хотим только фотографии, поэтому задай
-  значение `photo`.
-- `orientation` - ориентация фотографии. Задай значение `horizontal`.
-- `safesearch` - фильтр по возрасту. Задай значение `true`.
+- `key` - Twój unikalny klucz dostępu do API.
+- `q` - termin do wyszukania. To, co będzie wpisywał użytkownik.
+- `image_type` - typ obrazka. Chcemy tylko zdjęć, dlatego określ
+  wartość `photo`.
+- `orientation` - orientacja zdjęcia. Określ wartość `horizontal`.
+- `safesearch` - weryfikacja wieku. Określ wartość `true`.
 
-В ответе будет массив изображений удовлетворивших критериям параметров запроса.
-Каждое изображение описывается объектом, из которого тебе интересны только
-следующие свойства:
+W odpowiedzi pojawi się tablica obrazów odpowiadających kryteriom parametrów żądania.
+Każdy obraz opisany jest obiektem, z których interesują cię tylko
+następujące właściwości:
 
-- `webformatURL` - ссылка на маленькое изображение для списка карточек.
-- `largeImageURL` - ссылка на большое изображение.
-- `tags` - строка с описанием изображения. Подойдет для атрибута `alt`.
-- `likes` - количество лайков.
-- `views` - количество просмотров.
-- `comments` - количество комментариев.
-- `downloads` - количество загрузок.
+- `webformatURL` - link do małego obrazka.
+- `largeImageURL` - link do dużego obrazka.
+- `tags` - wiersz z opisem obrazka. Będzie pasować do atrybutu `alt`.
+- `likes` - liczba lajków.
+- `views` - liczba wyświetleń.
+- `comments` - liczba komentarzy.
+- `downloads` - liczba pobrań.
 
-Если бэкенд возвращает пустой массив, значит ничего подходящего найдено небыло.
-В таком случае показывай уведомление с текстом
+Jeśli backend oddaje pustą tablicę, oznacza to, że nic odpowiedniego nie znaleziono.
+W takim wypadku pokaż powiadomienie o treści
 `"Sorry, there are no images matching your search query. Please try again."`.
-Для уведомлений используй библиотеку
+Do powiadomień używaj biblioteki
 [notiflix](https://github.com/notiflix/Notiflix#readme).
 
-## Галерея и карточка изображения
+## Galeria i obraz karty
 
-Элемент `div.gallery` изначально есть в HTML документе, и в него необходимо
-рендерить разметку карточек изображений. При поиске по новому ключевому слову
-необходимо полностью очищать содержимое галереи, чтобы не смешивать результаты.
+Element `div.gallery` znajduje się początkowo w dokumencie HTML, należy
+wykonać w nim znacznik obrazu karty. Przy wyszukiwaniu według nowego słowa kluczowego,
+należy całkowicie wyczyścić zawartość galerii, aby nie mieszać wyników.
 
 ```html
 <div class="gallery">
-  <!-- Карточки изображений -->
+  <!-- Obraz karty -->
 </div>
 ```
 
-Шаблон разметки карточки одного изображения для галереи.
+Szablon znacznika karty jednego obrazka do galerii.
 
 ```html
 <div class="photo-card">
@@ -107,47 +107,47 @@ https://user-images.githubusercontent.com/17479434/125040406-49a6f600-e0a0-11eb-
 </div>
 ```
 
-## Пагинация
+## Paginacja
 
-Pixabay API поддерживает пагинацию и предоставляет параметры `page` и
-`per_page`. Сделай так, чтобы в каждом ответе приходило 40 объектов (по
-умолчанию 20).
+Pixabay API podtrzymuje paginację i dostarcza parametry `page` i
+`per_page`. Zrób tak, aby w każdej odpowiedzi pojawiało się po 40 obiektów 
+(domyślnie 20).
 
-- Изначально значение параметра `page` должно быть `1`.
-- При каждом последующем запросе, его необходимо увеличить на `1`.
-- При поиске по новому ключевому слову значение `page` надо вернуть в исходное,
-  так как будет пагинация по новой коллекции изображений.
+- Początkowo wartość parametru `page` powinna wynosić `1`.
+- Przy każdym kolejnym żądaniu, koniecznym jest zwiększenie go o `1`.
+- Przy wyszukiwwaniu według nowego kluczowego słowa wartość `page` należy cofnąć do początkowego stanu,
+  ponieważ będzie paginacja według nowej kolekcji obrazków.
 
-В HTML документе уже есть разметка кнопки при клике по которой необходимо
-выполнять запрос за следующей группой изображений и добавлять разметку к уже
-существующим элементам галереи.
+W dokumencie HTML istnieje już znacznik przycisku, po kliknięciu którego koniecznym jest
+spełnienie żądania według następnej grupy obrazków i dodanie znacznika do już
+istniejących elementów galerii.
 
 ```html
 <button type="button" class="load-more">Load more</button>
 ```
 
-- Изначально кнопка должна быть скрыта.
-- После первого запроса кнопка появляется в интерфейсе под галереей.
-- При повторном сабмите формы кнопка сначала прячется, а после запроса опять
-  отображается.
+- Początkowo przycisk powinien być ukryty.
+- Po pierwszym żądaniu przycisk pojawia się w interfejsie pod galerią.
+- Przy ponownym wysłaniu formularza przycisk najpierw się ukrywa, a po żądaniu ponownie
+  się wyświetla.
 
-В ответе бэкенд возвращает свойство `totalHits` - общее количество изображений
-которые подошли под критерий поиска (для бесплатного аккаунта). Если
-пользователь дошел до конца коллекции, пряч кнопку и выводи уведомление с
-текстом `"We're sorry, but you've reached the end of search results."`.
+W odpowiedzi backend oddaje właściwość `totalHits` - wspólną liczbę obrazków,
+które odpowiadają kryteriom wyszukiwania (dla bezpłatnego konta). Jeśli
+użytkownik doszedł do końca kolekcji, ukryj przycisk i pokaż powiadomienie o
+treści `"We're sorry, but you've reached the end of search results."`.
 
-## Дополнительно
+## Dodatkowo
 
-> ⚠️ Следующий функционал не обязателен при сдаче задания, но будет хорошей
-> дополнительной практикой.
+> ⚠️ Następna funkcja nie jest obowiązkowa przy oddawaniu zadania, ale będzie dobrą
+> dodatkową praktyką.
 
-### Уведомление
+### Powiadomienie
 
-После первого запроса при каждом новом поиске выводить уведомление в котором
-будет написано сколько всего нашли изображений (свойство `totalHits`). Текст
-уведомления `"Hooray! We found totalHits images."`
+Po pierwszym żądaniu przy każdym nowym wyszukiwaniu pokaż powiadomienie, w którym
+będzie napisane ile w sumie znaleziono obrazków (właściwość `totalHits`). Tekst
+powiadomienia `"Hooray! We found totalHits images."`
 
-### Библиотека `SimpleLightbox`
+### Biblioteka `SimpleLightbox`
 
 Добавить отображение большой версии изображения с библиотекой
 [SimpleLightbox](https://simplelightbox.com/) для полноценной галереи.
