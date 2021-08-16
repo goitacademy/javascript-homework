@@ -25,8 +25,8 @@ repozytorium.
 Utwórz frontend aplikacji wyszukiwania danych o kraju według częściowej 
 lub pełnej nazwy. Użyj publicznego API
 [Rest Countries](https://restcountries.eu/), a dokładniej
-[źródło name](https://restcountries.eu/#api-endpoints-name), przywracający tablicę
-obiektów krajów odpowiadających kryterium wyszukiwania. Popraw wizualnie
+[nazwa źródła](https://restcountries.eu/#api-endpoints-name), który przekazuje tablicę
+obiektów krajów odpowiadających kryteriom wyszukiwania. Popraw wizualnie
 elementy interfejsu.
 
 ![Country search app preview](./preview/app-preview.gif)
@@ -34,14 +34,14 @@ elementy interfejsu.
 ### Żądanie HTTP
 
 Napisz funkcję `fetchCountries(name)` która tworzy żądanie HTTP na
-[źródło name](https://restcountries.eu/#api-endpoints-name) i przywraca obietnicę
+[nazwa źródła](https://restcountries.eu/#api-endpoints-name) i przekazuje obietnicę
 z tablicą krajów - wynikiem żądania. Przenieś ją do oddzielnego pliku
 `fetchCountries.js` i utwórz eksport nazwany.
 
 ### Filtrowanie pól
 
-W odpowiedzi, z backendu przywracane są obiekty, których większość właściwości nie
-przyda Ci się. Aby zredukować zakres danych przekazywanych danych, dodaj ciąg parametrów
+W odpowiedzi, z backendu przekazywane są obiekty, których większość właściwości nie
+przyda Ci się. Aby zredukować zakres przekazywanych danych, dodaj ciąg parametrów
 żądania - w taki sposób backend realizuje filtrację pól. Zapoznaj się z
 [dokumentacją składni filtrów](https://restcountries.eu/#filter-response).
 
@@ -55,10 +55,10 @@ Potrzebujesz tylko następujących właściwości:
 
 ### Pole wyszukiwania
 
-Nazwę kraju, którą chce się wyszukać, użytkownik wprowadza w pole tekstowe
-`input#search-box`. Żądania HTTP realizuje się przy zebraniu nazwy kraju, czyli po
-zdarzeniu `input`. Jednak nie należy robić żądania przy każdym kliknięciu przycisku, ponieważ
-otrzymamy jednocześnie wiele żądań, które będą wykonywane w nieprzewidywalnym
+Nazwę kraju, którą chce wyszukać użytkownik, wprowadza się w pole tekstowe
+`input#search-box`. Żądania HTTP realizuje się przy komplecie nazw krajów, czyli po
+zdarzeniu `input`. Jednak nie należy spełniać żądania po każdym kliknięciu przycisku, ponieważ
+otrzymamy jednocześnie wiele żądań, które zostaną spełnione w nieprzewidywalnym
 porządku.
 
 Koniecznym jest zastosowanie funkcji `Debounce` na event handler i wykonanie
@@ -74,15 +74,15 @@ w polu wprowadzania są tylko spacje lub widnieją one na początku i na końcu 
 
 ### Interfejs
 
-Jeśli w odpowiedzi backend przywrócił więcej niż 10 krajów, w interfejsie pojawia się
-powiadomienie o tym, że nazwa powinna być bardziej charakterystyczna. Do powiadomień
+Jeśli w odpowiedzi backend przekazał więcej niż 10 krajów, w interfejsie pojawia się
+powiadomienie o tym, że nazwa powinna być bardziej specyficzna. Do powiadomień
 używaj [biblioteki notiflix](https://github.com/notiflix/Notiflix#readme) i
 wprowadź taki wiersz
 `"Too many matches found. Please enter a more specific name."`.
 
 ![Too many matches alert](./preview/too-many-matches.png)
 
-Jeśli backend przywrócił od 2-óch do 10-ciu krajów, pod polem tekstowym pojawia się lista
+Jeśli backend przekazał od 2-óch do 10-ciu krajów, pod polem tekstowym pojawia się lista
 znalezionych krajów. Każdy element listy składa się z flagi i nazwy kraju. 
 
 ![Country list UI](./preview/country-list.png)
@@ -95,12 +95,12 @@ języki.
 
 > ⚠️ Wystarczy, jeśli aplikacja będzie działała dla większości krajów. Niektóre
 > kraje, takie jak `Sudan`, mogą powodować problemy, ponieważ nazwa kraju
-> jest częścią nazwy innego kraju, `South Sudan`. Nie należy się martwić
-> tymi wyjątkami.
+> jest częścią nazwy innego kraju, `South Sudan`. Nie należy się skupiać
+> na tych wyjątkach.
 
 ### Przetwarzanie błędu
 
-Jeśli użytkownik wprowadził nazwę kraju, który nie istnieje, backend odda nie pustą
+Jeśli użytkownik wprowadził nazwę kraju, który nie istnieje, backend przekaże nie pustą
 tablicę, a błąd z kodem stanu `404` - nie znaleziono. Jeśli tego nie opracujesz, to
 użytkownik nigdy nie dowie się o tym, że żądanie nie przyniosło wyników. Dodaj
 powiadomienie `"Oops, there is no country with that name"` w razie błędu,
@@ -108,5 +108,5 @@ używając [biblioteki notiflix](https://github.com/notiflix/Notiflix#readme).
 
 ![Error alert](./preview/error-alert.png)
 
-> ⚠️ Nie zapominaj o tym, że `fetch` nie liczy 404 jako błąd, dlatego konieczne jest
+> ⚠️ Nie zapominaj o tym, że `fetch` nie postrzega 404 jako błędu, dlatego konieczne jest
 > widoczne odrzucenie obietnicy, aby można było wyłapać i przetworzyć błąd.
