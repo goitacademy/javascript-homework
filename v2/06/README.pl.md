@@ -9,7 +9,7 @@
 - Zadania wykonano zgodnie z zakresem zadań (nie wolno zmieniać kodu źródłowego HTML zadania).
 - Wiersz poleceń nie zawiera błędów i ostrzeżeń.
 - Nazwy zmiennych i funkcji są zrozumiałe, opisowe.
-- Kod sformatowano `Prettier`.
+- Sformatowano kod `Prettier`.
 
 ## Pliki startowe
 
@@ -142,7 +142,7 @@ const images = [
 
 ## Zadanie 4
 
-Licznik składa się ze spana i klawiszy, które, po naciśnięciu, powinny zwiększać i 
+Licznik składa się ze spana i przycisków, które, po ich kliknięciu, powinny zwiększać i 
 zmniejszać jego wartość na jednostkę.
 
 ```html
@@ -155,15 +155,15 @@ zmniejszać jego wartość na jednostkę.
 
 - Utwórz zmienną `counterValue` w której będzie przechowywana aktualna wartość
   licznika i inicjalizuj wartość `0`.
-- Dodaj click listeners na przyciski, wewnątrz których zwiększaj i zmniejszaj
+- Dodaj click listeners do przycisków, wewnątrz których zwiększaj i zmniejszaj
   wartość licznika.
 - Aktualizuj interfejs nową wartością zmiennej `counterValue`.
 
 ## Zadanie 5
 
-Napisz skrypt, który przy pisaniu tekstu w polu input `input#name-input` (zdarzenie
+Napisz skrypt, który przy wpisywaniu tekstu w polu input `input#name-input` (zdarzenie
 `input`) wstawia jego aktualną wartość do `span#name-output`. Jeśli pole input jest
-puste, w spanie powinien wyświetlić się wiersz `"Anonymous"`.
+puste, w spanie powinien wyświetlić się komunikat `"Anonymous"`.
 
 ```html
 <input type="text" id="name-input" placeholder="Please enter your name" />
@@ -209,8 +209,8 @@ dodaliśmy do plików źródłowych zadania.
 ## Zadanie 7
 
 Napisz skrypt, który reaguje na zmianę wartości `input#font-size-control`
-(событие `input`) i zmienia styl inline `span#text` aktualizując właściwość
-`font-size`. W rezultacie podczas przeciągania paska przesuwania będzie zmieniał się rozmiar
+(zdarzenie `input`) i zmienia styl inline `span#text` aktualizując właściwość
+`font-size`. W rezultacie, podczas przeciągania paska przesuwania będzie zmieniał się rozmiar
 tekstu.
 
 ```html
@@ -241,7 +241,7 @@ Napisz skrypt zarządzania formularzem logowania.
 2. Podczas przesyłania formularza strona nie powinna się restartować.
 3. Jeśli w formularzu są nieuzupełnione pola, wprowadź `alert` z upomnieniem o tym,
    że wszystkie pola powinny zostać wypełnione.
-4. Jeśli użytkownik uzupełnił wszystkie pola i wysłał formularz, zbierz wartość pól w
+4. Jeśli użytkownik uzupełnił wszystkie pola i wysłał formularz, zbierz wartość pól jako
    obiekt, gdzie nazwa pola będzie nazwą właściwości, a wartość pola - wartością
    właściwości. Aby otrzymać dostęp do elementów formularza użyj właściwości `elements`.
 5. Umieść obiekt z wprowadzonymi danymi do wiersza poleceń i wyczyść wartości pól formularza
@@ -250,7 +250,7 @@ Napisz skrypt zarządzania formularzem logowania.
 ## Zadanie 9
 
 Napisz skrypt, który zmienia kolor tła elementu `<body>` poprzez style inline
-przy kliknięciu na `button.change-color` i wprowadza wartość koloru do `span.color`.
+po kliknięciu na `button.change-color` i wprowadza wartość koloru do `span.color`.
 
 ```html
 <div class="widget">
@@ -283,7 +283,7 @@ tworzenie się kolekcji. Po naciśnięciu przycisku `Usuń`, kolekcja elementów
 <div id="boxes"></div>
 ```
 
-Utwórz funkcję `createBoxes(amount)`, która przyjmuje jeden parametr - liczbę.
+Utwórz funkcję `createBoxes(amount)`, która bierze jeden parametr - liczbę.
 Funkcja tworzy tyle `<div>`, ile ukazano w `amount` i dodaje je do
 `div#boxes`.
 
