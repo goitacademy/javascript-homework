@@ -149,28 +149,28 @@ powiadomienia `"Hooray! We found totalHits images."`
 
 ### Biblioteka `SimpleLightbox`
 
-Добавить отображение большой версии изображения с библиотекой
-[SimpleLightbox](https://simplelightbox.com/) для полноценной галереи.
+Dodaj funkcję wyświetlania większej wersji obrazka z biblioteką
+[SimpleLightbox](https://simplelightbox.com/).
 
-- В разметке необходимо будет обернуть каждую карточку изображения в ссылку, как
-  указано в документации.
-- У библиотеки есть метод `refresh()` который обязательно нужно вызывать каждый
-  раз после добавления новой группы карточек изображений.
+- W znaczniku trzeba będzie zamienić każdy obraz karty w link, tak jak
+  pokazano w dokumentacji.
+- Biblioteka zawiera metodę `refresh()` którą trzeba koniecznie wywołać za każdym
+  razem po dodaniu nowej grupy obrazów karty.
 
-Для того чтобы подключить CSS код библиотеки в проект, необходимо добавить еще
-один импорт, кроме того который описан в документации.
+Aby podłączyć kod CSS biblioteki do projektu, koniecznym jest dodanie jeszcze
+jednego importu, oprócz tego opisanego w dokumentacji.
 
 ```js
-// Описан в документации
+// Opisany w dokumentacji
 import SimpleLightbox from 'simplelightbox';
-// Дополнительный импорт стилей
+// Dodatkowy import stylów
 import 'simplelightbox/dist/simple-lightbox.min.css';
 ```
 
-### Прокрутка страницы
+### Przewijanie strony
 
-Сделать плавную прокрутку страницы после запроса и отрисовки каждой следующей
-группы изображений. Вот тебе код подсказка, а разберись в нём самостоятельно.
+Stwórz płynne przewijanie strony po żądaniu i renderowaniu każdej następnej 
+grupy obrazków. Oto kod-wskazówka, uporaj się z nią samodzielnie.
 
 ```js
 const { height: cardHeight } = document
@@ -183,8 +183,8 @@ window.scrollBy({
 });
 ```
 
-### Бесконечный скролл
+### Nieskończone przewijanie
 
-Вместо кнопки «Load more» можно сделать бесконечную загрузку изображений при
-прокрутке страницы. Мы предоставлям тебе полную свободу действий в реализации,
-можешь использовать любые библиотеки.
+Zamiast przycisku «Load more» można zrobić nieskończone przewijanie obrazów podczas
+przewijania strony. Zapewniamy Ci pełną swobodę w realizacji,
+możesz użyć dowolnej biblioteki.
