@@ -9,7 +9,7 @@
 - Wiersz poleceń nie zawiera błędów i ostrzeżeń.
 - Projekt utworzono z pomocą
   [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-- Kod sformatowano `Prettier`.
+- Sformatowano kod `Prettier`.
 
 ## Pliki startowe
 
@@ -137,10 +137,10 @@ dlatego bierzemy pierwszy element.
 
 - Jeśli użytkownik wybrał datę z przeszłości, pokaż `window.alert()` o treści
   `"Please choose a date in the future"`.
-- Jeśli użytkownik wybrał odpowiednią datę (w przyszłości), przycisk «Start» staje się
+- Jeśli użytkownik wybrał odpowiednią datę (z przyszłości), przycisk «Start» staje się
   aktywny.
 - Przycisk «Start» powinien być nieaktywny dotąd, dopóki użytkownik nie wybierze
-  daty w przyszłości.
+  daty z przyszłości.
 - Po kliknięciu przycisku «Start» zaczyna się odliczanie czasu do wybranej daty od
   momentu kliknięcia.
 
@@ -248,10 +248,10 @@ function createPromise(position, delay) {
 ```
 
 Uzupełnij kod funkcji `createPromise` tak, aby przywracała **jedną obietnicę**,
-którą realizuje się lub odwleka poprzez `delay` czasu. Wartością obietnicy
+którą realizuje się lub odkłada poprzez `delay` czasu. Wartością obietnicy
 powinien być obiekt, w którym będą właściwości `position` i `delay` z wartościami
 parametrów o tej samej nazwie. Użyj kodu początkowego funkcji, aby wybrać to, co
-należy zrobić z obietnicą - zrealizować lub odwlec.
+należy zrobić z obietnicą - zrealizować lub odłożyć.
 
 ```js
 createPromise(2, 1500)
