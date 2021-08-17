@@ -64,7 +64,7 @@ lub klas CSS oprócz tych, które znajdują się w tym szablonie.
 </div>
 ```
 
-Zwróc uwagę na to, że obrazek zamieniono w link, a więc po
+Zwróć uwagę na to, że obrazek zamieniono w link, a więc po
 domyślnym kliknięciu użytkownik zostanie przekierowany na inną stronę. Zablokuj to
 postępowanie domyślnie.
 
