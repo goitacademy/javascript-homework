@@ -23,15 +23,16 @@
 ## Задание - поиск стран
 
 Создай фронтенд часть приложения поиска данных о стране по её частичному или
-полному имени. Используй публичный API
-[Rest Countries](https://restcountries.eu/), а именно
+полному имени. Посмотри
+[демо видео](https://user-images.githubusercontent.com/17479434/131147741-7700e8c5-8744-4eea-8a8e-1c3d4635248a.mp4)
+приложения.
+
+### HTTP-запросы
+
+Используй публичный API [Rest Countries](https://restcountries.eu/), а именно
 [ресурс name](https://restcountries.eu/#api-endpoints-name), возвращающий массив
 объектов стран удовлетворивших критерий поиска. Добавь минимальное оформление
 элементов интерфейса.
-
-![Country search app preview](./preview/app-preview.gif)
-
-### HTTP-запрос
 
 Напиши функцию `fetchCountries(name)` которая делает HTTP-запрос на
 [ресурс name](https://restcountries.eu/#api-endpoints-name) и возвращает промис
