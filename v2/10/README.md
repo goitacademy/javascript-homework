@@ -31,22 +31,24 @@ https://user-images.githubusercontent.com/17479434/131147741-7700e8c5-8744-4eea-
 
 ### HTTP-запросы
 
-Используй публичный API [Rest Countries](https://restcountries.eu/), а именно
-[ресурс name](https://restcountries.eu/#api-endpoints-name), возвращающий массив
-объектов стран удовлетворивших критерий поиска. Добавь минимальное оформление
-элементов интерфейса.
+Используй публичный API
+[Rest Countries](https://gitlab.com/amatos/rest-countries/-/blob/master/README.md#api-endpoints),
+вторую версию (v2) и
+[ресурс name](https://gitlab.com/amatos/rest-countries/-/blob/master/README.md#v2-1),
+возвращающий массив объектов стран удовлетворивших критерий поиска. Добавь
+минимальное оформление элементов интерфейса.
 
 Напиши функцию `fetchCountries(name)` которая делает HTTP-запрос на
-[ресурс name](https://restcountries.eu/#api-endpoints-name) и возвращает промис
-с массивом стран - результатом запроса. Вынеси её в отдельный файл
-`fetchCountries.js` и сделай именованный экспорт.
+[ресурс name](https://gitlab.com/amatos/rest-countries/-/blob/master/README.md#v2-1)
+и возвращает промис с массивом стран - результатом запроса. Вынеси её в
+отдельный файл `fetchCountries.js` и сделай именованный экспорт.
 
 ### Фильтрация полей
 
 В ответе от бэкенда возвращаются объекты, большая часть свойств которых тебе не
 пригодится. Чтобы сократить объем передаваемых данных добавь строку параметров
 запроса - так этот бэкенд реализует фильтрацию полей. Ознакомься с
-[документацией синтаксиса фильтров](https://restcountries.eu/#filter-response).
+[документацией синтаксиса фильтров](https://gitlab.com/amatos/rest-countries/-/blob/master/README.md#filter-response).
 
 Тебе нужны только следующие свойства:
 

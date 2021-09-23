@@ -29,22 +29,25 @@ https://user-images.githubusercontent.com/17479434/131147741-7700e8c5-8744-4eea-
 
 ### Żądanie HTTP
 
-Użyj publicznego API [Rest Countries](https://restcountries.eu/), a dokładniej
-[nazwa źródła](https://restcountries.eu/#api-endpoints-name), który przekazuje
-tablicę obiektów krajów odpowiadających kryteriom wyszukiwania. Popraw wizualnie
-elementy interfejsu.
+Użyj publicznego API
+[Rest Countries v2](https://gitlab.com/amatos/rest-countries/-/blob/master/README.md#api-endpoints),
+a dokładniej
+[nazwa źródła](https://gitlab.com/amatos/rest-countries/-/blob/master/README.md#v2-1),
+który przekazuje tablicę obiektów krajów odpowiadających kryteriom wyszukiwania.
+Popraw wizualnie elementy interfejsu.
 
 Napisz funkcję `fetchCountries(name)` która tworzy żądanie HTTP na
-[nazwa źródła](https://restcountries.eu/#api-endpoints-name) i przekazuje
-obietnicę z tablicą krajów - wynikiem żądania. Przenieś ją do oddzielnego pliku
-`fetchCountries.js` i utwórz eksport nazwany.
+[nazwa źródła](https://gitlab.com/amatos/rest-countries/-/blob/master/README.md#v2-1)
+i przekazuje obietnicę z tablicą krajów - wynikiem żądania. Przenieś ją do
+oddzielnego pliku `fetchCountries.js` i utwórz eksport nazwany.
 
 ### Filtrowanie pól
 
 W odpowiedzi, z backendu przekazywane są obiekty, których większość właściwości
 nie przyda Ci się. Aby zredukować zakres przekazywanych danych, dodaj ciąg
 parametrów żądania - w taki sposób backend realizuje filtrację pól. Zapoznaj się
-z [dokumentacją składni filtrów](https://restcountries.eu/#filter-response).
+z
+[dokumentacją składni filtrów](https://gitlab.com/amatos/rest-countries/-/blob/master/README.md#filter-response).
 
 Potrzebujesz tylko następujących właściwości:
 

@@ -19,9 +19,11 @@
 ## Пошук країн
 
 Створи невеликий додаток пошуку даних про країну по її частковому або повному
-імені. Використовуй [Rest Countries API](https://restcountries.eu/), а саме
-ендпоінт [/name](https://restcountries.eu/#api-endpoints-name), який повертає
-масив об'єктів країн, що потрапили під критерій пошуку.
+імені. Використовуй
+[Rest Countries API v2](https://gitlab.com/amatos/rest-countries/-/blob/master/README.md#api-endpoints),
+а саме ендпоінт
+[/name](https://gitlab.com/amatos/rest-countries/-/blob/master/README.md#v2-1),
+який повертає масив об'єктів країн, що потрапили під критерій пошуку.
 
 Досить, щоб додаток працював для більшості країн. Деякі країни, такі як:
 `Sudan`, можуть створювати проблеми, оскільки назва країни є частиною назви
