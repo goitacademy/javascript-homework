@@ -19,11 +19,10 @@
 ## Поиск стран
 
 Создай небольшое приложение поиска данных о стране по ее частичному или полному
-имени. Используй
-[Rest Countries API](https://gitlab.com/amatos/rest-countries/-/blob/master/README.md#api-endpoints),
-а именно вторую версию (v2) и ендпоинт
-[/name](https://gitlab.com/amatos/rest-countries/-/blob/master/README.md#v2-1),
-возвращающий массив объектов стран попавших под критерий поиска.
+имени. Используй [Rest Countries API](https://restcountries.com/), а именно
+вторую версию (v2) и ендпоинт
+[/name](https://restcountries.com/#api-endpoints-v3-name), возвращающий массив
+объектов стран попавших под критерий поиска.
 
 Достаточно чтобы приложение работало для большинства стран. Некоторые страны,
 такие как `Sudan`, могут создавать проблемы, поскольку название страны является
