@@ -29,13 +29,13 @@ https://user-images.githubusercontent.com/17479434/131147741-7700e8c5-8744-4eea-
 
 ### Żądanie HTTP
 
-Użyj publicznego API [Rest Countries](https://restcountries.eu/), a dokładniej
-[nazwa źródła](https://restcountries.eu/#api-endpoints-name), który przekazuje
-tablicę obiektów krajów odpowiadających kryteriom wyszukiwania. Popraw wizualnie
-elementy interfejsu.
+Użyj publicznego API [Rest Countries v2](https://restcountries.com/), a
+dokładniej [nazwa źródła](https://restcountries.com/#api-endpoints-v3-name),
+który przekazuje tablicę obiektów krajów odpowiadających kryteriom wyszukiwania.
+Popraw wizualnie elementy interfejsu.
 
 Napisz funkcję `fetchCountries(name)` która tworzy żądanie HTTP na
-[nazwa źródła](https://restcountries.eu/#api-endpoints-name) i przekazuje
+[nazwa źródła](https://restcountries.com/#api-endpoints-v3-name) i przekazuje
 obietnicę z tablicą krajów - wynikiem żądania. Przenieś ją do oddzielnego pliku
 `fetchCountries.js` i utwórz eksport nazwany.
 
@@ -44,14 +44,14 @@ obietnicę z tablicą krajów - wynikiem żądania. Przenieś ją do oddzielnego
 W odpowiedzi, z backendu przekazywane są obiekty, których większość właściwości
 nie przyda Ci się. Aby zredukować zakres przekazywanych danych, dodaj ciąg
 parametrów żądania - w taki sposób backend realizuje filtrację pól. Zapoznaj się
-z [dokumentacją składni filtrów](https://restcountries.eu/#filter-response).
+z [dokumentacją składni filtrów](https://restcountries.com/#filter-response).
 
 Potrzebujesz tylko następujących właściwości:
 
-- `name` - pełna nazwa kraju
+- `name.official` - pełna nazwa kraju
 - `capital` - stolica
 - `population` - liczba ludności
-- `flag` - link do ilustracji przedstawiającej flagę
+- `flags.svg` - link do ilustracji przedstawiającej flagę
 - `languages` - tablica języków
 
 ### Pole wyszukiwania
