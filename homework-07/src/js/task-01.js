@@ -9,7 +9,22 @@
 
 const first = [1, 3, 3, 4, 6, 5, 4];
 const second = [6, 3, 5, 2, 2];
-// const third = [...first, ...second];
+function uniqieNumbers(first, second) {
+  let arr = [];
+
+  if (first !== second) {
+    return arr.push(first);
+  }
+}
+console.log(arr);
+
+const third = [...first, ...second].filter(
+  (number, index, array) => array.indexOf(number) !== index
+);
+
+var array3 = first.filter(function (obj) {
+  return second.indexOf(obj) !== 0;
+});
 // let third = first
 //   .concat(second)
 //   .third.sort(function (a, b) {
@@ -27,4 +42,15 @@ const second = [6, 3, 5, 2, 2];
 //   []
 // );
 
-console.log(third);
+// const getCommonElements = (first, second) => {
+//   const commonElements = [];
+
+//   first.forEach(element => {
+//     if (second.includes(first)) {
+//       commonElements.push(element);
+//     }
+//   });
+
+//   return commonElements;
+// };
+console.log(array3);
