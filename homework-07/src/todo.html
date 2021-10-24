@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ToDo</title>
+
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        font-family: Calibri;
+        color: white;
+      }
+
+      .todo {
+        height: 100%;
+        overflow-x: auto;
+        background: darkslateblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .todo .todo-canvas {
+        margin: 1rem;
+        width: 300px;
+      }
+
+      .todo .todo-list {
+        background: slateblue;
+        border-radius: 5px;
+        padding: 1rem;
+      }
+
+      .todo .todo-header {
+        padding: 1rem;
+        display: flex;
+        align-items: end;
+      }
+
+      .todo .todo-button {
+        cursor: pointer;
+
+        color: white;
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+        border-radius: 50%;
+        border: 0;
+        -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+      }
+
+      .todo .todo-button:hover {
+        -webkit-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.75);
+      }
+
+      .todo .todo-button.todo-button-add {
+        background: blue;
+      }
+
+      .todo .todo-button.todo-button-add:hover {
+        background: mediumblue;
+      }
+
+      .todo .todo-button.todo-button-delete {
+        width: 25px;
+        height: 25px;
+        background: red;
+        font-size: 1rem;
+      }
+
+      .todo .todo-button.todo-button-delete:hover {
+        background: darkred;
+      }
+
+      .todo .todo-card {
+        display: flex;
+        flex-direction: column;
+
+        padding: 1rem;
+        margin: 1rem 0;
+
+        border-radius: 5px;
+        -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75);
+      }
+
+      .todo .todo-card .label,
+      .todo .todo-card .save {
+        width: 100%;
+      }
+
+      .todo .todo-card .label,
+      .todo .todo-card .content,
+      .todo .todo-card .save {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        padding: 0.25rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="todo">
+      <div class="todo-canvas">
+        <div class="todo-header">
+          <button class="todo-button todo-button-add" id="todo-button-add">
+            +
+          </button>
+        </div>
+        <div class="todo-list">
+          <div class="todo-card" id="card-1">
+            <label class="label">Content</label>
+            <input class="content" type="text" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/todo.js" type="module"></script>
+  </body>
+</html>
