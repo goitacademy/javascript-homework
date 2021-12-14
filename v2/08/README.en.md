@@ -1,53 +1,34 @@
-**Read in other languages: [Русский](README.md), [Українська](README.ua.md),
-[English](README.en.md), [Español](README.es.md), [Polski](README.pl.md).**
+**Read in other languages: [Русский](README.md), [Українська](README.ua.md), [English](README.en.md), [Español](README.es.md), [Polski](README.pl.md).**
 
-# Критерии приема
+# Acceptance criteria
 
-- Создан репозиторий `goit-js-hw-08`.
-- При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую
-  страницу на `GitHub Pages`.
-- При посещении живой страницы задания, в консоли нету ошибок и предупреждений.
-- Проект собран с помощью
-  [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-- Код отформатирован `Prettier`.
+- `goit-js-hw-08` repository created.
+- In your submitted homework, there are two links: to the source files and your working page on `GitHub Pages`.
+- During live page visits, there are no errors or warnings generated in the console.
+- Project built with [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
+- Code formatted with `Prettier`.
 
-## Стартовые файлы
+## Start files
 
-В [папке src](./src) ты найдешь стартовые файлы с готовой разметкой, стилями и
-подключенными файлами скриптов для каждого задания. Скопируй их себе в проект,
-полностью заменив папку `src` в
-[parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-Для этого скачай весь этот репозиторий как архив или используй
-[сервис DownGit](https://downgit.github.io/) для скачивания отдельной папки из
-репозитория.
+In the [src folder](./src), you will find start files with ready-made markup, styles and added script files for each task. Copy them to your project completely replacing the `src` folder in [parcel-project-template](https://github.com/goitacademy/parcel-project-template). To do this, download this entire repository as an archive or use the [DownGit service](https://downgit.github.io/) to download a separate folder from the repository.
 
-## Задание 1 - библиотека `SimpleLightbox`
+## Task 1 - `SimpleLightbox` library
 
-Выполняй это задание в файлах `01-gallery.html` и `01-gallery.js`. Разбей его на
-несколько подзадач:
+Do this task in the `01-gallery.html` and `01-gallery.js` files. Break it down into several subtasks:
 
-1. Добавь библиотеку [SimpleLightbox](https://simplelightbox.com/) как
-   зависимость проекта используя `npm` (ссылка на CDN из твоей прошлой работы
-   больше не нужна).
-2. Используй свой JavaScript код из предыдущей домашней работы, но выполни
-   рефакторинг с учетом того, что библиотека была установлена через `npm`
-   (синтаксис import/export).
+1. Add the [SimpleLightbox](https://simplelightbox.com/) library as a project dependency using `npm` (the CDN link from your past work is no longer needed).
+2. Use your JavaScript code from the previous homework, but refactor it given that the library was installed via `npm` (import/export syntax).
 
-Для того чтобы подключить CSS код библиотеки в проект, необходимо добавить еще
-один импорт, кроме того который описан в документации.
+In order to add the CSS code of the library to the project, you need to add one more import, aside from the one described in the documentation.
 
 ```js
-// Описан в документации
-import SimpleLightbox from 'simplelightbox';
-// Дополнительный импорт стилей
-import 'simplelightbox/dist/simple-lightbox.min.css';
+// Described in import SimpleLightbox from 'simplelightbox' documentation;
+// Additional styles import: import 'simplelightbox/dist/simple-lightbox.min.css';
 ```
 
-## Задание 2 - видео плеер
+## Task 2 - video player
 
-В HTML есть `<iframe>` с видео для Vimeo плеера. Напиши скрипт который будет
-сохранять текущее время воспроизведения видео в локальное хранилище и, при
-перезагрузке страницы, продолжать воспроизводить видео с этого времени.
+In HTML, there is `<iframe>` with video for Vimeo player. Write a script that will save the current video playback time to local storage and, upon page reload, continue to play the video from that time.
 
 ```html
 <iframe
@@ -61,35 +42,19 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 ></iframe>
 ```
 
-Выполняй это задание в файлах `02-video.html` и `02-video.js`. Разбей его на
-несколько подзадач:
+Do this task in the `02-video.html` and `02-video.js` files. Break it down into several subtasks:
 
-1. Ознакомься с
-   [документацией](https://github.com/vimeo/player.js/#vimeo-player-api)
-   библиотеки Vimeo плеера.
-2. Добавь библиотеку как зависимость проекта через `npm`.
-3. Инициализируй плеер в файле скрипта как это описано в секции
-   [pre-existing player](https://github.com/vimeo/player.js/#pre-existing-player),
-   но учти что у тебя плеер добавлен как npm пакет, а не через CDN.
-4. Разбери документацию метода
-   [on()](https://github.com/vimeo/player.js/#onevent-string-callback-function-void)
-   и начни отслеживать событие
-   [timeupdate](https://github.com/vimeo/player.js/#events) - обновление времени
-   воспроизведения.
-5. Сохраняй время воспроизведения в локальное хранилище. Пусть ключом для
-   хранилища будет строка `"videoplayer-current-time"`.
-6. При перезагрузке страницы воспользуйся методом
-   [setCurrentTime()](https://github.com/vimeo/player.js/#setcurrenttimeseconds-number-promisenumber-rangeerrorerror)
-   для того чтобы возобновить воспроизведение с сохраненной позиции.
-7. Добавь в проект бибилотеку
-   [lodash.throttle](https://www.npmjs.com/package/lodash.throttle) и сделай
-   так, чтобы время воспроизведения обновлялось в хранилище не чаще чем раз в
-   секунду.
+1. Check out the [documentation](https://github.com/vimeo/player.js/#vimeo-player-api) of the Vimeo player library.
+2. Add the library as a project dependency via `npm`.
+3. Initialize the player in the script file as described in the [pre-existing player](https://github.com/vimeo/player.js/#pre-existing-player) section, but note that you have added the player as an npm package, not via CDN.
+4. Read the documentation of the [on()](https://github.com/vimeo/player.js/#onevent-string-callback-function-void) method and start tracking the [timeupdate](https://github.com/vimeo/player.js/#events) event - playback time update.
+5. Save playback time to local storage. Let the key for the storage be the `"videoplayer-current-time"` string.
+6. When reloading the page, use the [setCurrentTime()](https://github.com/vimeo/player.js/#setcurrenttimeseconds-number-promisenumber-rangeerrorerror) method to resume playback from the saved position.
+7. Add the [lodash.throttle](https://www.npmjs.com/package/lodash.throttle) library to the project and make sure that the playback time is updated in the storage once a second or less frequent.
 
-## Задание 3 - форма обратной связи
+## Task 3 - feedback form
 
-В HTML есть разметка формы. Напиши скрипт который будет сохранять значения полей
-в локальное хранилище когда пользователь что-то печатает.
+In HTML, there is form markup. Write a script that will save field values to local storage when the user types something.
 
 ```html
 <form class="feedback-form" autocomplete="off">
@@ -105,18 +70,9 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 </form>
 ```
 
-Выполняй это задание в файлах `03-feedback.html` и `03-feedback.js`. Разбей его
-на несколько подзадач:
+Do this task in the `03-feedback.html` and `03-feedback.js` files. Break it down into several subtasks:
 
-1. Отслеживай на форме событие `input`, и каждый раз записывай в локальное
-   хранилище объект с полями `email` и `message`, в которых сохраняй текущие
-   значения полей формы. Пусть ключом для хранилища будет строка
-   `"feedback-form-state"`.
-2. При загрузке страницы проверяй состояние хранилища, и если там есть
-   сохраненные данные, заполняй ими поля формы. В противном случае поля должны
-   быть пустыми.
-3. При сабмите формы очищай хранилище и поля формы, а также выводи объект с
-   полями `email`, `message` и текущими их значениями в консоль.
-4. Сделай так, чтобы хранилище обновлялось не чаще чем раз в 500 миллисекунд.
-   Для этого добавь в проект и используй библиотеку
-   [lodash.throttle](https://www.npmjs.com/package/lodash.throttle).
+1. Track the `input` event on the form, and each time write to local storage an object with the `email` and `message` fields, in which you save the current values of the form fields. Let the key for the storage be the `"feedback-form-state"` string.
+2. When loading the page, check the state of the storage, and if it stores some data, use it to fill in the form fields. Otherwise, the fields must be empty.
+3. When submitting the form, clear the storage and form fields, and also display the object with the `email` and `message` fields and their current values in the console.
+4. Make sure that the storage is updated no more than once every 500 milliseconds. To do this, add to the project and use the [lodash.throttle](https://www.npmjs.com/package/lodash.throttle) library.
