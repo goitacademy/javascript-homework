@@ -11,7 +11,7 @@
 - For notifications, the [notiflix](https://github.com/notiflix/Notiflix#readme) library is used.
 - Code formatted with `Prettier`.
 
-# Task - search for images
+# Task - image search
 
 Build a front-end part of a keyword search and image viewer application. Add some decoration to the interface elements. Check out the demo video of the app.
 
