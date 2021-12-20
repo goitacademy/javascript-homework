@@ -1,55 +1,55 @@
 **Read in other languages: [Русский](README.md), [Українська](README.ua.md),
 [English](README.en.md), [Español](README.es.md), [Polski](README.pl.md).**
 
-# Критерии приема
+# Criterios de admisión
 
-- Создан репозиторий `goit-js-hw-07`.
-- При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую
-  страницу на `GitHub Pages`.
-- При посещении живой страницы задания, в консоли нету ошибок и предупреждений.
-- Имена переменных и функций понятные, описательные.
-- Код отформатирован `Prettier`.
+Se ha creado el repositorio `goit-js-hw-07`.
+- Al enviar los deberes, hay dos enlaces: a los archivos de origen y al trabajo
+  página en `GitHub Pages'.
+- Al visitar la página de trabajos en vivo, no hay errores ni advertencias en la consola.
+- Los nombres de las variables y las funciones son claros y descriptivos.
+- El código es formateado por `Prettier'.
 
-## Стартовые файлы
+## Archivos de inicio
 
-- В [папке src](./src) ты найдешь стартовые файлы с базовой разметкой и готовыми
-  стилями. Скопируй их себе в проект. Для этого скачай весь этот репозиторий как
-  архив или используй [сервис DownGit](https://downgit.github.io/) для
-  скачивания отдельной папки из репозитория.
-- В файле `gallery-items.js` есть массив `galleryItems`, который содержит
-  объекты с информацией о изображениях: маленькое (превью), оригинальное
-  (большое) и описание. Мы уже подключили его к каждому из JS-файлов проекта.
+- En la [carpeta src](./src) se encuentran los archivos de inicio con el marcado básico y el
+  estilos. Cópialos en tu proyecto. Para ello, descargue todo el repositorio como
+  archivar o utilizar [servicio DownGit](https://downgit.github.io/) para
+  para descargar una carpeta separada del repositorio.
+- En el archivo `gallery-items.js` hay un array `galleryItems` que contiene
+  objetos con información sobre las imágenes: pequeña (vista previa), el original
+  (grande) y descripción. Ya lo hemos conectado a cada uno de los archivos JS del proyecto.
 
-## Задание 1 - галерея изображений
+## Tarea 1 - galería de imágenes
 
-Создай галерею с возможностью клика по её элементам и просмотра полноразмерного
-изображения в модальном окне. Посмотри демо видео работы галереи.
+Cree una galería con la posibilidad de hacer clic en los elementos y verlos a tamaño completo
+Ver una imagen a tamaño completo en una ventana modal. Vea un vídeo de demostración de la galería.
 
 https://user-images.githubusercontent.com/17479434/127711719-4e293f5b-fbaa-4851-8671-fc841963d961.mp4
 
-Выполняй это задание в файлах `01-gallery.html` и `01-gallery.js`. Разбей его на
-несколько подзадач:
+Ejecute esta tarea en los archivos `01-gallery.html` y `01-gallery.js`. Desglósalo en
+varias subtareas:
 
-1. Создание и рендер разметки по массиву данных `galleryItems` и
-   предоставленному шаблону элемента галереи.
-2. Реализация делегирования на `div.gallery` и получение `url` большого
-   изображения.
-3. Подключение скрипта и стилей библиотеки модального окна
-   [basicLightbox](https://basiclightbox.electerious.com/). Используй
-   [CDN сервис jsdelivr](https://www.jsdelivr.com/package/npm/basiclightbox?path=dist)
-   и добавь в проект ссылки на минифицированные (`.min`) файлы библиотеки.
-4. Открытие модального окна по клику на элементе галереи. Для этого ознакомься с
-   [документацией](https://github.com/electerious/basicLightbox#readme) и
-   [примерами](https://basiclightbox.electerious.com/).
-5. Замена значения атрибута `src` элемента `<img>` в модальном окне перед
-   открытием. Используй готовую разметку модального окна с изображением из
-   примеров библиотеки [basicLightbox](https://basiclightbox.electerious.com/).
+1. Creación y renderización de la marca basada en la array de datos `galleryItems` y
+   la plantilla de elementos de la galería proporcionada.
+2. Implementación de la delegación a `div.gallery` y obtención de `url` de un gran
+   imagen.
+3. Conectar el script de la ventana modal y los estilos de la biblioteca
+   [basicLightbox](https://basiclightbox.electerious.com/). Utilice
+   [CDN servicio jsdelivr](https://www.jsdelivr.com/package/npm/basiclightbox?path=dist)
+   y añadir referencias a archivos de biblioteca minificados (`.min`) al proyecto.
+4. Abra una ventana modal haciendo clic en un elemento de la galería. Para ello, consulte 
+   [documentación](https://github.com/electerious/basicLightbox#readme) y
+   [los ejemplos](https://basiclightbox.electerious.com/).
+5. Sustitución del atributo `src` del elemento `<img>` en la ventana modal antes de
+   apertura. Utiliza el diseño ya hecho de la ventana modal con la imagen del
+   ejemplos de la biblioteca [basicLightbox](https://basiclightbox.electerious.com/).
 
-### Разметка элемента галереи
+### Marcar el elemento de la galería
 
-Ссылка на оригинальное изображение должна храниться в data-атрибуте `source` на
-элементе `<img>`, и указываться в `href` ссылки. Не добавляй другие HTML теги
-или CSS классы кроме тех, что есть в этом шаблоне.
+El enlace a la imagen original debe almacenarse en data-atributo `source` del
+elemento `<img>`, y especificado en el `href` del enlace. No añada ninguna otra etiqueta HTML
+o clases CSS distintas a las de esta plantilla.
 
 ```html
 <div class="gallery__item">
@@ -64,30 +64,30 @@ https://user-images.githubusercontent.com/17479434/127711719-4e293f5b-fbaa-4851-
 </div>
 ```
 
-Обрати внимание на то, что изображение обернуто в ссылку, а значит при клике по
-умолчанию пользователь будет перенаправлен на другую страницу. Запрети это
-поведение по умолчанию.
+Tenga en cuenta que la imagen está envuelta en un enlace, lo que significa que cuando el usuario hace clic en
+el usuario será redirigido a otra página por defecto. Desactivar esto
+comportamiento por defecto.
 
-### Закрытие с клавиатуры
+### Cierre desde el teclado
 
-> ⚠️ Следующий функционал не обязателен при сдаче задания, но будет хорошей
-> дополнительной практикой.
+> ⚠️ La siguiente funcionalidad no es obligatoria a la hora de entregar una tarea, pero sería buena
+> práctica adicional.
 
-Добавь закрытие модального окна по нажатию клавиши `Escape`. Сделай так, чтобы
-прослушивание клавиатуры было только пока открыто модальное окно. У библиотеки
-[basicLightbox](https://basiclightbox.electerious.com/) есть метод для
-программного закрытия модального окна.
+Añade cerrar la ventana modal pulsando `Escape`. Hazlo de manera que
+el teclado sólo se escucha mientras la ventana modal está abierta. En la biblioteca
+[basicLightbox](https://basiclightbox.electerious.com/) existe un método para
+para cerrar la ventana modal de forma programada.
 
-## Задание 2 - библиотека `SimpleLightbox`
+## Tarea 2 - biblioteca `SimpleLightbox`
 
-Сделай такую же галерею как в первом задании, но используя библиотеку
-[SimpleLightbox](https://simplelightbox.com/), которая возьмет на себя обработку
-кликов по изображениям, открытие и закрытие модального окна, а также
-пролистывание изображений при помощи клавиатуры.
+Haz la misma galería que en la primera tarea, pero utilizando la biblioteca
+[SimpleLightbox](https://simplelightbox.com/), que se encargará de manejar
+clics en las imágenes, abriendo y cerrando la ventana modal, y
+desplazarse por las imágenes con el teclado.
 
 https://user-images.githubusercontent.com/17479434/127714821-4b7527c8-01db-42d3-83f0-8c1578561982.mp4
 
-Необходимо немного изменить разметку карточки галереи, используй этот шаблон.
+Si necesita cambiar ligeramente el diseño de la tarjeta de la galería, utilice esta plantilla.
 
 ```html
 <a class="gallery__item" href="large-image.jpg">
@@ -95,20 +95,20 @@ https://user-images.githubusercontent.com/17479434/127714821-4b7527c8-01db-42d3-
 </a>
 ```
 
-Выполняй это задание в файлах `02-lightbox.html` и `02-lightbox.js`. Разбей его
-на несколько подзадач:
+Ejecute esta tarea en los archivos `02-lightbox.html` y `02-lightbox.js`. Dividirlo
+en varias subtareas:
 
-1. Создание и рендер разметки по массиву данных `galleryItems` и
-   предоставленному шаблону элемента галереи. Используй готовый код из первого
-   задания.
-2. Подключение скрипта и стилей библиотеки используя
-   [CDN сервис cdnjs](https://cdnjs.com/libraries/simplelightbox). Необходимо
-   добавить ссылки на два файла: `simple-lightbox.min.js` и
+1. Creación y visualización de marcas a partir del conjunto de datos `galleryItems` y
+   la plantilla de elementos de la galería proporcionada. Utilice el código terminado del primer
+   asignación.
+2. Conectando el script y los estilos de la biblioteca usando
+   [CDN servicio cdnjs](https://cdnjs.com/libraries/simplelightbox). Necesidad de
+   añadir enlaces a dos archivos: `simple-lightbox.min.js` y
    `simple-lightbox.min.css`.
-3. Инициализация библиотеки после того как элементы галереи созданы и добавлены
-   в `div.gallery`. Для этого ознакомься с документацией
-   [SimpleLightbox](https://simplelightbox.com/) - в первую очередь секции
-   «Usage» и «Markup».
-4. Посмотри в документации секцию «Options» и добавь отображение подписей к
-   изображениям из атрибута `alt`. Пусть подпись будет снизу и появляется через
-   250 миллисекунд после открытия изображения.
+3. Inicialización de la biblioteca después de crear y añadir los elementos de la galería
+   en un `div.gallery`. Para ello, lea la documentación
+   [SimpleLightbox](https://simplelightbox.com/) - principalmente de las secciones
+   «Usage» y «Markup».
+4. Mire la sección «Opciones» de la documentación y añada una pantalla de subtítulos a
+   imágenes del atributo `alt`. Que el pie de foto esté en la parte inferior y aparezca después de
+   250 milisegundos después de abrir la imagen.
