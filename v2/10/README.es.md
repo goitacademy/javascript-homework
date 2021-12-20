@@ -109,5 +109,5 @@ al usar a [la biblioteca notiflix](https://github.com/notiflix/Notiflix#readme).
 
 ![Error alert](./preview/error-alert.png)
 
-> ⚠️ Tenga en cuenta que `fetch` no considera un error 404, por lo que debe
+> ⚠️ Tenga en cuenta que `fetch` no se considera como un error 404, por lo que debe
 > rechazar explícitamente la promise para que el error pueda ser capturado y manejado.
