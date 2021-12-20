@@ -1,113 +1,113 @@
 **Read in other languages: [Русский](README.md), [Українська](README.ua.md),
 [English](README.en.md), [Español](README.es.md), [Polski](README.pl.md).**
 
-# Критерии приема
+# Criterios de admisión
 
-- Создан репозиторий `goit-js-hw-10`.
-- При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую
-  страницу на `GitHub Pages`.
-- При посещении живой страницы задания, в консоли нету ошибок и предупреждений.
-- Проект собран с помощью
+- Se ha creado el repositorio `goit-js-hw-10`.
+- Al entregar las tareas, existen dos enlaces: a los archivos y a la
+  página de trabajo en `GitHub Pages`.
+- Al visitar la página de trabajos en vivo, no hay errores ni advertencias en la consola.
+- El proyecto se esta armando con la ayuda de 
   [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-- Код отформатирован `Prettier`.
+- El código es formateado por `Prettier`.
 
-## Стартовые файлы
+## Archivos de inicio
 
-В [папке src](./src) ты найдешь стартовые файлы. Скопируй их себе в проект,
-полностью заменив папку `src` в
+En la [carpeta src](./src)  encontrará los archivos de inicio. Cópielos en su proyecto,
+reemplazando completamente la carpeta `src` en
 [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-Для этого скачай весь этот репозиторий как архив или используй
-[сервис DownGit](https://downgit.github.io/) для скачивания отдельной папки из
-репозитория.
+Para eso, descargue todo el repositorio como un archivo o use
+[el servicio DownGit](https://downgit.github.io/) para descargar una carpeta separada del
+repositorio
 
-## Задание - поиск стран
+## Tarea - búsqueda de países
 
-Создай фронтенд часть приложения поиска данных о стране по её частичному или
-полному имени. Посмотри
-[демо видео](https://user-images.githubusercontent.com/17479434/131147741-7700e8c5-8744-4eea-8a8e-1c3d4635248a.mp4)
-приложения.
+Cree la parte del frontend de una aplicación de búsqueda sobre los datos de países por su parte o el
+nombre completo. Mire en
+[vídeo demo](https://user-images.githubusercontent.com/17479434/131147741-7700e8c5-8744-4eea-8a8e-1c3d4635248a.mp4)
+aplicaciones.
 
-### HTTP-запросы
+### Preguntas HTTP
 
-Используй публичный API [Rest Countries](https://restcountries.com/), а именно
-[ресурс name](https://restcountries.com/#api-endpoints-v3-name), возвращающий
-массив объектов стран удовлетворивших критерий поиска. Добавь минимальное
-оформление элементов интерфейса.
+Use la API pública [Rest Countries](https://restcountries.com/), es decir
+[resource name](https://restcountries.com/#api-endpoints-v3-name), que devuelve
+el array de los objetos de los países que cumplen los criterios de búsqueda. Añada un diseño
+mínimo a los elementos de la interfaz.
 
-Напиши функцию `fetchCountries(name)` которая делает HTTP-запрос на
-[ресурс name](https://restcountries.com/#api-endpoints-v3-name) и возвращает
-промис с массивом стран - результатом запроса. Вынеси её в отдельный файл
-`fetchCountries.js` и сделай именованный экспорт.
+Escriba la función `fetchCountries(name)` a cual hace una petición HTTP a
+[ресурс name](https://restcountries.com/#api-endpoints-v3-name) y devuelve
+promise con el array de los países, el resultado de la consulta. Colóquelo en un archivo separado
+`fetchCountries.js` y haga una exportación con nombre.
 
-### Фильтрация полей
+### Filtración de ámbitos
 
-В ответе от бэкенда возвращаются объекты, большая часть свойств которых тебе не
-пригодится. Чтобы сократить объем передаваемых данных добавь строку параметров
-запроса - так этот бэкенд реализует фильтрацию полей. Ознакомься с
-[документацией синтаксиса фильтров](https://restcountries.com/#filter-response).
+La respuesta del backend devuelve objetos, la mayoría de los cuales no
+ Para poder reducir la cantidad de datos transferidos, añada una secuencia de parámetros
+de consulta, así como este backend implementa el filtrado de los ámbitos. Heche un vistazo a la
+[documentación de la sintaxis del filtro](https://restcountries.com/#filter-response).
 
-Тебе нужны только следующие свойства:
+Sólo necesita las siguientes propiedades:
 
-- `name.official` - полное имя страны
-- `capital` - столица
-- `population` - население
-- `flags.svg` - ссылка на изображение флага
-- `languages` - массив языков
+- `name.official` - nombre completo del país
+- `capital` - capital
+- `population` - población
+- `flags.svg` - enlace a la imagen de la bandera
+- `languages` - array de idiomas
 
-### Поле поиска
+### Ámbitos de búsqueda
 
-Название страны для поиска пользователь вводит в текстовое поле
-`input#search-box`. HTTP-запросы выполняются при наборе имени страны, то есть по
-событию `input`. Но, делать запрос при каждом нажатии клавиши нельзя, так как
-одновременно получится много запросов и они будут выполняться в непредсказуемом
-порядке.
+El nombre del país a buscar es introducido por el usuario en la casilla de texto
+`input#search-box`. Las consultas HTTP se realizan cuando se escribe el nombre del país, es decir, 
+mediante el evento `input`. Pero no puede hacer una consulta cada vez que pulse la tecla
+porque habrá muchas consultas a la vez y se ejecutarán en un orden 
+imprevisible
 
-Необходимо применить приём `Debounce` на обработчике события и делать
-HTTP-запрос спустя `300мс` после того, как пользователь перестал вводить текст.
-Используй пакет
+Debe aplicar un truco `Debounce` en el manejador de eventos y hacer
+una petición HTTP `300ms después de que el usuario haya dejado de escribir.
+Use el paquete
 [lodash.debounce](https://www.npmjs.com/package/lodash.debounce).
 
-Если пользователь полностью очищает поле поиска, то HTTP-запрос не выполняется,
-а разметка списка стран или информации о стране пропадает.
+Si el usuario borra completamente el campo de búsqueda, no se realiza ninguna petición HTTP,
+y se elimina la marca del listado de países o la información del país.
 
-Выполни санитизацию введенной строки методом `trim()`, это решит проблему когда
-в поле ввода только пробелы или они есть в начале и в конце строки.
+Desinfecta la secuencia introducida usando el método `trim()`, esto resolverá el problema si el
+ámbito de entrada sólo tiene espacios o si tiene espacios al principio y al final de la secuencia.
 
-### Интерфейс
+### Interfaz
 
-Если в ответе бэкенд вернул больше чем 10 стран, в интерфейсе пояляется
-уведомление о том, что имя должно быть более специфичным. Для уведомлений
-используй [библиотеку notiflix](https://github.com/notiflix/Notiflix#readme) и
-выводи такую строку
+Si el backend devuelve más de 10 países en la respuesta, la interfaz mostrará la
+notificación de que el nombre debe ser más específico. Para las notificaciones
+use [la biblioteca notiflix](https://github.com/notiflix/Notiflix#readme) y
+la emisión de una secuencia como esta.
 `"Too many matches found. Please enter a more specific name."`.
 
 ![Too many matches alert](./preview/too-many-matches.png)
 
-Если бэкенд вернул от 2-х до 10-х стран, под тестовым полем отображается список
-найденных стран. Каждый элемент списка состоит из флага и имени страны.
+Si el backend ha devuelto entre 2 y 10 países, se muestra una lista de 
+los países encontrados. Cada elemento de la lista consta de una bandera y un nombre de país
 
 ![Country list UI](./preview/country-list.png)
 
-Если результат запроса это массив с одной страной, в интерфейсе отображается
-разметка карточки с данными о стране: флаг, название, столица, население и
-языки.
+Si el resultado de la consulta es un array con un país, la interfaz muestra un
+diseño de tarjeta con los datos del país: bandera, nombre, capital, población e 
+idiomas.
 
 ![Country info UI](./preview/country-info.png)
 
-> ⚠️ Достаточно чтобы приложение работало для большинства стран. Некоторые
-> страны, такие как `Sudan`, могут создавать проблемы, поскольку название страны
-> является частью названия другой страны, `South Sudan`. Не нужно беспокоиться
-> об этих исключениях.
+> ⚠️ Suficiente para que la aplicación funcione en la mayoría de los países. Algunos
+> de los países, como `Sudán', puede causar problemas ya que el nombre del país
+> es parte del nombre de otro país, "Sudán del Sur". No tiene que preocuparse por
+> estas excepciones.
 
-### Обработка ошибки
+### Manejo de errores
 
-Если пользователь ввёл имя страны которой не существует, бэкенд вернёт не пустой
-массив, а ошибку со статус кодом `404` - не найдено. Если это не обработать, то
-пользователь никогда не узнает о том, что поиск не дал результатов. Добавь
-уведомление `"Oops, there is no country with that name"` в случае ошибки
-используя [библиотеку notiflix](https://github.com/notiflix/Notiflix#readme).
+Si el usuario introduce un nombre de país que no existe, el backend no devolverá un array vacío 
+sino un error con el código de estado `404`, no encontrado.  Si esto no se gestiona, el 
+usuario nunca sabrá que la búsqueda ha fallado. Añada un
+un aviso `"Oops, there is no country with that name"` en caso de que se produzca un error 
+al usar a [la biblioteca notiflix](https://github.com/notiflix/Notiflix#readme).
 
 ![Error alert](./preview/error-alert.png)
 
-> ⚠️ Не забывай о том, что `fetch` не считает 404 ошибкой, поэтому необходимо
-> явно отклонить промис чтобы можно было словить и обработать ошибку.
+> ⚠️ Tenga en cuenta que `fetch` no considera un error 404, por lo que debe
+> rechazar explícitamente la promise para que el error pueda ser capturado y manejado.
