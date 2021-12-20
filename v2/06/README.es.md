@@ -60,7 +60,7 @@ Escribe un script que:
 1. Cuenta y muestra en la consola el número de categorías en `ul#categories`, es decir.
    artículos `li.item`.
 2. Para cada elemento `li.item` en la lista `ul#categories`, encuentra y envía a la consola
-   consola el texto del título del artículo (etiqueta `<h2>`) y el número de artículos en el
+   consola el texto del título del artículo (tag `<h2>`) y el número de artículos en la
    categoría (todo anidado `<li>`).
 
 Como resultado, se mostrarán los siguientes mensajes en la consola.
@@ -161,8 +161,8 @@ disminuye su valor en uno.
 
 ## Tarea 5
 
-Escribe un script que, cuando el texto se escribe en el input de `input#nombre-input` (evento
-evento `input`), sustituye su valor actual en `span#name-output`. Si el input
+Escribe un script que, cuando el texto se escribe en el input de `input#nombre-input` 
+(evento `input`), sustituye su valor actual en `span#name-output`. Si el input
 está vacío, el span debería mostrar la cadena `"Anónimo"`.
 
 ```html
