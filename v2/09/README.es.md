@@ -1,49 +1,49 @@
 **Read in other languages: [Русский](README.md), [Українська](README.ua.md),
 [English](README.en.md), [Español](README.es.md), [Polski](README.pl.md).**
 
-# Критерии приема
+# Criterios de admisión
 
-- Создан репозиторий `goit-js-hw-09`.
-- При сдаче домашней работы есть две ссылки для каждого проекта: на исходные
-  файлы и рабочую страницу на `GitHub Pages`.
-- При посещении живой страницы задания, в консоли нету ошибок и предупреждений.
-- Проект собран с помощью
+- Se ha creado el repositorio `goit-js-hw-09`.
+- Al presentar los deberes, hay dos enlaces para cada proyecto: a la fuente
+  y una página de trabajo en `GitHub Pages`.
+- Al visitar la página de trabajos en vivo, no hay errores ni advertencias en la consola.
+- El proyecto está construido con
   [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-- Код отформатирован `Prettier`.
+- El código es formateado por `Prettier`.
 
-## Стартовые файлы
+## Archivos de inicio
 
-В [папке src](./src) ты найдешь стартовые файлы с готовой разметкой, стилями и
-подключенными файлами скриптов для каждого задания. Скопируй их себе в проект,
-полностью заменив папку `src` в
+En la [carpeta src](./src) se encuentran los archivos de inicio con el diseño listo, los estilos y
+archivos de script conectados para cada trabajo. Cópialos en tu proyecto,
+reemplazando completamente la carpeta `src` en
 [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-Для этого скачай весь этот репозиторий как архив или используй
-[сервис DownGit](https://downgit.github.io/) для скачивания отдельной папки из
-репозитория.
+Para ello, descargue este repositorio completo como un archivo o utilice
+[servicio DownGit](https://downgit.github.io/) para descargar una carpeta individual del
+depósito.
 
-## Задание 1 - переключатель цветов
+## Tarea 1 - cambio de color
 
-Выполняй это задание в файлах `01-color-switcher.html` и `01-color-switcher.js`.
-Посмотри демо видео работы переключателя.
+Ejecute esta tarea en los archivos `01-color-switcher.html` y `01-color-switcher.js`.
+Vea un vídeo de demostración del funcionamiento del interruptor.
 
 https://user-images.githubusercontent.com/17479434/127716753-fabd276f-6a7d-411b-bfa2-01c818f4ea66.mp4
 
-В HTML есть кнопки «Start» и «Stop».
+Hay botones de «Start» y «Stop» en HTML.
 
 ```html
 <button type="button" data-start>Start</button>
 <button type="button" data-stop>Stop</button>
 ```
 
-Напиши скрипт, который после нажатия кнопки «Start», раз в секунду меняет цвет
-фона `<body>` на случайное значение используя инлайн стиль. При нажатии на
-кнопку «Stop», изменение цвета фона должно останавливаться.
+Escribe un script que, tras pulsar el botón "Start", cambie el color del fondo del `<body>` una vez por segundo utilizando un estilo inline.
+El color de fondo de `<body>` cambiará a un valor aleatorio utilizando el estilo inline.  Al pulsar la tecla
+«Stop», el cambio de color de fondo debería detenerse.
 
-> ⚠️ Учти, на кнопку «Start» можно нажать бесконечное количество раз. Сделай
-> так, чтобы пока изменение темы запушено, кнопка «Start» была не активна
+> ⚠️ Ten en cuenta que el botón «Start» puede ser pulsado un número infinito de veces. Haga
+> para que mientras se ejecute el cambio de tema, el botón «Start» esté inactivo
 > (disabled).
 
-Для генерации случайного цвета используй функцию `getRandomHexColor`.
+Utilice la función `getRandomHexColor` para generar un color aleatorio.
 
 ```js
 function getRandomHexColor() {
@@ -51,20 +51,20 @@ function getRandomHexColor() {
 }
 ```
 
-## Задание 2 - таймер обратного отсчета
+## Tarea 2 - Cuenta atrás
 
-Выполняй это задание в файлах `02-timer.html` и `02-timer.js`. Напиши скрипт
-таймера, который ведёт обратный отсчет до определенной даты. Такой таймер может
-использоваться в блогах и интернет-магазинах, страницах регистрации событий, во
-время технического обслуживания и т. д. Посмотри демо видео работы таймера.
+Ejecute esta tarea en los archivos `02-timer.html` y `02-timer.js`. Escribir un script
+un temporizador que cuenta hasta una fecha determinada. Este temporizador podría
+Este temporizador se puede utilizar en blogs y tiendas online, páginas de registro de eventos, durante
+trabajos de mantenimiento, etc. Vea un vídeo de demostración del temporizador.
 
 https://user-images.githubusercontent.com/17479434/127672390-2a51efe1-06fb-41dd-86dd-8542393d3043.mp4
 
-### Элементы интефрейса
+### Elementos de interconexión
 
-В HTML есть готовая разметка таймера, поля выбора конечной даты и кнопки, при
-клике по которой таймер должен запускаться. Добавь минимальное оформление
-элементов интерфейса.
+El HTML tiene un diseño de temporizador predefinido, un campo de selección de la fecha de finalización y un botón que, al hacer clic, debe iniciar el temporizador.
+para activar el temporizador. Añade un diseño mínimo
+elementos de la interfaz.
 
 ```html
 <input type="text" id="datetime-picker" />
@@ -90,32 +90,32 @@ https://user-images.githubusercontent.com/17479434/127672390-2a51efe1-06fb-41dd-
 </div>
 ```
 
-### Библиотека `flatpickr`
+### Biblioteca `flatpickr`
 
-Используй библиотеку [flatpickr](https://flatpickr.js.org/) для того чтобы
-позволить пользователю кроссбраузерно выбрать конечную дату и время в одном
-элементе интерфейса. Для того чтобы подключить CSS код библиотеки в проект,
-необходимо добавить еще один импорт, кроме того который описан в документации.
+Utilice la biblioteca [flatpickr](https://flatpickr.js.org/) para
+permiten al usuario multipliar la fecha y la hora de finalización en un solo
+elemento de interfaz. Para poder introducir el código CSS de la biblioteca en el proyecto,
+es necesario añadir otro importe además del descrito en la documentación.
 
 ```js
-// Описан в документации
+// Descrito en la documentación
 import flatpickr from 'flatpickr';
-// Дополнительный импорт стилей
+// Importación adicional de estilos
 import 'flatpickr/dist/flatpickr.min.css';
 ```
 
-Библиотека ожидает что её инициализируют на элементе `input[type="text"]`,
-поэтому мы добавили в HTML документ поле `input#datetime-picker`.
+La biblioteca espera ser inicializada en el elemento `input[type="text"]`,
+por lo que hemos añadido un campo `input#datetime-picker` al documento HTML.
 
 ```html
 <input type="text" id="datetime-picker" />
 ```
 
-Вторым аргументом функции `flatpickr(selector, options)` можно передать
-необязательный объект параметров. Мы подготовили для тебя объект который нужен
-для выполнения задания. Разберись за что отвечает каждое свойство в
-[документации «Options»](https://flatpickr.js.org/options/) и используй его в
-своем коде.
+El segundo argumento de la función `flatpickr(selector, options)` se puede pasar
+un objeto parámetro opcional. Hemos preparado para ti el objeto que necesitas
+para hacer el trabajo. Descubra qué hace cada propiedad en
+[Documentación «Options»](https://flatpickr.js.org/options/) y utilizarlo en
+su código.
 
 ```js
 const options = {
@@ -129,37 +129,37 @@ const options = {
 };
 ```
 
-### Выбор даты
+### Selección de fecha
 
-Метод `onClose()` из обьекта параметров вызывается каждый раз при закрытии
-элемента интерфейса который создает `flatpickr`. Именно в нём стоит обрабатывать
-дату выбранную пользователем. Параметр `selectedDates` это массив выбранных дат,
-поэтому мы берем первый элемент.
+El método `onClose()` del objeto parámetro es llamado cada vez que el
+elemento de interfaz que crea el `flatpickr`. Aquí es donde debería manejar
+fecha seleccionada por el usuario. El parámetro `selectedDates` es un array de fechas seleccionadas,
+así que tomamos el primer elemento.
 
-- Если пользователь выбрал дату в прошлом, покажи `window.alert()` с текстом
+- Si el usuario ha seleccionado una fecha en el pasado, mostrar `window.alert()` con el texto
   `"Please choose a date in the future"`.
-- Если пользователь выбрал валидную дату (в будущем), кнопка «Start» становится
-  активной.
-- Кнопка «Start» должа быть не активна до тех пор, пока пользователь не выбрал
-  дату в будущем.
-- При нажатии на кнопку «Start» начинается отсчет времени до выбранной даты с
-  момента нажатия.
+- Si el usuario ha seleccionado una fecha válida (en el futuro), el botón «Start» se convierte en
+  activo.
+- El botón «Start» no debe estar activo hasta que el usuario haya seleccionado
+  fecha en el futuro.
+- Al pulsar el botón «Start» se inicia la cuenta atrás hasta la fecha seleccionada de
+  desde el momento en que se pulsa.
 
-### Отсчет времени
+### Cuenta regresiva del tiempo
 
-При нажатии на кнопку «Start» скрипт должен вычислять раз в секунду сколько
-времени осталось до указанной даты и обновлять интерфейс таймера, показывая
-четыре цифры: дни, часы, минуты и секунды в формате `xx:xx:xx:xx`.
+Cuando se pulsa el botón «Start», el script debe calcular una vez por segundo cuánto tiempo queda hasta
+tiempo que queda hasta la fecha especificada y actualiza la interfaz del temporizador para mostrar
+cuatro dígitos: días, horas, minutos y segundos en el formato `xx:xx:xx:xx`.
 
-- Количество дней может состоять из более чем двух цифр.
-- Таймер должен останавливаться когда дошел до конечной даты, то есть
+- El número de días puede constar de más de dos dígitos.
+- El temporizador debe detenerse cuando llegue a la fecha de finalización, es decir
   `00:00:00:00`.
 
-> 💡 Не будем усложнять. Если таймер запущен, для того чтобы выбрать новую дату
-> и перезапустить его - необходимо перезагрузить страницу.
+> 💡 Hagámoslo sencillo. Si el temporizador está en marcha, para seleccionar una nueva fecha
+> y reiniciarlo - es necesario recargar la página.
 
-Для подсчета значений используй готовую функцию `convertMs`, где `ms` - разница
-между конечной и текущей датой в миллисекундах.
+Para calcular los valores, utilice la función preparada `convertMs`, donde `ms` es la diferencia
+entre la fecha de finalización y la fecha actual en milisegundos.
 
 ```js
 function convertMs(ms) {
@@ -186,33 +186,33 @@ console.log(convertMs(140000)); // {days: 0, hours: 0, minutes: 2, seconds: 20}
 console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20}
 ```
 
-### Форматирование времени
+### Formato de tiempo
 
-Функция `convertMs()` возвращает объект с рассчитанным оставшимся временем до
-конечной даты. Обрати внимание, что она не форматирует результат. То есть, если
-осталось 4 минуты или любой другой составляющей времени, то функция вернет `4`,
-а не `04`. В интерфейсе таймера необходимо добавлять `0` если в числе меньше
-двух символов. Напиши функцию `addLeadingZero(value)`, которая использует метод
-метод `padStart()` и перед отрисовкой интефрейса форматируй значение.
+La función `convertMs()` devuelve un objeto con el tiempo restante calculado hasta
+la fecha final. Tenga en cuenta que no formatea el resultado. Es decir, si hay
+4 minutos o cualquier otro componente de tiempo, la función devolverá `4`,
+no `04`. En la interfaz del temporizador, debe añadirse `0` si el número tiene menos de
+dos personajes. Escriba una función `addLeadingZero(value)` que utilice el
+`padStart()` y formatear el valor antes de renderizar el interframe.
 
-### Библиотека уведомлений
+### Biblioteca de notificaciones
 
-> ⚠️ Следующий функционал не обязателен при сдаче задания, но будет хорошей
-> дополнительной практикой.
+> ⚠️ La siguiente funcionalidad no es obligatoria a la hora de entregar un trabajo, pero sería bueno
+> práctica adicional.
 
-Для отображения уведомлений пользователю вместо `window.alert()` используй
-библиотеку [notiflix](https://github.com/notiflix/Notiflix#readme).
+Para mostrar notificaciones al usuario en lugar de `window.alert()` utilice
+biblioteca [notiflix](https://github.com/notiflix/Notiflix#readme).
 
-## Задание 3 - генератор промисов
+## Tarea 3 - Generador de promesas
 
-Выполняй это задание в файлах `03-promises.html` и `03-promises.js`. Посмотри
-демо видео работы генератора промисов.
+Ejecute esta tarea en los archivos `03-promises.html` y `03-promises.js`. Ver
+vídeo de demostración del generador de promesas.
 
 https://user-images.githubusercontent.com/17479434/127932183-42232f26-4db2-4614-86bc-6bec54b1d6a4.mp4
 
-В HTML есть разметка формы, в поля которой пользователь будет вводить первую
-задержку в миллисекундах, шаг увеличения задержки для каждого промиса после
-первого и количество промисов которое необходимо создать.
+El HTML tiene un diseño de formulario en el que el usuario introducirá la primera
+retraso en milisegundos, el paso de incremento de retraso para cada promis después de
+primero y el número de promesas a crear.
 
 ```html
 <form class="form">
@@ -232,10 +232,10 @@ https://user-images.githubusercontent.com/17479434/127932183-42232f26-4db2-4614-
 </form>
 ```
 
-Напиши скрипт, который при сабмите формы вызывает функцию
-`createPromise(position, delay)` столько раз, сколько ввели в поле `amount`. При
-каждом вызове передай ей номер создаваемого промиса (`position`) и задержку
-учитывая введенную пользователем первую задержку (`delay`) и шаг (`step`).
+Escriba un script que llame a la función  cuando se envíe el formulario
+`createPromise(position, delay)` tantas veces como se haya introducido en el campo `amount`. En
+cada vez que se llama, pasa el número del pagaré (`posición`) y el retraso
+considerando el primer retardo (`delay`) y el paso (`step`) introducidos por el usuario.
 
 ```js
 function createPromise(position, delay) {
@@ -248,11 +248,11 @@ function createPromise(position, delay) {
 }
 ```
 
-Дополни код функции `createPromise` так, чтобы она возвращала **один промис**,
-который выполянется или отклоняется через `delay` времени. Значением промиса
-должен быть объект, в котором будут свойства `position` и `delay` со значениями
-одноименных параметров. Используй начальный код функции для выбора того, что
-нужно сделать с промисом - выполнить или отклонить.
+Completa el código de la función `createPromise` para que devuelva **una promesa**,
+que se ejecuta o se rechaza después de un "retraso" de tiempo. El valor de la promesa
+debe ser un objeto que tendrá las propiedades `position` y `delay` con valores de
+parámetros del mismo nombre. Utilice el código inicial de la función para seleccionar lo que
+hacer con la promesa: ejecutarla o rechazarla.
 
 ```js
 createPromise(2, 1500)
@@ -264,10 +264,10 @@ createPromise(2, 1500)
   });
 ```
 
-### Библиотека уведомлений
+### Biblioteca de notificaciones
 
-> ⚠️ Следующий функционал не обязателен при сдаче задания, но будет хорошей
-> дополнительной практикой.
+> ⚠️ La siguiente funcionalidad no es obligatoria a la hora de entregar un trabajo, pero sería bueno
+> práctica adicional.
 
-Для отображения уведомлений пользователю вместо `console.log()` используй
-библиотеку [notiflix](https://github.com/notiflix/Notiflix#readme).
+Para mostrar notificaciones al usuario en lugar de `console.log()` utilice
+biblioteca [notiflix](https://github.com/notiflix/Notiflix#readme).
