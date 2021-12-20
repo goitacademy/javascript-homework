@@ -1,27 +1,27 @@
 **Read in other languages: [Русский](README.md), [Українська](README.ua.md),
 [English](README.en.md), [Español](README.es.md), [Polski](README.pl.md).**
 
-# Критерии приема
+# Criterios de admisión
 
-- Создан репозиторий `goit-js-hw-06`.
-- При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую
-  страницу на `GitHub Pages`.
-- Задания выполнены строго по ТЗ (нельзя изменять исходный HTML задания).
-- При посещении живой страницы задания, в консоли нету ошибок и предупреждений.
-- Имена переменных и функций понятные, описательные.
-- Код отформатирован `Prettier`.
+- Se ha creado un repositorio `goit-js-hw-06`.
+- Al entregar los deberes, hay dos enlaces: a los archivos de origen y al
+  en la página `GitHub Pages`.
+- Las asignaciones se ajustan estrictamente a los términos de referencia (no se pueden hacer cambios en el HTML original de la asignación).
+- Al visitar la página de tareas en vivo, no hay errores ni advertencias en la consola.
+- Los nombres de las variables y las funciones son claros y descriptivos.
+- El código está formateado `Prettier`.
 
-## Стартовые файлы
+## Archivos de inicio
 
-В [папке src](./src) ты найдешь стартовые файлы с готовой разметкой и
-подключенными файлами скриптов для каждого задания. Скопируй их себе в проект.
-Для этого скачай весь этот репозиторий как архив или используй
-[сервис DownGit](https://downgit.github.io/) для скачивания отдельной папки из
-репозитория.
+En [en la carpeta src](./src) encontrará archivos de inicio con un diseño ya hecho y
+archivos de script conectados para cada tarea. Cópialos en tu proyecto.
+Para ello, descargue este repositorio completo como un archivo o utilice
+[servicio DownGit](https://downgit.github.io/) para descargar una carpeta individual del
+depósito.
 
-## Задание 1
+## Tarea 1
 
-В HTML есть список категорий `ul#categories`.
+Hay una lista de categorías en el HTML `ul#categories`.
 
 ```html
 <ul id="categories">
@@ -55,15 +55,15 @@
 </ul>
 ```
 
-Напиши скрипт который:
+Escribe un script que:
 
-1. Посчитает и выведет в консоль количество категорий в `ul#categories`, то есть
-   элементов `li.item`.
-2. Для каждого элемента `li.item` в списке `ul#categories`, найдет и выведет в
-   консоль текст заголовка элемента (тега `<h2>`) и количество элементов в
-   категории (всех вложенных в него `<li>`).
+1. Cuenta y muestra en la consola el número de categorías en `ul#categories`, es decir.
+   artículos `li.item`.
+2. Para cada elemento `li.item` en la lista `ul#categories`, encuentra y envía a la consola
+   consola el texto del título del artículo (etiqueta `<h2>`) y el número de artículos en el
+   categoría (todo anidado `<li>`).
 
-В результате, в консоли будут выведены такие сообщения.
+Como resultado, se mostrarán los siguientes mensajes en la consola.
 
 ```bash
 Number of categories: 3
@@ -78,15 +78,15 @@ Category: Technologies
 Elements: 5
 ```
 
-## Задание 2
+## Tarea 2
 
-В HTML есть пустой список `ul#ingredients`.
+HTML tiene una lista vacía `ul#ingredients`.
 
 ```html
 <ul id="ingredients"></ul>
 ```
 
-В JavaScript есть массив строк.
+En JavaScript hay una array de cadenas.
 
 ```js
 const ingredients = [
@@ -99,30 +99,29 @@ const ingredients = [
 ];
 ```
 
-Напиши скрипт, который для каждого элемента массива `ingredients`:
+Escribe un script que para cada elemento de la array `ingredients`:
 
-1. Создаст отдельный элемент `<li>`. Обзательно используй метод
+1. Crea un elemento separado `<li>`. Asegúrese de utilizar el método
    `document.createElement()`.
-2. Добавит название ингредиента как его текстовое содержимое.
-3. Добавит элементу класс `item`.
-4. После чего вставит все `<li>` за одну операцию в список `ul.ingredients`.
+2. Añade el nombre de un ingrediente como contenido de texto.
+3. Añade una clase `item` al elemento.
+4. A continuación, inserte todos los `<li>` en una sola operación en la lista `ul.ingredients`.
 
-## Задание 3
+## Tarea 3
 
-Напиши скрипт для создания галереи изображений по массиву данных. В HTML есть
-список `ul.gallery`.
+Escribe un script para crear una galería de imágenes a partir de un array de datos. El HTML tiene
+lista `ul.gallery`.
 
 ```html
 <ul class="gallery"></ul>
 ```
 
-Используй массив объектов `images` для создания элементов `<img>` вложенных в
-`<li>`. Для создания разметки используй шаблонные строки и метод
-`insertAdjacentHTML()`.
+Utiliza una array de objetos `images` para crear elementos `<img>` anidados dentro de
+`<li>`. Utilizar cadenas de plantillas y el método `insertAdjacentHTML()` para crear el marcado.
 
-- Все элементы галереи должны добавляться в DOM за одну операцию вставки.
-- Добавь минимальное оформление галереи флексбоксами или гридами через CSS
-  классы.
+- Todos los elementos de la galería deben añadirse al DOM en una sola operación de inserción.
+- Añade un diseño mínimo a la galería con flexboxes o Computación en malla mediante CSS
+  clases.
 
 ```js
 const images = [
@@ -141,10 +140,10 @@ const images = [
 ];
 ```
 
-## Задание 4
+## Tarea 4
 
-Счетчик состоит из спана и кнопок, которые, при клике, должны увеличивать и
-уменьшать его значение на единицу.
+El contador consta de un span y de botones que, al ser pulsados, deben aumentar y
+disminuye su valor en uno.
 
 ```html
 <div id="counter">
@@ -154,27 +153,27 @@ const images = [
 </div>
 ```
 
-- Создай переменную `counterValue` в которой будет храниться текущее значение
-  счетчика и инициализируй её значением `0`.
-- Добавь слушатели кликов на кнопки, внутри которых увеличивай или уменьшай
-  значение счтетчика.
-- Обновляй интерфейс новым значением переменной `counterValue`.
+- Crear una variable `counterValue` para almacenar el valor actual
+  e inicializarlo con el valor `0`.
+- Añadir escuchas de clic a los botones, dentro de los cuales aumentar o disminuir
+  valor del contador.
+- Actualiza la interfaz con el nuevo valor de la variable `counterValue`.
 
-## Задание 5
+## Tarea 5
 
-Напиши скрипт который, при наборе текста в инпуте `input#name-input` (событие
-`input`), подставляет его текущее значение в `span#name-output`. Если инпут
-пустой, в спане должна отображаться строка `"Anonymous"`.
+Escribe un script que, cuando el texto se escribe en el input de `input#nombre-input` (evento
+evento `input`), sustituye su valor actual en `span#name-output`. Si el input
+está vacío, el span debería mostrar la cadena `"Anónimo"`.
 
 ```html
 <input type="text" id="name-input" placeholder="Please enter your name" />
 <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 ```
 
-## Задание 6
+## Tarea 6
 
-Напиши скрипт, который при потере фокуса на инпуте (событие `blur`), проверяет
-его содержимое на правильное количество введённых символов.
+Escribe un script que, si se pierde el foco en un input (el evento `blur`), compruebe
+El script comprobará el contenido del instupt para ver si el número de caracteres introducidos es correcto.
 
 ```html
 <input
@@ -185,13 +184,13 @@ const images = [
 />
 ```
 
-- Сколько символов должно быть в инпуте, указывается в его атрибуте
+- El número de símbolos que debe tener un input se especifica en su atributo
   `data-length`.
-- Если введено подходящее количество символов, то `border` инпута становится
-  зелёным, если неправильное - красным.
+- Si se introduce el número correcto de símbolos, el `border` del intuplet se convierte en
+  verde, si no es correcto se vuelve rojo.
 
-Для добавления стилей, используй CSS-классы `valid` и `invalid`, которые мы уже
-добавили в исходные файлы задания.
+Para añadir estilos, utiliza las clases CSS `valid` e `invalid`, que ya tenemos
+añadido a los archivos de origen del trabajo.
 
 ```css
 #validation-input {
@@ -207,12 +206,12 @@ const images = [
 }
 ```
 
-## Задание 7
+## Tarea 7
 
-Напиши скрипт, который реагирует на изменение значения `input#font-size-control`
-(событие `input`) и изменяет инлайн-стиль `span#text` обновляя свойство
-`font-size`. В результате при перетаскивании ползунка будет меняться размер
-текста.
+Escribir un script que reaccione a un cambio en el valor de `input#font-size-control`.
+(el evento `input`) y cambia el estilo inline de `span#text` actualizando el
+`font-size`. Por lo tanto, al arrastrar el deslizador cambiará el tamaño
+texto.
 
 ```html
 <input id="font-size-control" type="range" min="16" max="96" />
@@ -220,9 +219,9 @@ const images = [
 <span id="text">Abracadabra!</span>
 ```
 
-## Задание 8
+## Tarea 8
 
-Напиши скрипт управления формой логина.
+Escribe un script para controlar el formulario de acceso.
 
 ```html
 <form class="login-form">
@@ -238,20 +237,20 @@ const images = [
 </form>
 ```
 
-1. Обработка отправки формы `form.login-form` должна быть по событию `submit`.
-2. При отправке формы страница не должна перезагружаться.
-3. Если в форме есть незаполненные поля, выводи `alert` с предупреждением о том,
-   что все поля должны быть заполнены.
-4. Если пользователь заполнил все поля и отправил форму, собери значения полей в
-   обьект, где имя поля будет именем свойства, а значение поля - значением
-   свойства. Для доступа к элементам формы используй свойство `elements`.
-5. Выведи обьект с введенными данными в консоль и очисти значения полей формы
-   методом `reset`.
+1. El procesamiento de `form.login-form` debe ser por el evento `submit`.
+2. La página no debe recargarse cuando se envía el formulario.
+3. Si hay campos en blanco en el formulario, la salida `alert` con una advertencia de que
+   que todos los campos deben ser rellenados.
+4. Si el usuario ha rellenado todos los campos y ha enviado el formulario, reúne los valores de los campos en
+   donde el nombre del campo es el nombre de la propiedad y el valor del campo es el
+   propiedad. Utilice la propiedad `elements` para acceder a los elementos del formulario.
+5. Mostrar el objeto con los datos introducidos en la consola y borrar los valores de los campos del formulario
+   utilizando el método `reset`.
 
-## Задание 9
+## Tarea 9
 
-Напиши скрипт, который изменяет цвета фона элемента `<body>` через инлайн стиль
-при клике на `button.change-color` и выводит значение цвета в `span.color`.
+Escriba un script que cambie el color de fondo del elemento `<body>` mediante el estilo inline
+cuando se hace clic en `button.change-color` y emite el valor del color en `span.color`.
 
 ```html
 <div class="widget">
@@ -260,7 +259,7 @@ const images = [
 </div>
 ```
 
-Для генерации случайного цвета используй функцию `getRandomHexColor`.
+Utilice la función `getRandomHexColor` para generar un color aleatorio.
 
 ```js
 function getRandomHexColor() {
@@ -268,12 +267,12 @@ function getRandomHexColor() {
 }
 ```
 
-## Задание 10 (выполнять не обязательно)
+## Tarea 10 (opcional)
 
-Напиши скрипт создания и очистки коллекции элементов. Пользователь вводит
-количество элементов в `input` и нажимает кнопку `Создать`, после чего
-рендерится коллекция. При нажатии на кнопку `Очистить`, коллекция элементов
-очищается.
+Escribe un script para crear y borrar una colección de elementos. El usuario introduce
+número de elementos en `input` y pulsa el botón `Create`, tras lo cual
+La colección se ha renderizado. Cuando el usuario hace clic en el botón `Borrar`, la colección de artículos
+está despejado.
 
 ```html
 <div id="controls">
@@ -285,14 +284,14 @@ function getRandomHexColor() {
 <div id="boxes"></div>
 ```
 
-Создай функцию `createBoxes(amount)`, которая принимает один параметр - число.
-Функция создает столько `<div>`, сколько указано в `amount` и добавляет их в
+Crea una función `createBoxes(amount)` que toma un parámetro - un número.
+La función crea tantos `<div>` como se especifique en `amount` y los añade a
 `div#boxes`.
 
-1. Размеры самого первого `<div>` - 30px на 30px.
-2. Каждый элемент после первого, должен быть шире и выше предыдущего на 10px.
-3. Все элементы должены иметь случайный цвет фона в формате HEX. Используй
-   готовую функцию `getRandomHexColor` для получения цвета.
+1. El tamaño del primer `<div>` es de 30px por 30px.
+2. Cada elemento después del primero, debe ser 10px más ancho y alto que el anterior.
+3. Todos los elementos deben tener un color de fondo aleatorio en formato HEX. Utilice
+   función preparada `getRandomHexColor` para obtener el color.
 
 ```js
 function getRandomHexColor() {
@@ -300,5 +299,5 @@ function getRandomHexColor() {
 }
 ```
 
-Создай функцию `destroyBoxes()`, которая очищает содержимое `div#boxes`, тем
-самым удаляя все созданные элементы.
+Crear una función `destroyBoxes()` que borre el contenido de `div#boxes`, así
+eliminando así todos los elementos creados.
