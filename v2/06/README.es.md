@@ -4,7 +4,7 @@
 # Criterios de admisión
 
 - Se ha creado un repositorio `goit-js-hw-06`.
-- Al entregar los deberes, hay dos enlaces: a los archivos de origen y al
+- Al entregar los deberes, hay dos enlaces: a los archivos de origen y
   en la página `GitHub Pages`.
 - Las asignaciones se ajustan estrictamente a los términos de referencia (no se pueden hacer cambios en el HTML original de la asignación).
 - Al visitar la página de tareas en vivo, no hay errores ni advertencias en la consola.
@@ -13,11 +13,11 @@
 
 ## Archivos de inicio
 
-En [en la carpeta src](./src) encontrará archivos de inicio con un diseño ya hecho y
-archivos de script conectados para cada tarea. Cópialos en tu proyecto.
-Para ello, descargue este repositorio completo como un archivo o utilice
+En la [carpeta src](./src) encontrará archivos de inicio con un diseño ya hecho y
+archivos de script conectados para cada tarea. Cópielos en su proyecto.
+Para hacer eso, descargue este repositorio completo como un archivo o use el
 [servicio DownGit](https://downgit.github.io/) para descargar una carpeta individual del
-depósito.
+repositorio.
 
 ## Tarea 1
 
@@ -55,11 +55,11 @@ Hay una lista de categorías en el HTML `ul#categories`.
 </ul>
 ```
 
-Escribe un script que:
+Escriba un script que:
 
-1. Cuenta y muestra en la consola el número de categorías en `ul#categories`, es decir.
+1. Cuente y muestre en la consola el número de categorías en `ul#categories`, es decir. los
    artículos `li.item`.
-2. Para cada elemento `li.item` en la lista `ul#categories`, encuentra y envía a la consola
+2. Para cada elemento `li.item` en la lista `ul#categories`, encuentre y envíe a la
    consola el texto del título del artículo (tag `<h2>`) y el número de artículos en la
    categoría (todo anidado `<li>`).
 
@@ -86,7 +86,7 @@ HTML tiene una lista vacía `ul#ingredients`.
 <ul id="ingredients"></ul>
 ```
 
-En JavaScript hay una array de cadenas.
+En JavaScript hay una array de secuencias.
 
 ```js
 const ingredients = [
@@ -99,29 +99,29 @@ const ingredients = [
 ];
 ```
 
-Escribe un script que para cada elemento de la array `ingredients`:
+Escriba un script que para cada elemento del array `ingredients`:
 
-1. Crea un elemento separado `<li>`. Asegúrese de utilizar el método
+1. Cree un elemento separado `<li>`. Asegúrese de usar el método
    `document.createElement()`.
-2. Añade el nombre de un ingrediente como contenido de texto.
-3. Añade una clase `item` al elemento.
-4. A continuación, inserte todos los `<li>` en una sola operación en la lista `ul.ingredients`.
+2. Añada el nombre de un ingrediente como contenido de texto.
+3. Añada una clase `item` al elemento.
+4. Después, inserte todos los `<li>` en una sola operación en la lista `ul.ingredients`.
 
 ## Tarea 3
 
-Escribe un script para crear una galería de imágenes a partir de un array de datos. El HTML tiene
+Escriba un script para crear una galería de imágenes a partir de un array de datos. El HTML tiene una
 lista `ul.gallery`.
 
 ```html
 <ul class="gallery"></ul>
 ```
 
-Utiliza una array de objetos `images` para crear elementos `<img>` anidados dentro de
-`<li>`. Utilizar cadenas de plantillas y el método `insertAdjacentHTML()` para crear el marcado.
+Use un array de objetos `images` para crear elementos `<img>` anidados dentro de
+`<li>`. Use las secuencias de plantillas y el método `insertAdjacentHTML()` para crear el marcado.
 
 - Todos los elementos de la galería deben añadirse al DOM en una sola operación de inserción.
-- Añade un diseño mínimo a la galería con flexboxes o Computación en malla mediante CSS
-  clases.
+- Añada un diseño mínimo a la galería con flexboxes o Computación en malla mediante las clases
+  CSS.
 
 ```js
 const images = [
@@ -143,7 +143,7 @@ const images = [
 ## Tarea 4
 
 El contador consta de un span y de botones que, al ser pulsados, deben aumentar y
-disminuye su valor en uno.
+disminuir su valor en uno.
 
 ```html
 <div id="counter">
@@ -153,17 +153,17 @@ disminuye su valor en uno.
 </div>
 ```
 
-- Crear una variable `counterValue` para almacenar el valor actual
+- Cree una variable `counterValue` para almacenar el valor actual
   e inicializarlo con el valor `0`.
-- Añadir escuchas de clic a los botones, dentro de los cuales aumentar o disminuir
+- Añada escuchas de clic a los botones, dentro de los cuales aumenta o disminuye el
   valor del contador.
-- Actualiza la interfaz con el nuevo valor de la variable `counterValue`.
+- Actualice la interfaz con el nuevo valor de la variable `counterValue`.
 
 ## Tarea 5
 
-Escribe un script que, cuando el texto se escribe en el input de `input#nombre-input` 
-(evento `input`), sustituye su valor actual en `span#name-output`. Si el input
-está vacío, el span debería mostrar la cadena `"Anónimo"`.
+Escriba un script que, cuando se escriba el texto en el input de `input#nombre-input` 
+(evento `input`), sustituya su valor actual en `span#name-output`. Si el input
+está vacío, el span debería mostrar la secuencia `"Anónimo"`.
 
 ```html
 <input type="text" id="name-input" placeholder="Please enter your name" />
@@ -172,8 +172,8 @@ está vacío, el span debería mostrar la cadena `"Anónimo"`.
 
 ## Tarea 6
 
-Escribe un script que, si se pierde el foco en un input (el evento `blur`), compruebe
-El script comprobará el contenido del instupt para ver si el número de caracteres introducidos es correcto.
+Escriba un script que, si se pierde el enfoque en un input (evento `blur`),
+el script comprobará el contenido del instupt para ver si el número de símbolos introducidos es correcto.
 
 ```html
 <input
@@ -186,10 +186,10 @@ El script comprobará el contenido del instupt para ver si el número de caracte
 
 - El número de símbolos que debe tener un input se especifica en su atributo
   `data-length`.
-- Si se introduce el número correcto de símbolos, el `border` del intuplet se convierte en
+- Si se introduce el número correcto de símbolos, `border` del intuplet se convierte en
   verde, si no es correcto se vuelve rojo.
 
-Para añadir estilos, utiliza las clases CSS `valid` e `invalid`, que ya tenemos
+Para añadir estilos, use las clases CSS `valid` e `invalid`, que ya tenemos
 añadido a los archivos de origen del trabajo.
 
 ```css
@@ -208,9 +208,9 @@ añadido a los archivos de origen del trabajo.
 
 ## Tarea 7
 
-Escribir un script que reaccione a un cambio en el valor de `input#font-size-control`.
-(el evento `input`) y cambia el estilo inline de `span#text` actualizando el
-`font-size`. Por lo tanto, al arrastrar el deslizador cambiará el tamaño
+Escriba un script que reaccione a un cambio en el valor de `input#font-size-control`.
+(evento `input`) y cambie el estilo inline de `span#text` actualizando el
+`font-size`. Por lo tanto, al arrastrar el deslizador cambiará el tamaño del
 texto.
 
 ```html
@@ -221,7 +221,7 @@ texto.
 
 ## Tarea 8
 
-Escribe un script para controlar el formulario de acceso.
+Escriba un script para controlar el formulario de acceso.
 
 ```html
 <form class="login-form">
@@ -239,13 +239,13 @@ Escribe un script para controlar el formulario de acceso.
 
 1. El procesamiento de `form.login-form` debe ser por el evento `submit`.
 2. La página no debe recargarse cuando se envía el formulario.
-3. Si hay campos en blanco en el formulario, la salida `alert` con una advertencia de que
-   que todos los campos deben ser rellenados.
-4. Si el usuario ha rellenado todos los campos y ha enviado el formulario, reúne los valores de los campos en
-   donde el nombre del campo es el nombre de la propiedad y el valor del campo es el
-   propiedad. Utilice la propiedad `elements` para acceder a los elementos del formulario.
-5. Mostrar el objeto con los datos introducidos en la consola y borrar los valores de los campos del formulario
-   utilizando el método `reset`.
+3. Si hay espacios en blanco en el formulario, aparecerá `alert` con una advertencia diciendo
+   que todos los espacios deben ser rellenados.
+4. Si el usuario ha rellenado todos los espacios y ha enviado el formulario, reúne los valores de los espacios en
+   donde el nombre del espacio es el nombre de la propiedad y el valor del espacio es la
+   propiedad. Use la propiedad `elements` para acceder a los elementos del formulario.
+5. Muestre el objeto con los datos introducidos en la consola y borre los valores de los camposespacio del formulario
+   usando el método `reset`.
 
 ## Tarea 9
 
@@ -259,7 +259,7 @@ cuando se hace clic en `button.change-color` y emite el valor del color en `span
 </div>
 ```
 
-Utilice la función `getRandomHexColor` para generar un color aleatorio.
+Use la función `getRandomHexColor` para generar un color aleatorio.
 
 ```js
 function getRandomHexColor() {
@@ -269,10 +269,10 @@ function getRandomHexColor() {
 
 ## Tarea 10 (opcional)
 
-Escribe un script para crear y borrar una colección de elementos. El usuario introduce
+Escriba un script para crear y borrar una colección de elementos. El usuario introduce el
 número de elementos en `input` y pulsa el botón `Create`, tras lo cual
-La colección se ha renderizado. Cuando el usuario hace clic en el botón `Borrar`, la colección de artículos
-está despejado.
+la colección se ha renderizado. Cuando el usuario hace clic en el botón `Borrar`, la colección de artículos
+ya se ha despejado.
 
 ```html
 <div id="controls">
@@ -284,14 +284,14 @@ está despejado.
 <div id="boxes"></div>
 ```
 
-Crea una función `createBoxes(amount)` que toma un parámetro - un número.
+Cree una función `createBoxes(amount)` que tome un parámetro, un número.
 La función crea tantos `<div>` como se especifique en `amount` y los añade a
 `div#boxes`.
 
 1. El tamaño del primer `<div>` es de 30px por 30px.
 2. Cada elemento después del primero, debe ser 10px más ancho y alto que el anterior.
-3. Todos los elementos deben tener un color de fondo aleatorio en formato HEX. Utilice
-   función preparada `getRandomHexColor` para obtener el color.
+3. Todos los elementos deben tener un color de fondo aleatorio en formato HEX. Use la
+   función `getRandomHexColor` lista para obtener el color.
 
 ```js
 function getRandomHexColor() {
@@ -299,5 +299,5 @@ function getRandomHexColor() {
 }
 ```
 
-Crear una función `destroyBoxes()` que borre el contenido de `div#boxes`, así
+Cree una función `destroyBoxes()` que borre el contenido de `div#boxes`, 
 eliminando así todos los elementos creados.
