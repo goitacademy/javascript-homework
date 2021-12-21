@@ -4,10 +4,10 @@
 # Criterios de admisión
 
 - Se ha creado el repositorio `goit-js-hw-10`.
-- Al entregar las tareas, existen dos enlaces: a los archivos y a la
-  página de trabajo en `GitHub Pages`.
+- Al entregar las tareas, existen dos enlaces: a los archivos de origen y el trabajo 
+  en la página de `GitHub Pages`.
 - Al visitar la página de trabajos en vivo, no hay errores ni advertencias en la consola.
-- El proyecto se esta armando con la ayuda de 
+- El proyecto está construido con la ayuda de
   [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
 - El código es formateado por `Prettier`.
 
@@ -16,8 +16,8 @@
 En la [carpeta src](./src)  encontrará los archivos de inicio. Cópielos en su proyecto,
 reemplazando completamente la carpeta `src` en
 [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
-Para eso, descargue todo el repositorio como un archivo o use
-[el servicio DownGit](https://downgit.github.io/) para descargar una carpeta separada del
+Para eso, descargue todo el repositorio como un archivo o use el
+[servicio DownGit](https://downgit.github.io/) para descargar una carpeta individual del
 repositorio
 
 ## Tarea - búsqueda de países
@@ -27,7 +27,7 @@ nombre completo. Mire en
 [vídeo demo](https://user-images.githubusercontent.com/17479434/131147741-7700e8c5-8744-4eea-8a8e-1c3d4635248a.mp4)
 aplicaciones.
 
-### Preguntas HTTP
+### Consultas HTTP
 
 Use la API pública [Rest Countries](https://restcountries.com/), es decir
 [resource name](https://restcountries.com/#api-endpoints-v3-name), que devuelve
