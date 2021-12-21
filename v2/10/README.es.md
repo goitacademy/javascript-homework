@@ -60,7 +60,7 @@ El nombre del país a buscar es introducido por el usuario en la casilla de text
 `input#search-box`. Las consultas HTTP se realizan cuando se escribe el nombre del país, es decir, 
 mediante el evento `input`. Pero no puede hacer una consulta cada vez que pulse la tecla
 porque habrá muchas consultas a la vez y se ejecutarán en un orden 
-imprevisible
+imprevisible.
 
 Debe aplicar un truco `Debounce` en el manejador de eventos y hacer
 una petición HTTP `300ms después de que el usuario haya dejado de escribir.
