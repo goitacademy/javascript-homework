@@ -7,7 +7,7 @@
 - Al entregar las tareas, existen dos enlaces: a los archivos de origen y el trabajo 
   en la página de `GitHub Pages`.
 - Al visitar la página de trabajos en vivo, no hay errores ni advertencias en la consola.
-- se esta armando con la ayuda 
+- El proyecto está construido con la ayuda de
   [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
 - Para las consultas HTTP se usa la biblioteca [axios](https://axios-http.com/).
 - La sintaxis usada es `async/await`.
@@ -18,8 +18,8 @@
 # Tarea - búsqueda de imágenes
 
 Cree la parte del frontend de una aplicación de búsqueda y navegación de imágenes basada en palabras clave
-palabra. Añada el diseño de los elementos de la interfaz
-app.
+palabra. Añada el diseño de los elementos de la interfaz de la
+aplicación.
 
 https://user-images.githubusercontent.com/17479434/125040406-49a6f600-e0a0-11eb-975d-e7d8eaf2af6b.mp4
 
