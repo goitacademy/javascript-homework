@@ -18,7 +18,7 @@ reemplazando completamente la carpeta `src` en
 [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
 Para eso, descargue todo el repositorio como un archivo o use el
 [servicio DownGit](https://downgit.github.io/) para descargar una carpeta individual del
-repositorio
+repositorio.
 
 ## Tarea - búsqueda de países
 
