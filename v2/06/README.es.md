@@ -4,12 +4,12 @@
 # Criterios de admisión
 
 - Se ha creado un repositorio `goit-js-hw-06`.
-- Al entregar los deberes, hay dos enlaces: a los archivos de origen y
-  en la página `GitHub Pages`.
+- Al entregar las tareas, existen dos enlaces: a los archivos de origen y el trabajo 
+  en la página de `GitHub Pages`.
 - Las asignaciones se ajustan estrictamente a los términos de referencia (no se pueden hacer cambios en el HTML original de la asignación).
 - Al visitar la página de tareas en vivo, no hay errores ni advertencias en la consola.
 - Los nombres de las variables y las funciones son claros y descriptivos.
-- El código está formateado `Prettier`.
+- El código está formateado por `Prettier`.
 
 ## Archivos de inicio
 
