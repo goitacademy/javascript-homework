@@ -3,7 +3,7 @@
 # Acceptance criteria
 
 - `goit-js-hw-06` repository created.
-- In your submitted homework, there are two links: to the source files and your working page on `GitHub Pages`.
+- In your submitted homework, there are two links: One to your source files and one to your working page on `GitHub Pages`.
 - All tasks are completed strictly according to the specifications (do not change the original HTML in the task).
 - During live page visits, there are no errors or warnings generated in the console.
 - Clear and descriptive names of variables and functions.
@@ -93,9 +93,9 @@ const ingredients = [
 Write a script that, for each element in the `ingredients` array:
 
 1. Will create a separate `<li>` element. Be sure to use the `document.createElement()` method.
-2. Will add the ingredient name as its text content.
-3. Will add the `item` class to the element.
-4. Then will insert all `<li>` to the `ul.ingredients` list in a single operation.
+2. Will add the ingredient name as the `<li>` element's text content.
+3. Will add the `item` class to the `<li>` element.
+4. Will insert all `<li>` elements to the `ul.ingredients` list in a single operation.
 
 ## Task 3
 
@@ -105,7 +105,7 @@ Write a script to create a gallery of images from an array of data. There is a l
 <ul class="gallery"></ul>
 ```
 
-Use an array of objects `images` to create `<img>` elements nested in `<li>`. Use template strings and the `insertAdjacentHTML()` method to create markup.
+Use an array of objects, `images`, to create `<img>` elements nested in `<li>`. Use template strings and the `insertAdjacentHTML()` method to create markup.
 
 - All gallery items must be added to DOM in one insert operation.
 - Add at least some gallery design with flexboxes or grids using CSS classes.
@@ -186,7 +186,7 @@ To add styles, use the `valid` and `invalid` CSS classes, which you can find in 
 
 ## Task 7
 
-Write a script that responds to changes in the value of `input#font-size-control` (`input` event) and changes the inline style of `span#text` by updating the `font-size` property. As a result, the text size will change responding to scrollbar dragging.
+Write a script that responds to changes in the value of `input#font-size-control` (`input` event) and changes the inline style of `span#text` by updating the `font-size` property. As a result, the text size will respond to scrollbar dragging by changing size.
 
 
 ```html
@@ -215,8 +215,8 @@ Write a script to manage the login form.
 
 1. Form submission (`form.login-form`) must be processed on the `submit` event.
 2. The page must not reload when the form is submitted.
-3. If the form has empty fields, display `alert` saying that all fields must be filled in.
-4. As soon as the user has filled in all the fields and submitted the form, collect the field values into an object, where the field name will be the property name and the field value will be the property value. Use the `elements` property to access form elements.
+3. If the form has empty fields, display an `alert` saying that all fields must be filled in.
+4. As soon as the user has filled in all the fields and submitted the form, collect the field values into an object where the field name will be the property name and the field value will be the property value. Use the `elements` property to access form elements.
 5. Display the object with the entered data in the console and clear the values of the form fields using the `reset` method.
 
 ## Task 9
@@ -256,7 +256,7 @@ Create a `createBoxes(amount)` function that takes one parameter, a number. The 
 
 1. The dimensions of the very first `<div>` are 30px by 30px.
 2. Each element after the first one should be 10px wider and higher than the previous one.
-3. All elements must have a random HEX background color. Use the ready-made `getRandomHexColor` function to get a color.
+3. All elements must have a random hex background color. Use the ready-made `getRandomHexColor` function to get a color.
 
 ```js
 function getRandomHexColor() {
