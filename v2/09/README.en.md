@@ -3,14 +3,14 @@
 # Acceptance criteria
 
 - `goit-js-hw-09` repository created.
-- In your submitted homework, there are two links for each project: to the source files and your working page on `GitHub Pages`.
+- In your submitted homework, there are two links for each project: One to your source files and one to your working page on `GitHub Pages`.
 - During live page visits, there are no errors or warnings generated in the console.
 - Project built with [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
 - Code formatted with `Prettier`.
 
 ## Start files
 
-In the [src folder](./src), you will find start files with ready-made markup, styles and added script files for each task. Copy them to your project completely replacing the `src` folder in [parcel-project-template](https://github.com/goitacademy/parcel-project-template). To do this, download this entire repository as an archive or use the [DownGit service](https://downgit.github.io/) to download a separate folder from the repository.
+In the [src folder](./src), you will find start files with ready-made markup, styles, and added script files for each task. Copy them to your project, completely replacing the `src` folder in [parcel-project-template](https://github.com/goitacademy/parcel-project-template). To do this, download this entire repository as an archive or use the [DownGit service](https://downgit.github.io/) to download a separate folder from the repository.
 
 ## Task 1 - color switcher
 
@@ -25,7 +25,7 @@ In HTML, there are "Start" and "Stop" buttons.
 <button type="button" data-stop>Stop</button>
 ```
 
-Write a script that, after clicking the "Start" button, changes the `<body>` background color once a second to a random value using the inline style. When clicking on the "Stop" button, background color change must stop.
+Write a script that, after clicking the "Start" button, changes the `<body>` background color once a second to a random value using an inline style. When clicking on the "Stop" button, the background color change must stop.
 
 > ⚠️ Please note that the "Start" button can be clicked an infinite number of times. Make sure that the "Start" button is disabled while the theme change is running.
 
@@ -45,7 +45,7 @@ https://user-images.githubusercontent.com/17479434/127672390-2a51efe1-06fb-41dd-
 
 ### Interface elements
 
-In HTML, there is ready-made markup for the timer, end date selection field and a button that should trigger the timer when clicked. Add at least some decoration to the interface elements.
+In HTML, there is ready-made markup for the timer, end date selection field, and a button that should trigger the timer when clicked. Add at least some decoration to the interface elements.
 
 ```html
 <input type="text" id="datetime-picker" />
@@ -73,7 +73,7 @@ In HTML, there is ready-made markup for the timer, end date selection field and 
 
 ### `flatpickr` library
 
-Use the [flatpickr](https://flatpickr.js.org/) library to allow cross-browser selection of the end date and time in a single UI element. In order to add the CSS code of the library to the project, you need to add one more import, aside from the one described in the documentation.
+Use the [flatpickr](https://flatpickr.js.org/) library to allow cross-browser selection of the end date and time in a single UI element. In order to add the CSS code of the library to the project, you need to add one more import aside from the one described in the documentation.
 
 ```js
 // Described in import flatpickr from 'flatpickr' documentation;
@@ -86,7 +86,7 @@ The library expects to be initialized on the `input[type="text"]` element, so th
 <input type="text" id="datetime-picker" />
 ```
 
-An optional parameter object can be passed as the second argument to the `flatpickr(selector, options)` function. We have prepared an object for you that you need to complete the task. Find about the role of each property in the [Options documentation](https://flatpickr.js.org/options/) and use it in your code.
+An optional parameter object can be passed as the second argument to the `flatpickr(selector, options)` function. We have prepared an object for you that you need in order to complete the task. Find about the role of each property in the [Options documentation](https://flatpickr.js.org/options/) and use it in your code.
 
 ```js
 const options = {
@@ -111,7 +111,7 @@ The `onClose()` method is called from the parameter object every time the interf
 
 ### Countdown
 
-When you click on the "Start" button, the script must calculate once a second how much time is left until the specified date and update the timer interface, showing four numbers: days, hours, minutes and seconds in the following format: `xx:xx:xx:xx`.
+When you click on the "Start" button, the script must calculate, once per second, how much time is left until the specified date and update the timer interface, showing four numbers: Days, hours, minutes, and seconds in the following format: `xx:xx:xx:xx`.
 
 - The number of days can be more than two digits.
 - The timer must stop when it reaches the end date, that is, `00:00:00:00`.
@@ -151,7 +151,7 @@ The `convertMs()` function returns an object with the calculated time remaining 
 
 ### Notification library
 
-> ⚠️ The following features are optional, but they will be a good additional practice.
+> ⚠️ The following features are optional, but they will be good for additional practice.
 
 Use the [notiflix](https://github.com/notiflix/Notiflix#readme) library to display notifications to the user instead of `window.alert()`.
 
@@ -161,7 +161,7 @@ Do this task in the `03-promises.html` and `03-promises.js` files. Watch a demo 
 
 https://user-images.githubusercontent.com/17479434/127932183-42232f26-4db2-4614-86bc-6bec54b1d6a4.mp4
 
-In HTML, there is form markup; in its fields, the user will enter the first delay in milliseconds, the delay increment for each promise after the first one and the number of promises to be created.
+In HTML, there is form markup; in its fields, the user will enter the first delay in milliseconds, the delay increment for each promise after the first one, and the number of promises to be created.
 
 ```html
 <form class="form">
@@ -181,7 +181,7 @@ In HTML, there is form markup; in its fields, the user will enter the first dela
 </form>
 ```
 
-Write a script that, when submitting the form, calls the `createPromise(position, delay)` function as many times as you entered in the `amount` field. On each call, pass it the number of the promise to be created (`position`) and the delay given the first delay (`delay`) and step (`step`) entered by the user.
+Write a script that, when submitting the form, calls the `createPromise(position, delay)` function as many times as you entered in the `amount` field. On each call, pass it the number of the promises to be created (`position`) and the delay given the first delay (`delay`) and step (`step`) entered by the user.
 
 ```js
 function createPromise(position, delay) {
@@ -208,6 +208,6 @@ createPromise(2, 1500)
 
 ### Notification library
 
-> ⚠️ The following features are optional, but they will be a good additional practice.
+> ⚠️ The following features are optional, but they will be good for additional practice.
 
 Use the [notiflix](https://github.com/notiflix/Notiflix#readme) library to display notifications to the user instead of `console.log()`.
