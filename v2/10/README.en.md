@@ -3,14 +3,14 @@
 # Acceptance criteria
 
 - `goit-js-hw-10` repository created.
-- In your submitted homework, there are two links: to the source files and your working page on `GitHub Pages`.
+- In your submitted homework, there are two links: One to your source files and one to your working page on `GitHub Pages`.
 - During live page visits, there are no errors or warnings generated in the console.
 - Project built with [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
 - Code formatted with `Prettier`.
 
 ## Start files
 
-In the [src folder](./src), you will find start files. Copy them to your project completely replacing the `src` folder in [parcel-project-template](https://github.com/goitacademy/parcel-project-template). To do this, download this entire repository as an archive or use the [DownGit service](https://downgit.github.io/) to download a separate folder from the repository.
+In the [src folder](./src), you will find start files. Copy them to your project completely, replacing the `src` folder in [parcel-project-template](https://github.com/goitacademy/parcel-project-template). To do this, download this entire repository as an archive or use the [DownGit service](https://downgit.github.io/) to download a separate folder from the repository.
 
 ## Task - country search
 
