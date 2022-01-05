@@ -3,7 +3,7 @@
 # Acceptance criteria
 
 - `goit-js-hw-11` repository created.
-- In your submitted homework, there are two links: to the source files and your working page on `GitHub Pages`.
+- In your submitted homework, there are two links: One to your source files and one to your working page on `GitHub Pages`.
 - During live page visits, there are no errors or warnings generated in the console.
 - Project built with [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
 - For HTTP requests, the [axios](https://axios-http.com/) library is used.
@@ -13,7 +13,7 @@
 
 # Task - image search
 
-Build a front-end part of a keyword search and image viewer application. Add some decoration to the interface elements. Check out the demo video of the app.
+Build the front-end part of a keyword search and image viewer application. Add some decoration to the interface elements. Check out the demo video of the app.
 
 https://user-images.githubusercontent.com/17479434/125040406-49a6f600-e0a0-11eb-975d-e7d8eaf2af6b.mp4
 
@@ -121,10 +121,10 @@ After the first request, for each new search, display a notification with the nu
 
 Add the display of large images with the [SimpleLightbox](https://simplelightbox.com/) library for a full gallery.
 
-- In your markup, wrap each image card in a link as said in the documentation.
+- In your markup, wrap each image card in a link as stated in the documentation.
 - The library has a `refresh()` method that must be called every time after adding a new group of image cards.
 
-In order to add the CSS code of the library to the project, you need to add one more import, aside from the one described in the documentation.
+In order to add the CSS code of the library to the project, you need to add one more import aside from the one described in the documentation.
 
 ```js
 // Described in import SimpleLightbox from 'simplelightbox' documentation;
@@ -148,4 +148,4 @@ window.scrollBy({
 
 ### Infinite scrolling
 
-Instead of the "Load more" button, you can make an infinite loading of images when scrolling the page. You are free to choose your ways of implementation and libraries.
+Instead of the "Load more" button, you can make an infinite loading of images when scrolling the page. You are free to choose your method of implementation and libraries.
