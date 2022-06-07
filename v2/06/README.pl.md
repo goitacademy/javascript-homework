@@ -289,7 +289,7 @@ Funkcja tworzy tyle `<div>`, ile ukazano w `amount` i dodaje je do
 
 1. Wymiary pierwszego `<div>` - 30px na 30px.
 2. Każdy następny element powinien być szerszy i wyższy od poprzedniego o 10px.
-3. Wszystkie elementy powinny mieć losowy kolor tła w formacie NEX. Użyj
+3. Wszystkie elementy powinny mieć losowy kolor tła w formacie HEX. Użyj
    gotowej funkcji `getRandomHexColor` aby otrzymać kolor.
 
 ```js
