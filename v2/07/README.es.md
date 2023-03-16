@@ -32,7 +32,7 @@ varias subtareas:
 
 1. Creación y renderización de la marca basada en el array de datos `galleryItems` y
    la plantilla de elementos de la galería proporcionada.
-2. Implementación de la delegación a `div.gallery` y obtención de `url` de un gran
+2. Implementación de la delegación a `ul.gallery` y obtención de `url` de un gran
    imagen.
 3. Conectar el script de la ventana modal y los estilos de la biblioteca
    [basicLightbox](https://basiclightbox.electerious.com/). Utilice
@@ -52,7 +52,7 @@ elemento `<img>`, y debe estar especificado en el `href` del enlace. No añada n
 o distintas clases CSS en esta plantilla.
 
 ```html
-<div class="gallery__item">
+<li class="gallery__item">
   <a class="gallery__link" href="large-image.jpg">
     <img
       class="gallery__image"
@@ -61,7 +61,7 @@ o distintas clases CSS en esta plantilla.
       alt="Image description"
     />
   </a>
-</div>
+</li>
 ```
 
 Tenga en cuenta que la imagen está envuelta en un enlace, lo que significa que cuando el usuario hace clic
@@ -90,9 +90,11 @@ https://user-images.githubusercontent.com/17479434/127714821-4b7527c8-01db-42d3-
 Si necesita cambiar ligeramente el diseño de la tarjeta de la galería, use esta plantilla.
 
 ```html
-<a class="gallery__item" href="large-image.jpg">
-  <img class="gallery__image" src="small-image.jpg" alt="Image description" />
-</a>
+<li class="gallery__item">
+   <a class="gallery__link" href="large-image.jpg">
+      <img class="gallery__image" src="small-image.jpg" alt="Image description" />
+   </a>
+</li>
 ```
 
 Ejecute esta tarea en los archivos `02-lightbox.html` y `02-lightbox.js`. Divídalo
@@ -106,7 +108,7 @@ en varias subtareas:
    añadir los enlaces a los dos archivos: `simple-lightbox.min.js` y
    `simple-lightbox.min.css`.
 3. Inicialización de la biblioteca después de crear y añadir los elementos de la galería
-   en un `div.gallery`. Para ello, lea la documentación
+   en un `ul.gallery`. Para ello, lea la documentación
    [SimpleLightbox](https://simplelightbox.com/) , principalmente de las secciones
    «Usage» y «Markup».
 4. Mire la sección «Opciones» de la documentación y añada una pantalla de subtítulos las

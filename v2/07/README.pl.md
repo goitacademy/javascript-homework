@@ -32,7 +32,7 @@ kilka podzadań:
 
 1. Tworzenie i renderowanie znacznika zgodnie z tablicą danych `galleryItems` i
    dostarczonym szablonem elementu galerii.
-2. Implementacja delegowania na `div.gallery` i otrzymanie `url` większego
+2. Implementacja delegowania na `ul.gallery` i otrzymanie `url` większego
    obrazu.
 3. Połączenie skryptu i stylów biblioteki okna modalnego
    [basicLightbox](https://basiclightbox.electerious.com/). Użyj
@@ -52,7 +52,7 @@ elemencie `<img>`, i ukazywać się w `href` linku. Nie dodawaj innych tagów HT
 lub klas CSS oprócz tych, które znajdują się w tym szablonie.
 
 ```html
-<div class="gallery__item">
+<ul class="gallery__item">
   <a class="gallery__link" href="large-image.jpg">
     <img
       class="gallery__image"
@@ -61,7 +61,7 @@ lub klas CSS oprócz tych, które znajdują się w tym szablonie.
       alt="Image description"
     />
   </a>
-</div>
+</ul>
 ```
 
 Zwróć uwagę na to, że obrazek zamieniono w link, a więc po
@@ -91,9 +91,11 @@ https://user-images.githubusercontent.com/17479434/127714821-4b7527c8-01db-42d3-
 Konieczna jest nieznaczna zmiana znacznika galerii, użyj tego szablonu.
 
 ```html
-<a class="gallery__item" href="large-image.jpg">
-  <img class="gallery__image" src="small-image.jpg" alt="Image description" />
-</a>
+<li class="gallery__item">
+   <a class="gallery__link" href="large-image.jpg">
+      <img class="gallery__image" src="small-image.jpg" alt="Image description" />
+   </a>
+</li>
 ```
 
 Wykonuj to zadanie w plikach `02-lightbox.html` i `02-lightbox.js`. Rozbij je
@@ -107,7 +109,7 @@ na kilka podzadań:
    dodanie linków do dwóch plików: `simple-lightbox.min.js` i
    `simple-lightbox.min.css`.
 3. Inicjalizacja biblioteki po utworzeniu elementów galerii i dodaniu ich
-   do `div.gallery`. Aby to zrobić, zapoznaj się z dokumentacją
+   do `ul.gallery`. Aby to zrobić, zapoznaj się z dokumentacją
    [SimpleLightbox](https://simplelightbox.com/) - najpierw sekcje
    «Usage» i «Markup».
 4. W dokumentacji zwróć uwagę na sekcję «Options» i dodaj wyświetlanie podpisów do
