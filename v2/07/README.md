@@ -36,7 +36,7 @@ https://user-images.githubusercontent.com/17479434/127711719-4e293f5b-fbaa-4851-
 
 1. Создание и рендер разметки по массиву данных `galleryItems` и
    предоставленному шаблону элемента галереи.
-2. Реализация делегирования на `div.gallery` и получение `url` большого
+2. Реализация делегирования на `ul.gallery` и получение `url` большого
    изображения.
 3. Подключение скрипта и стилей библиотеки модального окна
    [basicLightbox](https://basiclightbox.electerious.com/). Используй
@@ -56,7 +56,7 @@ https://user-images.githubusercontent.com/17479434/127711719-4e293f5b-fbaa-4851-
 или CSS классы кроме тех, что есть в этом шаблоне.
 
 ```html
-<div class="gallery__item">
+<li class="gallery__item">
   <a class="gallery__link" href="large-image.jpg">
     <img
       class="gallery__image"
@@ -65,7 +65,7 @@ https://user-images.githubusercontent.com/17479434/127711719-4e293f5b-fbaa-4851-
       alt="Image description"
     />
   </a>
-</div>
+</li>
 ```
 
 Обрати внимание на то, что изображение обернуто в ссылку, а значит при клике по
@@ -100,9 +100,11 @@ https://user-images.githubusercontent.com/17479434/127714821-4b7527c8-01db-42d3-
 Необходимо немного изменить разметку карточки галереи, используй этот шаблон.
 
 ```html
-<a class="gallery__item" href="large-image.jpg">
-  <img class="gallery__image" src="small-image.jpg" alt="Image description" />
-</a>
+<li class="gallery__item">
+   <a class="gallery__link" href="large-image.jpg">
+      <img class="gallery__image" src="small-image.jpg" alt="Image description" />
+   </a>
+</li>
 ```
 
 Выполняй это задание в файлах `02-lightbox.html` и `02-lightbox.js`. Разбей его
@@ -116,7 +118,7 @@ https://user-images.githubusercontent.com/17479434/127714821-4b7527c8-01db-42d3-
    добавить ссылки на два файла: `simple-lightbox.min.js` и
    `simple-lightbox.min.css`.
 3. Инициализация библиотеки после того как элементы галереи созданы и добавлены
-   в `div.gallery`. Для этого ознакомься с документацией
+   в `ul.gallery`. Для этого ознакомься с документацией
    [SimpleLightbox](https://simplelightbox.com/) - в первую очередь секции
    «Usage» и «Markup».
 4. Посмотри в документации секцию «Options» и добавь отображение подписей к
